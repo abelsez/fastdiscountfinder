@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Discount Finder - Score Student Savings Now!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="https://images.unsplash.com/photo-1506152983158-b663e911a3a3?q=80&w=2070&auto=format&fit=crop" alt="Cool Student Vibes" class="hero-image">
+            <div class="hero-text">
+                <h1>Fast Discount Finder</h1>
+                <p>Unlock Epic Student Deals – Even If You’re Not a Student!</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="intro">
+        <h2>Yo, Deal Hunters!</h2>
+        <p>Welcome to <strong>Fast Discount Finder</strong>, where we hook you up with unreal savings—think student discounts on steroids! We’re the wizards who verify you for college perks, no textbook required. From ski passes to tech gear, we’ve got the hacks to save you stacks of cash.</p>
+    </section>
+
+    <section class="benefits">
+        <div class="benefit-card">
+            <img src="https://images.unsplash.com/photo-1517404215738-1529e5e8ec7c?q=80&w=2070&auto=format&fit=crop" alt="Money Stacks">
+            <h3>Big Bucks Saved</h3>
+            <p>Snag discounts worth <strong>hundreds</strong>—like $540 off IKON Pass. More money for the fun stuff!</p>
+        </div>
+        <div class="benefit-card">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=2070&auto=format&fit=crop" alt="Ski Action">
+            <h3>Cool Perks</h3>
+            <p>Score student-only deals on epic experiences—skiing, shopping, streaming, you name it.</p>
+        </div>
+        <div class="benefit-card">
+            <h3>No Student ID? No Prob!</h3>
+            <p>We verify you fast for just <strong>$80</strong>. Beat the system, live the dream.</p>
+        </div>
+    </section>
+
+    <section class="pitch">
+        <h2>Why Roll With Us?</h2>
+        <p>Student discounts are the ultimate cheat code, but the verification grind? Lame. We’ve cracked it—send us your deets, and we’ll get you in the club, no campus required. Our latest obsession? Getting you on the slopes with the IKON Pass for way less. Check it out below and let’s make savings your superpower!</p>
+        <a href="/ikonpass.html" class="cta-button">Peep the IKON Pass Deal</a>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Win?</h2>
+        <p>Drop us a line at <a href="mailto:deals@fastdiscountfinder.com">deals@fastdiscountfinder.com</a> with your name and vibe, and let’s score you some dope discounts!</p>
+        <p><em>— Your Discount Crew at Fast Discount Finder</em></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Fast Discount Finder. Savings so fast, they’re supersonic.</p>
+    </footer>
+</body>
+</html>

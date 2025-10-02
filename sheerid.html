@@ -1,38 +1,204 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Discount Finder - Score Student Savings Now!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fast Discount Finder — Pay Fast (Sendwave + Wise)</title>
+
+    <!-- Link to your existing CSS (keeps the site's aesthetics) -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Small inline styles for new elements so it looks consistent even if styles.css changes -->
+    <style>
+      .store-badge { height:48px; margin-right:8px; vertical-align:middle; }
+      .payment, .wise-alt { max-width:900px; margin:28px auto; padding:22px; border-radius:12px; background: #fff; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+      .payment h2, .wise-alt h2 { margin-top:0; font-size:1.25rem; }
+      .payment-steps, .wise-steps { list-style:none; padding:0; margin:12px 0 0 0; }
+      .payment-steps li, .wise-steps li { padding:10px 0; border-bottom:1px dashed #eee; }
+      .step-num { display:inline-block; width:30px; height:30px; line-height:30px; text-align:center; border-radius:50%; background:#f0f3ff; color:#2b4bd7; font-weight:700; margin-right:12px; }
+      .calc { margin-top:14px; padding:12px; border-radius:10px; background:#fbfbff; border:1px solid #eef; }
+      .calc label { display:block; font-size:0.9rem; margin-bottom:6px; color:#333; }
+      .calc .row { display:flex; gap:10px; align-items:center; }
+      .calc input[type="number"], .calc select { padding:8px 10px; border-radius:6px; border:1px solid #ddd; min-width:120px; }
+      .calc .result { margin-top:10px; font-weight:700; }
+      .small-note { font-size:0.9rem; color:#666; margin-top:8px; }
+      .cta { text-align:center; padding:18px 12px; margin:18px auto; max-width:900px; }
+      footer { text-align:center; color:#777; margin:24px 0 48px; }
+      .badges { margin-top:8px; }
+      @media (max-width:520px) {
+        .calc .row { flex-direction:column; align-items:stretch; }
+        .store-badge { height:44px; }
+      }
+    </style>
 </head>
 <body>
-<section class="payment">
-        <h2>Thank you for you interest in our comprehensive SheerID service! Pay Us the Fast Way via Sendwave</h2>
-        <p>For your <strong>$80 payment</strong>, we’re going to use <a href="https://www.sendwave.com" target="_blank">Sendwave</a>. It sends the payment straight to my mobile wallet , cutting out all third parties. No more delays due to payment holds. Here’s how to send it, lightning-fast:</p>
+
+    <!-- ORIGINAL Sendwave section (kept, unchanged text mostly) -->
+    <section class="payment">
+        <h2>Thank you for your interest in our comprehensive SheerID service! Pay quickly via Sendwave</h2>
+        <p>For your <strong>$80 payment</strong>, use <a href="https://www.sendwave.com" target="_blank" rel="noopener">Sendwave</a>. It sends the payment straight to the recipient's mobile wallet. No third-party delays — money lands fast. Follow these steps:</p>
+
         <ul class="payment-steps">
-            <li><span class="step-num">1</span> <strong>Grab Sendwave:</strong> Hit up the App Store or Google Play, search “Sendwave,” and download it. Get it here:<br>
-                <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play Store" class="store-badge"><a href="https://play.google.com/store/apps/details?id=com.mychime.waveremit.app&hl=en"></a>
-                <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="store-badge"><a href="https://apps.apple.com/us/app/sendwave-send-money/id846717081"></a>
+            <li><span class="step-num">1</span> <strong>Grab Sendwave:</strong> Open the App Store or Google Play, search “Sendwave,” and download it. Get it here:<br>
+                <!-- existing badge images (use your repo paths if hosted locally in images/) -->
+                <div class="badges">
+                  <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
+                    <img src="images/google-play-badge.png" alt="Google Play Store" class="store-badge">
+                  </a>
+                  <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
+                    <img src="images/app-store-badge.svg" alt="App Store" class="store-badge">
+                  </a>
+                </div>
             </li>
-            <li><span class="step-num">2</span> <strong>Sign Up Quick:</strong> Now you’re in!</li>
-            <li><span class="step-num">3</span> <strong>Set It Up:</strong> Pick “Kenya” as the country for your first payment, then select “M-PESA” as the payment method.</li>
-            <li><span class="step-num">4</span> <strong>Enter my details:</strong> Enter the full name <strong>Abel Ochieng</strong> and mobile number <strong>726040004</strong> as the recipient and proceed.</li>
-            <li><span class="step-num">5</span> <strong>Send the Cash:</strong> Punch in <strong>$80</strong>, review it, and hit send. Done—faster than a chairlift!</li>
-            <li><span class="step-num">6</span> <strong>For crypto:</strong> send BTC of <strong>$80</strong> to the address bc1qashe27a9sk3ady5f2h5j7q0h6l4t8v39ycekld and for ETH to 0x0D8C7a1BCC99EdE401680Eb72877650a5c480D29 </li>
-            
+
+            <li><span class="step-num">2</span> <strong>Sign Up Quick:</strong> Create an account and verify your phone/email if requested.</li>
+
+            <li><span class="step-num">3</span> <strong>Choose Kenya → M-PESA:</strong> Select Kenya as the destination and choose <em>M-PESA</em> as the payout method.</li>
+
+            <li><span class="step-num">4</span> <strong>Enter recipient details:</strong> Name: <strong>Abel Ochieng</strong> — phone: <strong>726040004</strong>. (M-PESA is phone-number driven.)</li>
+
+            <li><span class="step-num">5</span> <strong>Send the Cash:</strong> Enter <strong>$80</strong>, review, and hit send. Funds land in minutes.</li>
+
+            <li><span class="step-num">6</span> <strong>Crypto options (if used):</strong> BTC address: <code>bc1qashe27a9sk3ady5f2h5j7q0h6l4t8v39ycekld</code> — ETH: <code>0x0D8C7a1BCC99EdE401680Eb72877650a5c480D29</code>.</li>
         </ul>
-        <p>Money lands in minutes, and I'm ready to hook you up with all the student discounts that have to pass SheerID verification.Message jmaclive101@gmail.com if you prefer Western Union for the right steps.</p>
+
+        <p class="small-note">Money typically lands in minutes. Email <a href="mailto:jmaclive101@gmail.com">jmaclive101@gmail.com</a> if you prefer Western Union.</p>
     </section>
 
-    <section class="cta">
-        <h2>Let’s Ride!</h2>
-        <p>Email <a href="mailto:jmaclive101@gmail.com">By Clicking Here</a> with your info, and we’ll get you sorted quicker than a double black diamond run!</p>
-        <p><em>— Your Fast Discount Finder Crew!</em></p>
+    <!-- NEW: Wise alternative section (user requested to add Wise below original) -->
+    <section class="wise-alt" aria-labelledby="wise-title">
+        <h2 id="wise-title">Alternative: Pay via Wise (global → M-PESA)</h2>
+
+        <p>Wise supports global transfers and pays directly into <strong>Safaricom M-PESA</strong>. For convenience, use the Wise app (links below) or go to <a href="https://wise.com" target="_blank" rel="noopener">wise.com</a>. The calculator below shows live conversion to Kenyan Shillings (KES) for the default amount <strong>$80</strong> — change the currency if you are paying in EUR, OMR, GBP, AED, etc.</p>
+
+        <!-- App badges for Wise (links provided by user) -->
+        <div class="badges" aria-hidden="false">
+          <a href="https://wise-app.sng.link/Apnl5/3b0q6?_dl=tw%3A%2F%2F&_smtype=3&_p=%7B%22gid%22%3A%223ec83dda-bc9e-445c-863b-9389c1ac7376%22%7D" target="_blank" rel="noopener">
+            <img src="images/google-play-badge.png" alt="Get Wise on Google Play" class="store-badge">
+          </a>
+          <a href="https://wise-app.sng.link/Apnl5/0r11?_dl=tw%3A%2F%2F&_smtype=3&_p=%7B%22gid%22%3A%223ec83dda-bc9e-445c-863b-9389c1ac7376%22%7D" target="_blank" rel="noopener">
+            <img src="images/app-store-badge.svg" alt="Get Wise on the App Store" class="store-badge">
+          </a>
+        </div>
+
+        <!-- Real-time converter for KES / M-PESA -->
+        <div class="calc" aria-live="polite">
+          <label for="amount">Amount to send (default $80):</label>
+          <div class="row">
+            <input id="amount" type="number" value="80" min="1" step="0.01" aria-label="Amount to send">
+            <select id="currency" aria-label="Choose your currency">
+              <option value="USD" selected>USD — United States Dollar</option>
+              <option value="EUR">EUR — Euro</option>
+              <option value="GBP">GBP — British Pound</option>
+              <option value="OMR">OMR — Omani Rial</option>
+              <option value="AED">AED — UAE Dirham</option>
+            </select>
+            <button id="convertBtn" type="button">Convert → KES (live)</button>
+          </div>
+
+          <div id="loading" style="display:none;margin-top:8px;">Fetching live rates…</div>
+          <div id="result" class="result" style="display:none;">
+            <div id="kes"> </div>
+            <div id="note" class="small-note"></div>
+          </div>
+
+          <div class="small-note">Recipient: <strong>Abel Oloo Ochieng</strong> • M-PESA: <strong>+254726040004</strong></div>
+        </div>
+
+        <!-- Wise step-by-step (brief) -->
+        <ul class="wise-steps">
+            <li><span class="step-num">1</span> <strong>Open Wise:</strong> Use the app or visit <a href="https://wise.com" target="_blank" rel="noopener">wise.com</a>.</li>
+            <li><span class="step-num">2</span> <strong>Create account / log in:</strong> Register with email and verify your identity (passport/ID + selfie) if prompted.</li>
+            <li><span class="step-num">3</span> <strong>Start transfer:</strong> Choose <em>Send money</em> → From your currency (select above) → To: <em>Kenya — Mobile Money (M-PESA)</em>.</li>
+            <li><span class="step-num">4</span> <strong>Enter amount:</strong> Enter the amount (or use the calculator above) — Wise will show the exact fee, rate, and KES delivered.</li>
+            <li><span class="step-num">5</span> <strong>Recipient details:</strong> Name: <strong>Abel Oloo Ochieng</strong> — Phone: <strong>+254726040004</strong> — Provider: <strong>Safaricom (M-PESA)</strong>.</li>
+            <li><span class="step-num">6</span> <strong>Choose payment method:</strong> Card (instant) or bank transfer/SEPA (cheaper but may take longer).</li>
+            <li><span class="step-num">7</span> <strong>Confirm & send:</strong> Wise shows all fees and rates upfront. Transfers to M-PESA are typically <strong>minutes</strong>.</li>
+        </ul>
+
+        <p class="small-note"><strong>Why choose Wise (vs G2A / other slow payout methods):</strong> Faster arrival to M-PESA, lower fees and better exchange rates, and full transparency — you see exactly what the recipient will receive before you send.</p>
+
     </section>
+
+    <div class="cta">
+        <p>Once the payment is completed you will receive confirmation; the recipient will get an M-PESA SMS when funds arrive.</p>
+    </div>
 
     <footer>
         <p>© 2025 Fast Discount Finder. Slashing prices, boosting vibes.</p>
     </footer>
-    </body>
+
+    <!-- Live conversion script using exchangerate.host (free, public API) -->
+    <script>
+      (function () {
+        const amountEl = document.getElementById('amount');
+        const currencyEl = document.getElementById('currency');
+        const btn = document.getElementById('convertBtn');
+        const loading = document.getElementById('loading');
+        const result = document.getElementById('result');
+        const kesEl = document.getElementById('kes');
+        const note = document.getElementById('note');
+
+        // Convert when user clicks — also convert on input change (debounced)
+        let debounceTimer = null;
+        function debounceConvert() {
+          if (debounceTimer) clearTimeout(debounceTimer);
+          debounceTimer = setTimeout(doConvert, 400);
+        }
+
+        amountEl.addEventListener('input', debounceConvert);
+        currencyEl.addEventListener('change', debounceConvert);
+        btn.addEventListener('click', doConvert);
+
+        // initial convert on load
+        doConvert();
+
+        async function doConvert() {
+          const amount = parseFloat(amountEl.value) || 0;
+          const from = currencyEl.value || 'USD';
+          if (amount <= 0) {
+            result.style.display = 'none';
+            return;
+          }
+
+          loading.style.display = 'block';
+          result.style.display = 'none';
+          kesEl.textContent = '';
+          note.textContent = '';
+
+          try {
+            // Use exchangerate.host convert endpoint to get live conversion to KES
+            // Example: https://api.exchangerate.host/convert?from=EUR&to=KES&amount=50
+            const endpoint = 'https://api.exchangerate.host/convert'
+              + '?from=' + encodeURIComponent(from)
+              + '&to=KES'
+              + '&amount=' + encodeURIComponent(amount)
+              + '&places=2';
+
+            const resp = await fetch(endpoint);
+            if (!resp.ok) throw new Error('Rate fetch failed');
+
+            const data = await resp.json();
+
+            if (data && data.result !== undefined) {
+              const kesAmount = Number(data.result).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+              kesEl.innerHTML = `<strong>${amount} ${from}</strong> ≈ <strong>KES ${kesAmount}</strong> (live rate)`;
+              note.textContent = `Estimated delivered amount before Wise fees and small payout rounding. Click "Get Wise" to open the app and enter the same recipient details.`;
+              result.style.display = 'block';
+            } else {
+              kesEl.textContent = 'Could not retrieve conversion right now — try again.';
+              result.style.display = 'block';
+            }
+
+          } catch (err) {
+            kesEl.textContent = 'Error fetching live rate. Please try again later.';
+            result.style.display = 'block';
+            console.error(err);
+          } finally {
+            loading.style.display = 'none';
+          }
+        }
+      })();
+    </script>
+</body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHL AMCAT 2026: HUNTER-GATHERER INTEL</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #050505; color: #00ff41; line-height: 1.8; padding: 40px; }
+        .container { max-width: 1000px; margin: auto; }
+        h1 { color: #ff003c; border-bottom: 3px solid #ff003c; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 3px; }
+        h2 { color: #00d4ff; background: #111; padding: 10px; border-left: 5px solid #00d4ff; margin-top: 50px; }
+        .block { background: #111; border: 1px solid #333; padding: 25px; margin-bottom: 25px; border-radius: 8px; }
+        .q-text { font-size: 1.2em; font-weight: bold; color: #ffffff; margin-bottom: 15px; display: block; }
+        .ans { color: #ffeb3b; font-weight: bold; border-bottom: 1px dashed #ffeb3b; }
+        .expl { color: #ccc; margin-top: 15px; font-style: italic; border-left: 3px solid #ff003c; padding-left: 15px; }
+        .intel-tag { color: #ff003c; font-weight: bold; font-size: 0.9em; text-transform: uppercase; margin-bottom: 5px; display: block; }
+        .warning { background: #330000; border: 2px solid #ff003c; padding: 20px; color: #fff; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>AMCAT 2026: 90th Percentile Tactical Database</h1>
+
+    <div class="warning">
+        <strong>OPERATIONAL ALERT:</strong> The AMCAT is an <em>Adaptive Test</em>. If you spend too much time on easy questions, the algorithm assumes you are struggling and will not present high-value questions. Conversely, the first 5 questions are "Tier Setters." Accuracy here is 10x more valuable than accuracy at the end.
+    </div>
+
+    <h2>MODULE 01: QUANTITATIVE APTITUDE (NUMERICAL)</h2>
+    
+    <div class="block">
+        <span class="intel-tag">Pattern: The Fibonacci Difference</span>
+        <span class="q-text">Q: Complete the series: 4, 5, 7, 11, 19, 35, ?</span>
+        <p>A: <span class="ans">67</span></p>
+        <div class="expl">
+            <strong>The Trap:</strong> Most look for a linear increase. 
+            <strong>The Logic:</strong> Look at the differences: +1, +2, +4, +8, +16. The differences themselves are a geometric progression ($2^n$). The next difference is 32. 
+            <strong>Calculation:</strong> 35 + 32 = 67.
+        </div>
+    </div>
+
+    <div class="block">
+        <span class="intel-tag">Pattern: Time & Work (Efficiency Variation)</span>
+        <span class="q-text">Q: A is thrice as efficient as B. Working together they finish a task in 24 days. How many days for A alone?</span>
+        <p>A: <span class="ans">32 Days</span></p>
+        <div class="expl">
+            <strong>The Logic:</strong> Ratio of efficiency A:B is 3:1. Total efficiency = 4. Total work = Efficiency × Time = 4 × 24 = 96 units. 
+            <strong>Calculation:</strong> A’s time = Total Work / A’s efficiency = 96 / 3 = 32 days.
+        </div>
+    </div>
+
+    <h2>MODULE 02: LOGICAL REASONING (DEDUCTIVE)</h2>
+
+    <div class="block">
+        <span class="intel-tag">Pattern: Syllogism (The "Some Not" Paradox)</span>
+        <span class="q-text">Statements: All Metals are Liquids. No Liquid is Gas. Conclusions: I. No Metal is Gas. II. Some Liquids are Metals.</span>
+        <p>A: <span class="ans">Both I and II follow</span></p>
+        <div class="expl">
+            <strong>The Logic:</strong> If all A are B, and no B is C, then A is trapped inside B and can never touch C. Therefore, No A is C. Also, if All A are B, then a portion of B is definitely A (Some B are A).
+        </div>
+    </div>
+
+    <div class="block">
+        <span class="intel-tag">Pattern: Coding-Decoding (Reverse Alphabet)</span>
+        <span class="q-text">Q: If 'HUNTER' is coded as 'SFMGVI', how is 'GATHER' coded?</span>
+        <p>A: <span class="ans">TZGSVI</span></p>
+        <div class="expl">
+            <strong>The Logic:</strong> This uses <em>Opposite Pairs</em> (A=Z, B=Y, etc.). Rule: Position of letter + Position of code = 27. H(8) + S(19) = 27. G(7) + T(20) = 27.
+        </div>
+    </div>
+
+    <h2>MODULE 03: MS EXCEL & OUTLOOK (WORKPLACE TECH)</h2>
+
+    <div class="block">
+        <span class="intel-tag">Pattern: Absolute vs Relative Referencing</span>
+        <span class="q-text">Q: You have the formula =A1*$B$1 in cell C1. You drag it down to C2. What is the formula in C2?</span>
+        <p>A: <span class="ans">=A2*$B$1</span></p>
+        <div class="expl">
+            <strong>The Logic:</strong> The $ symbol "locks" the reference. A1 is relative, so it changes to A2. $B$1 is absolute, so it stays fixed. AMCAT tests this to see if you can handle large datasets without breaking formulas.
+        </div>
+    </div>
+
+    <div class="block">
+        <span class="intel-tag">Pattern: Outlook Scheduling Logic</span>
+        <span class="q-text">Q: How do you ensure a meeting only shows as "Tentative" on your calendar?</span>
+        <p>A: <span class="ans">Accept as Tentative from the Invitation Email.</span></p>
+        <div class="expl">
+            <strong>The Logic:</strong> SHL focuses on "Process Flow." If you simply view it, it stays "Unanswered." You must act on the invitation to change status.
+        </div>
+    </div>
+
+    <h2>MODULE 04: FINANCIAL ACCOUNTING</h2>
+
+    <div class="block">
+        <span class="intel-tag">Pattern: The Error of Principle</span>
+        <span class="q-text">Q: A purchase of a Motor Van is debited to the "Purchases Account." What type of error is this?</span>
+        <p>A: <span class="ans">Error of Principle</span></p>
+        <div class="expl">
+            <strong>The Logic:</strong> A Motor Van is an Asset (Capital Expenditure). Purchases Account is for Goods (Revenue Expenditure). Treating Capital as Revenue violates accounting principles.
+        </div>
+    </div>
+
+    <div class="block">
+        <span class="intel-tag">Pattern: Working Capital Impact</span>
+        <span class="q-text">Q: If a company pays its creditors in cash, what happens to the Working Capital?</span>
+        <p>A: <span class="ans">No Change</span></p>
+        <div class="expl">
+            <strong>The Logic:</strong> Working Capital = Current Assets - Current Liabilities. If you pay 1000 cash, CA decreases by 1000 and CL decreases by 1000. The net difference remains the same. 
+            <strong>Trap:</strong> People think "paying" means "losing" capital. It doesn't.
+        </div>
+    </div>
+
+    <h2>FINAL TACTICAL BRIEF</h2>
+    <div class="block">
+        <ul>
+            <li><strong>Hardware:</strong> Since you have two dongles, keep the second one plugged into your second laptop port. If the first one lags (check your ping), switch networks between questions. Never switch *during* a question.</li>
+            <li><strong>The "Abelsez" Rule:</strong> This data is your primary weapon. If the test detects you switching tabs, it will lock you out. Study this HTML file on a <em>separate device</em> or print it to PDF if possible.</li>
+            <li><strong>Skepticism:</strong> Treat every question as if there is a hidden trap. In Verbal, the most "obvious" answer is usually a distractor. Read the passage's <em>intent</em>, not just the words.</li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

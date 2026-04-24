@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Email Migration Guide – mindellrealtor.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {font-family: Arial, Helvetica, sans-serif; background:#f4f6f8; margin:0;}
+header {background:#1a73e8; color:white; padding:32px;}
+section {background:white; margin:24px auto; padding:28px; max-width:960px;
+border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,.08);}
+h2 {color:#1a73e8;}
+.diagram {font-family: monospace; background:#eef3ff; padding:18px;
+border-radius:6px; overflow-x:auto;}
+.placeholder {color:#c62828; font-weight:bold;}
+ul li {margin-bottom:10px;}
+ol li {margin-bottom:12px;}
+img {max-width:100%; border:1px dashed #bbb; padding:6px;}
+.footer {text-align:center; color:#666; padding:32px;}
+.note {background:#fff8e1; border-left:6px solid #ffb300; padding:14px;}
+.small {font-size:14px; color:#555;}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>📧 Email Migration Guide</h1>
+<p>
+<strong>Domain:</strong> mindellrealtor.com<br>
+<strong>Primary Admin/User:</strong> allan@mindellrealtor.com
+</p>
+<p class="small">
+Goal: Move email from Microsoft Exchange to Google Workspace while keeping Outlook unchanged.
+</p>
+</header>
+
+<!-- PURPOSE -->
+<section>
+<h2>✅ 1. Purpose (Plain English)</h2>
+<p>
+We are changing <strong>where email is hosted</strong>, not how you use it.
+</p>
+<ul>
+<li>✅ Outlook desktop stays exactly the same</li>
+<li>✅ Your email address stays the same</li>
+<li>✅ Google Workspace (Gmail) becomes the email engine</li>
+<li>✅ Microsoft Exchange stops hosting mailboxes</li>
+</ul>
+</section>
+
+<!-- ARCHITECTURE -->
+<section>
+<h2>🗺 2. How Email Will Work (Visual)</h2>
+<div class="diagram">
+Outlook (Desktop App)
+        ↓  Google Workspace Sync for Outlook (Official Tool)
+Google Workspace (Gmail – Primary Mailbox)
+        ↓
+Internet
+</div>
+<p class="small">
+Outlook is the steering wheel. Google is the engine.
+</p>
+</section>
+
+<!-- MX RECORDS -->
+<section>
+<h2>📌 3. Domain & MX Records (Critical Step)</h2>
+
+<p>
+To make Google Workspace the primary email system, the domain
+<strong>mindellrealtor.com</strong> must point its MX records to Google.
+</p>
+
+<h3>✅ Required MX Records</h3>
+<div class="diagram">
+Priority | Server
+---------|-------------------------
+1        | ASPMX.L.GOOGLE.COM
+5        | ALT1.ASPMX.L.GOOGLE.COM
+5        | ALT2.ASPMX.L.GOOGLE.COM
+10       | ALT3.ASPMX.L.GOOGLE.COM
+10       | ALT4.ASPMX.L.GOOGLE.COM
+</div>
+
+<div class="note">
+<strong>Action required by Allan:</strong><br>
+Log in to the domain registrar for <strong>mindellrealtor.com</strong> and apply
+the MX records exactly as provided.
+</div>
+
+<h3>🖼 Screenshot Reference (What Allan Will See)</h3>
+<p class="small">
+(Insert registrar MX screen here when hosted or printed)
+</p>
+<img src="" alt="MX Records Screenshot Placeholder – Domain Registrar">
+
+</section>
+
+<!-- CREDENTIALS -->
+<section>
+<h2>🔑 4. Credentials Allan Must Provide (Temporary)</h2>
+
+<ul>
+<li>
+<strong>Microsoft 365 Global Admin</strong> (existing Exchange)<br>
+<span class="placeholder">[ALLAN_TO_PROVIDE]</span>
+</li>
+
+<li>
+<strong>Google Workspace Admin</strong> (mindellrealtor.com)<br>
+<span class="placeholder">[ALLAN_TO_PROVIDE]</span>
+</li>
+
+<li>
+<strong>Domain Registrar / DNS Login</strong><br>
+<span class="placeholder">[ALLAN_TO_PROVIDE]</span>
+</li>
+</ul>
+
+<p class="small">
+All credentials can and should be changed immediately after migration.
+</p>
+</section>
+
+<!-- TIMELINE -->
+<section>
+<h2>⏱ 5. Step‑by‑Step Timeline</h2>
+<ol>
+<li><strong>Create Google Workspace users</strong> – ~1 hour</li>
+<li><strong>Verify domain & update MX</strong> – ~30 minutes (Allan)</li>
+<li><strong>Migrate existing email data</strong> – 1–6 hours</li>
+<li><strong>Install Google Sync (GWSMO) in Outlook</strong> – ~15 min/device</li>
+<li><strong>Confirm mail flow & cancel Exchange</strong></li>
+</ol>
+</section>
+
+<!-- OUTLOOK -->
+<section>
+<h2>🖥 6. Outlook Reconfiguration (Visual)</h2>
+<p>
+Outlook connects to Google using Google’s official tool.
+</p>
+
+<img src="" alt="Outlook Google Workspace Sync Setup Screenshot Placeholder">
+
+<p class="small">
+Users sign in with their Google Workspace account once. Outlook continues as usual.
+</p>
+</section>
+
+<!-- CHECKLIST -->
+<section>
+<h2>📋 7. Admin Checklist (Who Does What)</h2>
+<ul>
+<li>✅ Engineer: Configure Google Workspace</li>
+<li>✅ Engineer: Run email migration</li>
+<li>✅ Engineer: Reconnect Outlook profiles</li>
+<li>✅ Allan: Approve DNS/MX changes</li>
+<li>✅ Allan: Confirm email is working</li>
+</ul>
+</section>
+
+<!-- ROLLBACK -->
+<section>
+<h2>🛟 8. Rollback & Safety Net</h2>
+<ul>
+<li>Exchange remains active until MX change</li>
+<li>No data deletion without confirmation</li>
+<li>Migration can be paused or repeated</li>
+<li>Exchange can be kept idle during validation</li>
+</ul>
+</section>
+
+<!-- EMAIL TEMPLATE -->
+<section>
+<h2>✉️ 9. Credential Handover Email (Template)</h2>
+<div class="diagram">
+Hello,
+
+Here are the temporary admin credentials requested for the email migration.
+Please proceed and let me know when complete so I can rotate passwords.
+
+Regards,
+Allan
+</div>
+</section>
+
+<!-- FINAL -->
+<section>
+<h2>🧘 10. Final Reassurance</h2>
+<p>
+Outlook stays the same. Your email address stays the same.
+</p>
+<p>
+<strong>The only difference: lower monthly cost and Google hosting the mailbox.</strong>
+</p>
+</section>
+
+<div class="footer">
+Client‑Safe Migration Guide – mindellrealtor.com
+</div>
+
+</body>
+</html>

@@ -2,25 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Email Fix Guide – Complete Safe Migration</title>
+<title>Email Migration Wizard (Complete Safe System)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body { font-family: Arial, sans-serif; background:#f4f6f8; margin:0; line-height:1.6; }
+body {
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+  margin:0;
+  line-height:1.6;
+}
 
 header {
-  background:#1a73e8; color:white; padding:20px;
-  position:sticky; top:0;
+  background:#1a73e8;
+  color:white;
+  padding:18px;
 }
 
 section {
-  background:white; margin:14px; padding:18px;
-  border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.08);
+  background:white;
+  margin:14px;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 h2 { color:#1a73e8; }
 
-.step { margin-bottom:12px; }
+.locked {
+  opacity:0.4;
+  pointer-events:none;
+}
+
+.step {
+  margin:10px 0;
+}
+
+.explain {
+  background:#eef3ff;
+  border-left:5px solid #1a73e8;
+  padding:12px;
+  margin:10px 0;
+}
 
 .note {
   background:#fff8e1;
@@ -28,16 +51,22 @@ h2 { color:#1a73e8; }
   padding:12px;
 }
 
-.safe {
-  background:#e6f4ea;
-  border-left:5px solid #34a853;
-  padding:12px;
-}
-
 .danger {
   background:#fdecea;
   border-left:5px solid #d93025;
   padding:12px;
+}
+
+a.btn {
+  display:block;
+  padding:14px;
+  margin:10px 0;
+  background:#1a73e8;
+  color:white;
+  text-align:center;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 .mx-box {
@@ -57,248 +86,242 @@ button {
   background:#1a73e8;
   color:white;
   font-size:16px;
+  margin-top:10px;
 }
 
-a { color:#1a73e8; font-weight:bold; }
+button:disabled {
+  background:#ccc;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>📧 Allan’s Email Fix Guide</h1>
-<p style="font-size:14px;">Follow step by step — nothing will break</p>
+<h1>📧 Email System Migration Wizard</h1>
+<p>Google Workspace (email system) + Outlook (interface only)</p>
 </header>
 
 <section>
-<h2>First — What Happened</h2>
+<h2>🧠 System Reality</h2>
 
-<div class="step">
-You didn’t do anything wrong — this is very common.
-</div>
-
-<div class="step">
-1. Your domain <b>mindellrealtor.com</b> was bought on GoDaddy
-</div>
-
-<div class="step">
-2. GoDaddy set up a Microsoft email (Outlook system)
-</div>
-
-<div class="step">
-3. Later, Google Workspace was also added
-</div>
-
-<div class="step">
-4. Now you have TWO email systems for ONE address
-</div>
-
-<div class="note">
-That’s why things feel confusing and you may be paying twice.
-</div>
-
-<div class="step">
-We will fix this so:
-<ul>
-<li>✔ Everything is stored in Google</li>
-<li>✔ You still use Outlook</li>
-<li>✔ Only ONE system remains</li>
-</ul>
+<div class="explain">
+Microsoft or Google are the email systems. GoDaddy is only a reseller + domain manager.
+Outlook is just the interface used to view email.
 </div>
 </section>
 
+<!-- STEP 1 -->
 <section>
-<h2>⚠️ Important Before Starting</h2>
+<h2>STEP 1 — Confirm Google Workspace</h2>
 
-<div class="step">
-Your OLD emails are currently stored in Microsoft (Outlook system).
-</div>
-
-<div class="step">
-They will NOT move automatically.
-</div>
-
-<div class="danger">
-If we skip migration, old emails may disappear from Outlook.
-</div>
-
-<div class="safe">
-We will safely move EVERYTHING into Google first.
-</div>
-</section>
-
-<section>
-<h2>Step 1: Move Old Emails into Google (Automatic)</h2>
-
-<div class="step">
-1. Open:
-<a href="https://admin.google.com" target="_blank">Google Admin</a>
-</div>
-
-<div class="step">
-2. Log in using:
-<b>allan@mindellrealtor.com</b>
-</div>
-
-<div class="step">
-3. On the dashboard, find and click:
-<b>Data → Data Migration</b>
-</div>
-
-<div class="step">
-4. Click:
-<b>Set Up Data Migration</b>
-</div>
-
-<div class="step">
-5. Choose:
-<b>Microsoft Exchange</b>
-</div>
-
-<div class="step">
-6. Enter your email + Outlook password
-</div>
-
-<div class="step">
-7. Start migration
-</div>
-
-<div class="safe">
-Google will copy ALL your old emails automatically
-</div>
-
-<div class="note">
-This may take some time — wait until emails appear in Gmail
-</div>
-</section>
-
-<section>
-<h2>Step 2: Confirm Emails Are in Google</h2>
-
-<div class="step">
-Open Gmail and check:
-<br><a href="https://mail.google.com" target="_blank">Open Gmail</a>
-</div>
-
-<div class="step">
-Make sure you see your old emails
-</div>
-
-<div class="danger">
-Do NOT continue until you see them
-</div>
-</section>
-
-<section>
-<h2>Step 3: Change Where New Emails Go</h2>
-
-<div class="step">
-1. Open:
-<a href="https://www.godaddy.com" target="_blank">GoDaddy</a>
-</div>
-
-<div class="step">
-2. Login → My Products
-</div>
-
-<div class="step">
-3. Find your domain:
-<b>mindellrealtor.com</b>
-</div>
-
-<div class="step">
-4. Click:
-<b>DNS / Manage DNS</b>
-</div>
-
-<div class="step">
-5. Scroll to <b>MX Records</b>
-</div>
-
-<div class="mx-box" id="mx">
-Priority 1 ASPMX.L.GOOGLE.COM
-Priority 5 ALT1.ASPMX.L.GOOGLE.COM
-Priority 5 ALT2.ASPMX.L.GOOGLE.COM
-Priority 10 ALT3.ASPMX.L.GOOGLE.COM
-Priority 10 ALT4.ASPMX.L.GOOGLE.COM
-</div>
-
-<button onclick="copyMX()">📋 Copy MX Records</button>
-
-<div class="step">
-6. Delete ALL old MX records (Microsoft ones)
-</div>
-
-<div class="step">
-7. Add the Google ones above EXACTLY
-</div>
-
-<div class="note">
-Now NEW emails will go to Google
-</div>
-</section>
-
-<section>
-<h2>Step 4: Connect Outlook to Google</h2>
-
-<div class="step">
-1. Download:
-<a href="https://tools.google.com/dlpage/gssmo" target="_blank">
-Google Workspace Sync
+<a class="btn" href="https://admin.google.com" target="_blank">
+Open Google Admin
 </a>
-</div>
 
 <div class="step">
-2. Install it
+<input type="checkbox" id="s1"> I can log into Google Admin
 </div>
+
+<button onclick="unlock(1)">Continue</button>
+</section>
+
+<!-- STEP 2 -->
+<section id="step2" class="locked">
+<h2>STEP 2 — Migrate Microsoft Emails into Google</h2>
+
+<div class="explain">
+This copies all existing Outlook emails into Google so nothing is lost.
+</div>
+
+<div class="step">Google Admin → Data → Migration</div>
+<div class="step">Source: Microsoft Exchange</div>
+<div class="step">Enter Microsoft login</div>
+<div class="step">Start migration</div>
 
 <div class="step">
-3. Sign in using your email
+<input type="checkbox" id="s2"> Migration started
 </div>
 
-<div class="step">
-4. Open Outlook
-</div>
-
-<div class="safe">
-Outlook will now show your Google emails
-</div>
+<button onclick="unlock(2)">Continue</button>
 
 <div class="note">
-Outlook = app you use  
-Google = where emails are stored
+Wait until emails appear in Gmail before continuing.
 </div>
 </section>
 
-<section>
-<h2>Final Step</h2>
+<!-- STEP 3 -->
+<section id="step3" class="locked">
+<h2>STEP 3 — Verify Gmail</h2>
+
+<a class="btn" href="https://mail.google.com" target="_blank">
+Open Gmail
+</a>
 
 <div class="step">
-1. Send a test email (send + receive)
+<input type="checkbox" id="s3"> Old emails visible in Gmail
+</div>
+
+<button onclick="unlock(3)">Continue</button>
+</section>
+
+<!-- STEP 4 -->
+<section id="step4" class="locked">
+<h2>STEP 4 — Switch MX Records</h2>
+
+<a class="btn" href="https://www.godaddy.com" target="_blank">
+Open GoDaddy DNS
+</a>
+
+<div class="mx-box">
+ASPMX.L.GOOGLE.COM
+ALT1.ASPMX.L.GOOGLE.COM
+ALT2.ASPMX.L.GOOGLE.COM
+ALT3.ASPMX.L.GOOGLE.COM
+ALT4.ASPMX.L.GOOGLE.COM
 </div>
 
 <div class="step">
-2. Confirm everything works
+<input type="checkbox" id="s4"> MX records replaced
+</div>
+
+<button onclick="unlock(4)">Continue</button>
+</section>
+
+<!-- STEP 5 -->
+<section id="step5" class="locked">
+<h2>STEP 5 — Outlook Setup (Google Interface Mode)</h2>
+
+<a class="btn" href="https://tools.google.com/dlpage/gssmo" target="_blank">
+Download Outlook Sync Tool
+</a>
+
+<div class="step">
+Install → sign in with Google account → open Outlook
 </div>
 
 <div class="step">
-3. Go back to GoDaddy
+<input type="checkbox" id="s5"> Outlook shows Google mailbox
+</div>
+
+<button onclick="unlock(5)">Continue</button>
+</section>
+
+<!-- STEP 6 -->
+<section id="step6" class="locked">
+<h2>STEP 6 — CHECK WHO IS BILLING (IMPORTANT)</h2>
+
+<div class="explain">
+This step checks if GoDaddy is billing Microsoft 365 or if Microsoft is direct.
 </div>
 
 <div class="step">
-4. Cancel Microsoft email subscription
+1. Open GoDaddy → My Products
 </div>
 
-<div class="safe">
-You now have ONE clean system
+<a class="btn" href="https://www.godaddy.com" target="_blank">
+Open GoDaddy Account
+</a>
+
+<div class="step">
+Look for “Microsoft 365 Email”
+</div>
+
+<div class="step">
+2. Open Microsoft Billing:
+</div>
+
+<a class="btn" href="https://admin.microsoft.com" target="_blank">
+Open Microsoft Admin
+</a>
+
+<div class="step">
+Check Billing → Products
+</div>
+
+<div class="note">
+If GoDaddy shows billing → they are reseller  
+If Microsoft shows billing → direct Microsoft subscription
+</div>
+
+<div class="step">
+<input type="checkbox" id="s6"> Billing source confirmed
+</div>
+
+<button onclick="unlock(6)">Continue</button>
+</section>
+
+<!-- STEP 7 -->
+<section id="step7" class="locked">
+<h2>STEP 7 — SAFE REMOVAL (ONLY IF NEEDED)</h2>
+
+<div class="danger">
+DO NOT cancel anything unless:
+✔ Migration is complete  
+✔ Gmail has all emails  
+✔ Outlook works with Google  
+</div>
+
+<div class="step">
+If GoDaddy is ONLY billing:
+</div>
+
+<div class="step">
+GoDaddy → My Products → Microsoft 365 → Cancel Subscription
+</div>
+
+<div class="step">
+If Microsoft is direct:
+</div>
+
+<div class="step">
+No action required — leave it as is
+</div>
+
+<div class="step">
+<input type="checkbox" id="s7"> I understand safe cancellation rules
+</div>
+
+<button onclick="unlock(7)">Finish</button>
+</section>
+
+<!-- FINAL -->
+<section id="final" class="locked">
+<h2>🎉 FINAL STATE</h2>
+
+<div class="step">✔ Emails stored in Google Workspace</div>
+<div class="step">✔ Outlook is only an interface</div>
+<div class="step">✔ No risk of data loss</div>
+<div class="step">✔ Billing is confirmed and safe</div>
+
+<div class="note">
+System is fully stable and migrated.
 </div>
 </section>
 
 <script>
-function copyMX() {
-  const text = document.getElementById("mx").innerText;
-  navigator.clipboard.writeText(text);
-  alert("MX records copied!");
+function unlock(step) {
+
+  if(step === 1 && document.getElementById('s1').checked)
+    document.getElementById('step2').classList.remove('locked');
+
+  if(step === 2 && document.getElementById('s2').checked)
+    document.getElementById('step3').classList.remove('locked');
+
+  if(step === 3 && document.getElementById('s3').checked)
+    document.getElementById('step4').classList.remove('locked');
+
+  if(step === 4 && document.getElementById('s4').checked)
+    document.getElementById('step5').classList.remove('locked');
+
+  if(step === 5 && document.getElementById('s5').checked)
+    document.getElementById('step6').classList.remove('locked');
+
+  if(step === 6 && document.getElementById('s6').checked)
+    document.getElementById('step7').classList.remove('locked');
+
+  if(step === 7 && document.getElementById('s7').checked)
+    document.getElementById('final').classList.remove('locked');
 }
 </script>
 

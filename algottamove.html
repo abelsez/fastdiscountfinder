@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Email Migration Wizard (Complete Safe System)</title>
+<title>Google Workspace Migration Wizard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -36,6 +36,11 @@ h2 { color:#1a73e8; }
 
 .step {
   margin:10px 0;
+}
+
+.email {
+  font-weight:bold;
+  color:#1a73e8;
 }
 
 .explain {
@@ -98,29 +103,33 @@ button:disabled {
 <body>
 
 <header>
-<h1>📧 Email System Migration Wizard</h1>
-<p>Google Workspace (email system) + Outlook (interface only)</p>
+<h1>📧 Email Migration Wizard</h1>
+<p>Target mailbox: <span class="email">allan@mindellrealtor.com</span></p>
 </header>
 
 <section>
-<h2>🧠 System Reality</h2>
+<h2>🧠 System Overview</h2>
 
 <div class="explain">
-Microsoft or Google are the email systems. GoDaddy is only a reseller + domain manager.
-Outlook is just the interface used to view email.
+You are moving <span class="email">allan@mindellrealtor.com</span> into Google Workspace.
+Outlook will remain only as a viewing interface after migration.
 </div>
 </section>
 
 <!-- STEP 1 -->
 <section>
-<h2>STEP 1 — Confirm Google Workspace</h2>
+<h2>STEP 1 — Confirm Google Workspace Access</h2>
+
+<div class="explain">
+This confirms Google is ready to host <span class="email">allan@mindellrealtor.com</span>.
+</div>
 
 <a class="btn" href="https://admin.google.com" target="_blank">
-Open Google Admin
+Open Google Admin Console
 </a>
 
 <div class="step">
-<input type="checkbox" id="s1"> I can log into Google Admin
+<input type="checkbox" id="s1"> I can log into Google Admin for allan@mindellrealtor.com
 </div>
 
 <button onclick="unlock(1)">Continue</button>
@@ -128,38 +137,43 @@ Open Google Admin
 
 <!-- STEP 2 -->
 <section id="step2" class="locked">
-<h2>STEP 2 — Migrate Microsoft Emails into Google</h2>
+<h2>STEP 2 — Migrate Emails from Microsoft</h2>
 
 <div class="explain">
-This copies all existing Outlook emails into Google so nothing is lost.
+This copies all existing emails from Microsoft (Outlook system) into Google.
+No data is deleted.
 </div>
 
 <div class="step">Google Admin → Data → Migration</div>
 <div class="step">Source: Microsoft Exchange</div>
-<div class="step">Enter Microsoft login</div>
+<div class="step">Enter: <span class="email">allan@mindellrealtor.com</span></div>
 <div class="step">Start migration</div>
 
 <div class="step">
-<input type="checkbox" id="s2"> Migration started
+<input type="checkbox" id="s2"> Migration has started
 </div>
 
 <button onclick="unlock(2)">Continue</button>
 
 <div class="note">
-Wait until emails appear in Gmail before continuing.
+Wait until emails appear in Gmail before proceeding.
 </div>
 </section>
 
 <!-- STEP 3 -->
 <section id="step3" class="locked">
-<h2>STEP 3 — Verify Gmail</h2>
+<h2>STEP 3 — Verify Gmail Data</h2>
 
 <a class="btn" href="https://mail.google.com" target="_blank">
 Open Gmail
 </a>
 
 <div class="step">
-<input type="checkbox" id="s3"> Old emails visible in Gmail
+Check inbox for <span class="email">allan@mindellrealtor.com</span>
+</div>
+
+<div class="step">
+<input type="checkbox" id="s3"> All old emails are visible in Gmail
 </div>
 
 <button onclick="unlock(3)">Continue</button>
@@ -167,11 +181,15 @@ Open Gmail
 
 <!-- STEP 4 -->
 <section id="step4" class="locked">
-<h2>STEP 4 — Switch MX Records</h2>
+<h2>STEP 4 — Switch Email Routing (MX Records)</h2>
 
 <a class="btn" href="https://www.godaddy.com" target="_blank">
 Open GoDaddy DNS
 </a>
+
+<div class="explain">
+This directs all new emails for <span class="email">allan@mindellrealtor.com</span> into Google.
+</div>
 
 <div class="mx-box">
 ASPMX.L.GOOGLE.COM
@@ -182,7 +200,7 @@ ALT4.ASPMX.L.GOOGLE.COM
 </div>
 
 <div class="step">
-<input type="checkbox" id="s4"> MX records replaced
+<input type="checkbox" id="s4"> MX records updated in GoDaddy
 </div>
 
 <button onclick="unlock(4)">Continue</button>
@@ -193,8 +211,12 @@ ALT4.ASPMX.L.GOOGLE.COM
 <h2>STEP 5 — Outlook Setup (Google Interface Mode)</h2>
 
 <a class="btn" href="https://tools.google.com/dlpage/gssmo" target="_blank">
-Download Outlook Sync Tool
+Download Google Workspace Sync
 </a>
+
+<div class="explain">
+Outlook will no longer use Microsoft. It will display Google mail for <span class="email">allan@mindellrealtor.com</span>.
+</div>
 
 <div class="step">
 Install → sign in with Google account → open Outlook
@@ -209,39 +231,23 @@ Install → sign in with Google account → open Outlook
 
 <!-- STEP 6 -->
 <section id="step6" class="locked">
-<h2>STEP 6 — CHECK WHO IS BILLING (IMPORTANT)</h2>
+<h2>STEP 6 — Billing Check (GoDaddy vs Microsoft)</h2>
 
 <div class="explain">
-This step checks if GoDaddy is billing Microsoft 365 or if Microsoft is direct.
-</div>
-
-<div class="step">
-1. Open GoDaddy → My Products
+Confirm who is billing Microsoft 365 for <span class="email">allan@mindellrealtor.com</span>.
 </div>
 
 <a class="btn" href="https://www.godaddy.com" target="_blank">
-Open GoDaddy Account
+Check GoDaddy Billing
 </a>
-
-<div class="step">
-Look for “Microsoft 365 Email”
-</div>
-
-<div class="step">
-2. Open Microsoft Billing:
-</div>
 
 <a class="btn" href="https://admin.microsoft.com" target="_blank">
-Open Microsoft Admin
+Check Microsoft Billing
 </a>
 
-<div class="step">
-Check Billing → Products
-</div>
-
 <div class="note">
-If GoDaddy shows billing → they are reseller  
-If Microsoft shows billing → direct Microsoft subscription
+If GoDaddy is billing → they are reseller.  
+If Microsoft is billing → direct subscription.
 </div>
 
 <div class="step">
@@ -253,33 +259,25 @@ If Microsoft shows billing → direct Microsoft subscription
 
 <!-- STEP 7 -->
 <section id="step7" class="locked">
-<h2>STEP 7 — SAFE REMOVAL (ONLY IF NEEDED)</h2>
+<h2>STEP 7 — Safe Cancellation (Optional)</h2>
 
 <div class="danger">
-DO NOT cancel anything unless:
+ONLY cancel if:
 ✔ Migration is complete  
-✔ Gmail has all emails  
-✔ Outlook works with Google  
+✔ Gmail contains all emails  
+✔ Outlook is working with Google  
 </div>
 
 <div class="step">
-If GoDaddy is ONLY billing:
+If GoDaddy is reseller → cancel Microsoft 365 inside GoDaddy
 </div>
 
 <div class="step">
-GoDaddy → My Products → Microsoft 365 → Cancel Subscription
+If Microsoft is direct → no action required
 </div>
 
 <div class="step">
-If Microsoft is direct:
-</div>
-
-<div class="step">
-No action required — leave it as is
-</div>
-
-<div class="step">
-<input type="checkbox" id="s7"> I understand safe cancellation rules
+<input type="checkbox" id="s7"> I understand cancellation rules
 </div>
 
 <button onclick="unlock(7)">Finish</button>
@@ -289,13 +287,13 @@ No action required — leave it as is
 <section id="final" class="locked">
 <h2>🎉 FINAL STATE</h2>
 
-<div class="step">✔ Emails stored in Google Workspace</div>
-<div class="step">✔ Outlook is only an interface</div>
-<div class="step">✔ No risk of data loss</div>
-<div class="step">✔ Billing is confirmed and safe</div>
+<div class="step">✔ <span class="email">allan@mindellrealtor.com</span> is now hosted in Google Workspace</div>
+<div class="step">✔ Outlook is only a viewing interface</div>
+<div class="step">✔ No email loss or downtime</div>
+<div class="step">✔ Billing verified and safe</div>
 
 <div class="note">
-System is fully stable and migrated.
+Migration complete and stable system achieved.
 </div>
 </section>
 

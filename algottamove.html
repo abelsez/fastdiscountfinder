@@ -10,65 +10,55 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background:#f4f6f8;
   margin:0;
+  line-height:1.6;
 }
 
 header {
   background:#1a73e8;
   color:white;
-  padding:38px;
+  padding:24px;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
+
+h1 { font-size:20px; margin:0; }
 
 section {
   background:white;
-  margin:28px auto;
-  padding:32px;
-  max-width:980px;
-  border-radius:8px;
-  box-shadow:0 2px 14px rgba(0,0,0,.08);
+  margin:16px;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 h2 {
   color:#1a73e8;
   margin-top:0;
-}
-
-.flow {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  margin:26px 0;
+  font-size:18px;
 }
 
 .flow-step {
   background:#eef3ff;
-  padding:16px 24px;
+  padding:14px;
   border-radius:6px;
-  width:100%;
-  max-width:600px;
   text-align:center;
   font-weight:bold;
+  margin:10px 0;
 }
 
 .flow-arrow {
-  font-size:30px;
+  text-align:center;
+  font-size:22px;
   color:#1a73e8;
-  margin:10px 0;
 }
 
 .note {
   background:#fff8e1;
   border-left:6px solid #ffb300;
-  padding:18px;
-  margin-top:20px;
-}
-
-.small {
+  padding:14px;
+  margin-top:16px;
   font-size:14px;
-  color:#555;
-}
-
-ul li, ol li {
-  margin-bottom:14px;
 }
 
 a {
@@ -77,14 +67,37 @@ a {
   font-weight:bold;
 }
 
-a:hover {
-  text-decoration:underline;
+button {
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  border:none;
+  border-radius:8px;
+  background:#1a73e8;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+
+button:active {
+  opacity:0.8;
+}
+
+.mx-box {
+  background:#111;
+  color:#0f0;
+  padding:14px;
+  border-radius:6px;
+  font-family:monospace;
+  font-size:13px;
+  overflow:auto;
 }
 
 .footer {
   text-align:center;
   color:#666;
-  padding:40px;
+  padding:30px;
+  font-size:13px;
 }
 </style>
 </head>
@@ -92,148 +105,87 @@ a:hover {
 <body>
 
 <header>
-<h1>📧 Allan’s Email Cleanup & Migration Guide</h1>
-<p>
-<strong>Domain:</strong> mindellrealtor.com<br>
-<strong>Email covered:</strong> allan@mindellrealtor.com
-</p>
-<p class="small">
-This guide helps you clean up a common GoDaddy email situation and move to a simpler,
-lower‑cost setup while keeping Microsoft Outlook.
-</p>
+<h1>📧 Email Cleanup Guide</h1>
 </header>
 
 <section>
-<h2>✅ 1. Why This Happened (Very Common with GoDaddy)</h2>
+<h2>Why This Happened</h2>
+<ul>
+<li>Domain on GoDaddy</li>
+<li>Microsoft email added</li>
+<li>Google Workspace added later</li>
+</ul>
+
+<div class="note">
+You are paying for two email systems for one inbox.
+</div>
+</section>
+
+<section>
+<h2>What We Are Doing</h2>
+<ul>
+<li>Keep Outlook</li>
+<li>Use Google only</li>
+<li>Cancel GoDaddy email later</li>
+</ul>
+</section>
+
+<section>
+<h2>Email Flow</h2>
+
+<div class="flow-step">Open Outlook</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">Connect via Google Sync</div>
+<div class="flow-arrow">↓</div>
+<div class="flow-step">Email stored in Gmail</div>
+</section>
+
+<section>
+<h2>Login Links</h2>
 
 <p>
-This is a very common situation for domain owners — you didn’t do anything wrong.
-</p>
-
-<ul>
-<li>Your domain was registered on GoDaddy.</li>
-<li>During setup, GoDaddy strongly promoted Microsoft email.</li>
-<li>GoDaddy created and sold a Microsoft Exchange mailbox.</li>
-<li>Later, Google Workspace was added separately.</li>
-</ul>
-
-<div class="note">
-Result: You ended up paying for two email services for the same single email address.
-</div>
-</section>
-
-<section>
-<h2>✅ 2. What We Are Doing</h2>
-
-<ul>
-<li>You keep using <strong>Microsoft Outlook</strong>.</li>
-<li>Your email address stays the same.</li>
-<li>Google Workspace becomes the only email system.</li>
-<li>The GoDaddy Microsoft email subscription is canceled at the end.</li>
-</ul>
-</section>
-
-<section>
-<h2>🗺 3. How Your Email Will Work</h2>
-
-<div class="flow">
-  <div class="flow-step">Open Outlook on your computer</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">Outlook connects using Google Workspace Sync</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">Email lives in Google (Gmail)</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">Messages go to and from the internet</div>
-</div>
-
-<p class="small">
-Outlook is the steering wheel. Google is the engine.
+<a href="https://www.godaddy.com" target="_blank">GoDaddy Login</a><br><br>
+<a href="https://admin.google.com" target="_blank">Google Admin</a>
 </p>
 </section>
 
 <section>
-<h2>🧭 4. Step One – Log in to GoDaddy</h2>
+<h2>MX Records (Copy Below)</h2>
 
-<ol>
-<li>Go to https://www.godaddy.comhttps://www.godaddy.com</a></li>
-<li>Sign in with the account that owns <strong>mindellrealtor.com</strong>.</li>
-<li>Click <strong>My Products</strong>.</li>
-<li>Look for <strong>Microsoft 365 / Email</strong> under the domain.</li>
-</ol>
+<div class="mx-box" id="mx">
+Priority 1 ASPMX.L.GOOGLE.COM
+Priority 5 ALT1.ASPMX.L.GOOGLE.COM
+Priority 5 ALT2.ASPMX.L.GOOGLE.COM
+Priority 10 ALT3.ASPMX.L.GOOGLE.COM
+Priority 10 ALT4.ASPMX.L.GOOGLE.COM
+</div>
+
+<button onclick="copyMX()">📋 Copy MX Records</button>
 
 <div class="note">
-Do not cancel anything yet — this is just to confirm what exists.
+Paste these into GoDaddy DNS → MX records
 </div>
 </section>
 
 <section>
-<h2>🧭 5. Step Two – Log in to Google Workspace</h2>
-
-<ol>
-<li>Go to https://admin.google.comhttps://admin.google.com</a></li>
-<li>Sign in as admin for <strong>mindellrealtor.com</strong>.</li>
-<li>Confirm the mailbox <strong>allan@mindellrealtor.com</strong> exists.</li>
-</ol>
-</section>
-
-<section>
-<h2>📌 6. Step Three – Update MX Records in GoDaddy</h2>
-
-<p>
-In GoDaddy, open DNS settings for <strong>mindellrealtor.com</strong> and update MX records to:
-</p>
-
+<h2>Final Step</h2>
 <ul>
-<li>Priority 1 – ASPMX.L.GOOGLE.COM</li>
-<li>Priority 5 – ALT1.ASPMX.L.GOOGLE.COM</li>
-<li>Priority 5 – ALT2.ASPMX.L.GOOGLE.COM</li>
-<li>Priority 10 – ALT3.ASPMX.L.GOOGLE.COM</li>
-<li>Priority 10 – ALT4.ASPMX.L.GOOGLE.COM</li>
-</ul>
-
-<div class="note">
-This tells the internet to deliver all new email to Google. Changes usually take under one hour.
-</div>
-</section>
-
-<section>
-<h2>🧭 7. Step Four – Connect Outlook to Google</h2>
-
-<ol>
-<li>Install Google Workspace Sync for Outlook.</li>
-<li>Remove the old Exchange profile.</li>
-<li>Sign in using <strong>allan@mindellrealtor.com</strong>.</li>
-</ol>
-</section>
-
-<section>
-<h2>✅ 8. Final Step – Cancel the GoDaddy Microsoft Email</h2>
-
-<ol>
-<li>Confirm Outlook is working normally.</li>
-<li>Confirm old emails are visible.</li>
-<li>Return to GoDaddy → <strong>My Products</strong>.</li>
-<li>Cancel the Microsoft email subscription.</li>
-</ol>
-
-<div class="note">
-Only cancel after everything is confirmed working.
-</div>
-</section>
-
-<section>
-<h2>🧘 Final Reassurance</h2>
-<ul>
-<li>One email address</li>
-<li>One email system</li>
-<li>One bill instead of two</li>
-<li>The same Outlook experience</li>
+<li>Confirm email works</li>
+<li>Cancel Microsoft email in GoDaddy</li>
 </ul>
 </section>
 
 <div class="footer">
-Email Cleanup Guide – mindellrealtor.com
+mindellrealtor.com setup guide
 </div>
+
+<script>
+function copyMX() {
+  const text = document.getElementById("mx").innerText;
+  navigator.clipboard.writeText(text);
+  alert("MX Records copied!");
+}
+</script>
 
 </body>
 </html>

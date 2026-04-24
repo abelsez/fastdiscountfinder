@@ -75,36 +75,69 @@ a {
 <body>
 
 <header>
-<h1>📧 Simple Email Fix Guide</h1>
+<h1>📧 Allan’s Email Fix Guide</h1>
 <p style="font-size:14px;">Follow slowly — nothing will break</p>
 </header>
 
 <section>
-<h2>Step 1: Open GoDaddy</h2>
+<h2>First — What Happened (Simple Explanation)</h2>
 
-<div class="step">1. Tap this link:
-<br><a href="https://www.godaddy.com" target="_blank">GoDaddy Login</a></div>
-
-<div class="step">2. Tap <b>Sign In</b> (top right)</div>
-
-<div class="step">3. Enter your email + password</div>
-
-<div class="step">4. After login, look for <b>"My Products"</b></div>
-
-<div class="note">
-If you don’t see "My Products", scroll or tap your profile icon.
+<div class="step">
+You did nothing wrong. This happens to many people.
 </div>
 
-<div class="step">5. Find anything that says:
-<br><b>Microsoft 365</b> or <b>Email</b></div>
+<div class="step">
+1. Your domain <b>mindellrealtor.com</b> was bought on GoDaddy
+</div>
+
+<div class="step">
+2. GoDaddy suggested setting up email → this created a Microsoft email account
+</div>
+
+<div class="step">
+3. Later, Google Workspace was also added
+</div>
+
+<div class="step">
+4. Now you have <b>two email systems for the same address</b>
+</div>
 
 <div class="note">
-Do NOT delete anything yet.
+That’s why you are paying twice and things feel confusing.
+</div>
+
+<div class="step">
+We are going to simplify everything so:
+<ul>
+<li>One email system (Google)</li>
+<li>Same email address</li>
+<li>Still use Outlook</li>
+</ul>
 </div>
 </section>
 
 <section>
-<h2>Step 2: Open Google Admin</h2>
+<h2>Step 1: Check GoDaddy (Do NOT change anything yet)</h2>
+
+<div class="step">1. Tap:
+<br><a href="https://www.godaddy.com" target="_blank">GoDaddy Login</a></div>
+
+<div class="step">2. Tap <b>Sign In</b></div>
+
+<div class="step">3. Enter your email + password</div>
+
+<div class="step">4. After login, find <b>My Products</b></div>
+
+<div class="step">5. Look for anything called:
+<br><b>Microsoft 365</b> or <b>Email</b></div>
+
+<div class="note">
+Just confirm it exists — do NOT delete it yet.
+</div>
+</section>
+
+<section>
+<h2>Step 2: Check Google (Make sure email exists)</h2>
 
 <div class="step">1. Tap:
 <br><a href="https://admin.google.com" target="_blank">Google Admin</a></div>
@@ -112,27 +145,27 @@ Do NOT delete anything yet.
 <div class="step">2. Sign in using:
 <br><b>allan@mindellrealtor.com</b></div>
 
-<div class="step">3. If login works, you’re good ✅</div>
+<div class="step">3. If you can log in → good ✅</div>
 
 <div class="note">
-If password fails, stop here and recover account first.
+If login fails, stop here and fix password first.
 </div>
 </section>
 
 <section>
-<h2>Step 3: Change Email Delivery (Important)</h2>
+<h2>Step 3: Change Where Email Goes (Important)</h2>
 
 <div class="step">1. Go back to GoDaddy</div>
 
-<div class="step">2. Find your domain:
+<div class="step">2. Find:
 <br><b>mindellrealtor.com</b></div>
 
 <div class="step">3. Tap <b>DNS</b> or <b>Manage DNS</b></div>
 
-<div class="step">4. Scroll down to <b>MX Records</b></div>
+<div class="step">4. Scroll to <b>MX Records</b></div>
 
 <div class="note">
-MX = where your email goes. We are pointing it to Google.
+MX records control where your email is delivered.
 </div>
 
 <div class="mx-box" id="mx">
@@ -145,12 +178,12 @@ Priority 10 ALT4.ASPMX.L.GOOGLE.COM
 
 <button onclick="copyMX()">📋 Copy MX Records</button>
 
-<div class="step">5. Delete old MX records (usually Microsoft ones)</div>
+<div class="step">5. Delete old MX records (Microsoft ones)</div>
 
-<div class="step">6. Add the Google ones above EXACTLY</div>
+<div class="step">6. Add the Google ones above exactly</div>
 
 <div class="note">
-Take your time. One mistake = email not working.
+Take your time. This is the most important step.
 </div>
 </section>
 
@@ -159,24 +192,24 @@ Take your time. One mistake = email not working.
 
 <div class="step">Wait 30–60 minutes</div>
 
-<div class="step">Then send a test email to yourself</div>
+<div class="step">Send a test email to yourself</div>
 
-<div class="step">Check if it arrives in Gmail</div>
+<div class="step">Check if it arrives</div>
 </section>
 
 <section>
 <h2>Step 5: Fix Outlook</h2>
 
-<div class="step">1. Open Outlook on your computer</div>
+<div class="step">1. Open Outlook</div>
 
 <div class="step">2. Remove the old account</div>
 
 <div class="step">3. Add account again</div>
 
-<div class="step">4. Login using your email</div>
+<div class="step">4. Sign in with your email</div>
 
 <div class="note">
-Outlook will now connect to Google automatically.
+Outlook will now connect to Google.
 </div>
 </section>
 
@@ -190,7 +223,7 @@ Outlook will now connect to Google automatically.
 <div class="step">3. Cancel it</div>
 
 <div class="note">
-ONLY cancel after confirming email works.
+Only cancel after confirming email works perfectly.
 </div>
 </section>
 

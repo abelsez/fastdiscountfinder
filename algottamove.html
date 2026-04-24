@@ -2,99 +2,116 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Google Workspace Migration Wizard</title>
+<title>📧 Email Migration Control Panel</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background:#f4f6f8;
+body{
   margin:0;
-  line-height:1.6;
+  font-family:Arial,sans-serif;
+  background:#f4f6f8;
+  color:#202124;
 }
 
-header {
-  background:#1a73e8;
+header{
+  background:linear-gradient(135deg,#1a73e8,#4285f4);
   color:white;
-  padding:18px;
+  padding:22px;
 }
 
-section {
+.container{
+  max-width:980px;
+  margin:auto;
+  padding:14px;
+}
+
+.card{
   background:white;
-  margin:14px;
+  margin:14px 0;
   padding:18px;
-  border-radius:10px;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  border-radius:14px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08);
 }
 
-h2 { color:#1a73e8; }
-
-.locked {
+.locked{
   opacity:0.4;
   pointer-events:none;
 }
 
-.step {
-  margin:10px 0;
-}
-
-.email {
-  font-weight:bold;
+h2{
   color:#1a73e8;
+  margin-top:0;
 }
 
-.explain {
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:12px;
+  color:white;
+  background:#1a73e8;
+  margin-bottom:8px;
+}
+
+.explain{
   background:#eef3ff;
   border-left:5px solid #1a73e8;
   padding:12px;
+  border-radius:8px;
   margin:10px 0;
 }
 
-.note {
+.note{
   background:#fff8e1;
-  border-left:5px solid #ffb300;
+  border-left:5px solid #fbbc04;
   padding:12px;
+  border-radius:8px;
 }
 
-.danger {
+.danger{
   background:#fdecea;
   border-left:5px solid #d93025;
   padding:12px;
+  border-radius:8px;
 }
 
-a.btn {
-  display:block;
-  padding:14px;
+.step{
   margin:10px 0;
+}
+
+a.btn{
+  display:block;
+  text-align:center;
+  padding:12px;
   background:#1a73e8;
   color:white;
-  text-align:center;
-  border-radius:8px;
   text-decoration:none;
+  border-radius:10px;
+  margin:10px 0;
   font-weight:bold;
 }
 
-.mx-box {
-  background:#111;
-  color:#0f0;
-  padding:12px;
-  border-radius:6px;
+.mx{
+  background:#0f172a;
+  color:#00ff88;
   font-family:monospace;
+  padding:12px;
+  border-radius:8px;
   font-size:13px;
 }
 
-button {
+button{
   width:100%;
-  padding:14px;
+  padding:12px;
   border:none;
-  border-radius:8px;
+  border-radius:10px;
   background:#1a73e8;
   color:white;
-  font-size:16px;
+  font-size:15px;
   margin-top:10px;
 }
 
-button:disabled {
+button:disabled{
   background:#ccc;
 }
 </style>
@@ -103,223 +120,229 @@ button:disabled {
 <body>
 
 <header>
-<h1>📧 Email Migration Wizard</h1>
-<p>Target mailbox: <span class="email">allan@mindellrealtor.com</span></p>
+<h1>📧 Email Migration Control Panel</h1>
+<p>Primary: <b>allan@mindellrealtor.com</b></p>
+<p><b>Rule:</b> Email must NEVER stop during migration</p>
 </header>
 
-<section>
-<h2>🧠 System Overview</h2>
-
-<div class="explain">
-You are moving <span class="email">allan@mindellrealtor.com</span> into Google Workspace.
-Outlook will remain only as a viewing interface after migration.
-</div>
-</section>
+<div class="container">
 
 <!-- STEP 1 -->
-<section>
-<h2>STEP 1 — Confirm Google Workspace Access</h2>
+<div class="card">
+<span class="badge">STEP 1</span>
+<h2>🔐 Find Google Admin Access</h2>
 
 <div class="explain">
-This confirms Google is ready to host <span class="email">allan@mindellrealtor.com</span>.
+Admin login may NOT be the company email. It could be:
+• Company email  
+• Personal Gmail  
+• Or unknown (recovery needed)
 </div>
 
-<a class="btn" href="https://admin.google.com" target="_blank">
-Open Google Admin Console
-</a>
+<a class="btn" href="https://admin.google.com" target="_blank">Try Company Email Login</a>
 
 <div class="step">
-<input type="checkbox" id="s1"> I can log into Google Admin for allan@mindellrealtor.com
+<input type="checkbox" id="s1a"> Company login worked
+</div>
+
+<a class="btn" href="https://admin.google.com" target="_blank">Try Personal Gmail Login</a>
+
+<div class="step">
+<input type="checkbox" id="s1b"> Personal Gmail worked
+</div>
+
+<a class="btn" href="https://accounts.google.com/signin/v2/usernamerecovery" target="_blank">Recover Admin by Domain</a>
+
+<div class="step">
+<input type="checkbox" id="s1c"> Admin recovered
 </div>
 
 <button onclick="unlock(1)">Continue</button>
-</section>
+
+<div class="danger">
+Do NOT continue until Google Admin access is confirmed.
+</div>
+</div>
 
 <!-- STEP 2 -->
-<section id="step2" class="locked">
-<h2>STEP 2 — Migrate Emails from Microsoft</h2>
+<div id="step2" class="card locked">
+<span class="badge">STEP 2</span>
+<h2>📥 Email Migration (Microsoft → Google)</h2>
 
 <div class="explain">
-This copies all existing emails from Microsoft (Outlook system) into Google.
-No data is deleted.
+Copies all Outlook emails into Google Workspace. No data loss.
 </div>
 
 <div class="step">Google Admin → Data → Migration</div>
 <div class="step">Source: Microsoft Exchange</div>
-<div class="step">Enter: <span class="email">allan@mindellrealtor.com</span></div>
-<div class="step">Start migration</div>
+<div class="step"><b>allan@mindellrealtor.com</b></div>
 
 <div class="step">
-<input type="checkbox" id="s2"> Migration has started
+<input type="checkbox" id="s2"> Migration started
 </div>
 
 <button onclick="unlock(2)">Continue</button>
 
 <div class="note">
-Wait until emails appear in Gmail before proceeding.
+If Microsoft login fails → use fallback mode below.
 </div>
-</section>
+</div>
+
+<!-- FALLBACK -->
+<div class="card">
+<span class="badge">FALLBACK</span>
+<h2>🟡 Emergency Email Continuity</h2>
+
+<div class="explain">
+If migration fails, email continues using forwarding system.
+</div>
+
+<a class="btn" href="https://mail.google.com" target="_blank">Open Backup Gmail</a>
+<a class="btn" href="https://outlook.office.com" target="_blank">Open Outlook Web</a>
+
+<div class="step">
+Enable Outlook → Gmail forwarding if needed
+</div>
+
+<div class="note">
+Prevents ANY email downtime.
+</div>
+</div>
 
 <!-- STEP 3 -->
-<section id="step3" class="locked">
-<h2>STEP 3 — Verify Gmail Data</h2>
+<div id="step3" class="card locked">
+<span class="badge">STEP 3</span>
+<h2>📬 Verify Gmail Migration</h2>
 
-<a class="btn" href="https://mail.google.com" target="_blank">
-Open Gmail
-</a>
-
-<div class="step">
-Check inbox for <span class="email">allan@mindellrealtor.com</span>
-</div>
+<a class="btn" href="https://mail.google.com" target="_blank">Open Gmail</a>
 
 <div class="step">
-<input type="checkbox" id="s3"> All old emails are visible in Gmail
+<input type="checkbox" id="s3"> Emails visible in Gmail
 </div>
 
 <button onclick="unlock(3)">Continue</button>
-</section>
-
-<!-- STEP 4 -->
-<section id="step4" class="locked">
-<h2>STEP 4 — Switch Email Routing (MX Records)</h2>
-
-<a class="btn" href="https://www.godaddy.com" target="_blank">
-Open GoDaddy DNS
-</a>
-
-<div class="explain">
-This directs all new emails for <span class="email">allan@mindellrealtor.com</span> into Google.
 </div>
 
-<div class="mx-box">
-ASPMX.L.GOOGLE.COM
-ALT1.ASPMX.L.GOOGLE.COM
-ALT2.ASPMX.L.GOOGLE.COM
-ALT3.ASPMX.L.GOOGLE.COM
-ALT4.ASPMX.L.GOOGLE.COM
+<!-- STEP 4 -->
+<div id="step4" class="card locked">
+<span class="badge">STEP 4</span>
+<h2>🌐 MX Records (Google Routing)</h2>
+
+<a class="btn" href="https://www.godaddy.com" target="_blank">Open GoDaddy DNS</a>
+
+<div class="mx">
+ASPMX.L.GOOGLE.COM  
+ALT1.ASPMX.L.GOOGLE.COM  
+ALT2.ASPMX.L.GOOGLE.COM  
+ALT3.ASPMX.L.GOOGLE.COM  
+ALT4.ASPMX.L.GOOGLE.COM  
 </div>
 
 <div class="step">
-<input type="checkbox" id="s4"> MX records updated in GoDaddy
+<input type="checkbox" id="s4"> MX updated
 </div>
 
 <button onclick="unlock(4)">Continue</button>
-</section>
+
+<div class="danger">
+Do NOT change MX unless Gmail migration is confirmed.
+</div>
+</div>
 
 <!-- STEP 5 -->
-<section id="step5" class="locked">
-<h2>STEP 5 — Outlook Setup (Google Interface Mode)</h2>
+<div id="step5" class="card locked">
+<span class="badge">STEP 5</span>
+<h2>🖥 Outlook = Google Interface</h2>
 
-<a class="btn" href="https://tools.google.com/dlpage/gssmo" target="_blank">
-Download Google Workspace Sync
-</a>
+<a class="btn" href="https://tools.google.com/dlpage/gssmo" target="_blank">Install Sync Tool</a>
 
 <div class="explain">
-Outlook will no longer use Microsoft. It will display Google mail for <span class="email">allan@mindellrealtor.com</span>.
+Outlook becomes a viewer for Google mail only.
 </div>
 
 <div class="step">
-Install → sign in with Google account → open Outlook
-</div>
-
-<div class="step">
-<input type="checkbox" id="s5"> Outlook shows Google mailbox
+<input type="checkbox" id="s5"> Outlook shows Google mail
 </div>
 
 <button onclick="unlock(5)">Continue</button>
-</section>
-
-<!-- STEP 6 -->
-<section id="step6" class="locked">
-<h2>STEP 6 — Billing Check (GoDaddy vs Microsoft)</h2>
-
-<div class="explain">
-Confirm who is billing Microsoft 365 for <span class="email">allan@mindellrealtor.com</span>.
 </div>
 
-<a class="btn" href="https://www.godaddy.com" target="_blank">
-Check GoDaddy Billing
-</a>
+<!-- STEP 6 -->
+<div id="step6" class="card locked">
+<span class="badge">STEP 6</span>
+<h2>💳 Billing Check (IMPORTANT)</h2>
 
-<a class="btn" href="https://admin.microsoft.com" target="_blank">
-Check Microsoft Billing
-</a>
+<a class="btn" href="https://www.godaddy.com" target="_blank">GoDaddy Billing</a>
+<a class="btn" href="https://admin.microsoft.com" target="_blank">Microsoft Billing</a>
 
-<div class="note">
-If GoDaddy is billing → they are reseller.  
-If Microsoft is billing → direct subscription.
+<div class="explain">
+Find who is actually charging email services.
 </div>
 
 <div class="step">
-<input type="checkbox" id="s6"> Billing source confirmed
+<input type="checkbox" id="s6a"> GoDaddy bills Microsoft 365
+</div>
+
+<div class="step">
+<input type="checkbox" id="s6b"> Microsoft bills directly
+</div>
+
+<div class="step">
+<input type="checkbox" id="s6c"> Not sure yet (safe mode)
+</div>
+
+<div class="note">
+✔ GoDaddy billing → cancel there AFTER migration  
+✔ Microsoft billing → cancel AFTER MX switch  
+✔ Not sure → do nothing
 </div>
 
 <button onclick="unlock(6)">Continue</button>
-</section>
+</div>
 
-<!-- STEP 7 -->
-<section id="step7" class="locked">
-<h2>STEP 7 — Safe Cancellation (Optional)</h2>
+<!-- FINAL -->
+<div id="step7" class="card locked">
+<span class="badge">FINAL</span>
+<h2>🎉 Migration Complete</h2>
 
-<div class="danger">
-ONLY cancel if:
-✔ Migration is complete  
-✔ Gmail contains all emails  
-✔ Outlook is working with Google  
+<div class="step">✔ Google Workspace active</div>
+<div class="step">✔ Outlook = interface only</div>
+<div class="step">✔ Email continuity preserved</div>
+<div class="step">✔ Billing verified</div>
+
+<div class="note">
+System is stable and safe.
 </div>
 
 <div class="step">
-If GoDaddy is reseller → cancel Microsoft 365 inside GoDaddy
-</div>
-
-<div class="step">
-If Microsoft is direct → no action required
-</div>
-
-<div class="step">
-<input type="checkbox" id="s7"> I understand cancellation rules
+<input type="checkbox" id="s7"> I confirm completion
 </div>
 
 <button onclick="unlock(7)">Finish</button>
-</section>
-
-<!-- FINAL -->
-<section id="final" class="locked">
-<h2>🎉 FINAL STATE</h2>
-
-<div class="step">✔ <span class="email">allan@mindellrealtor.com</span> is now hosted in Google Workspace</div>
-<div class="step">✔ Outlook is only a viewing interface</div>
-<div class="step">✔ No email loss or downtime</div>
-<div class="step">✔ Billing verified and safe</div>
-
-<div class="note">
-Migration complete and stable system achieved.
 </div>
-</section>
+
+</div>
 
 <script>
-function unlock(step) {
+function unlock(step){
 
-  if(step === 1 && document.getElementById('s1').checked)
-    document.getElementById('step2').classList.remove('locked');
+if(step===1 && (s1a.checked||s1b.checked||s1c.checked))
+document.getElementById("step2").classList.remove("locked");
 
-  if(step === 2 && document.getElementById('s2').checked)
-    document.getElementById('step3').classList.remove('locked');
+if(step===2 && s2.checked)
+document.getElementById("step3").classList.remove("locked");
 
-  if(step === 3 && document.getElementById('s3').checked)
-    document.getElementById('step4').classList.remove('locked');
+if(step===3 && s3.checked)
+document.getElementById("step4").classList.remove("locked");
 
-  if(step === 4 && document.getElementById('s4').checked)
-    document.getElementById('step5').classList.remove('locked');
+if(step===4 && s4.checked)
+document.getElementById("step5").classList.remove("locked");
 
-  if(step === 5 && document.getElementById('s5').checked)
-    document.getElementById('step6').classList.remove('locked');
+if(step===5 && s5.checked)
+document.getElementById("step6").classList.remove("locked");
 
-  if(step === 6 && document.getElementById('s6').checked)
-    document.getElementById('step7').classList.remove('locked');
-
-  if(step === 7 && document.getElementById('s7').checked)
-    document.getElementById('final').classList.remove('locked');
+if(step===6 && (s6a.checked||s6b.checked||s6c.checked))
+document.getElementById("step7").classList.remove("locked");
 }
 </script>
 

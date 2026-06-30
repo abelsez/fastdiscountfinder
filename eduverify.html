@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== META TAGS – SEO & TRUST ========== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Verification – Get Verified on SheerID, ID.me & More | studentverify.online</title>
+    <meta name="description" content="Need student verification for discounts? We help you get verified on SheerID, ID.me, UNiDAYS, and more – no .edu required. Fast, simple, and reliable." />
+    <meta name="keywords" content="student verification, SheerID, ID.me, UNiDAYS, student discounts, get verified, edu email" />
+    <meta name="author" content="StudentVerify" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Student Verification – Get Verified on SheerID, ID.me & More" />
+    <meta property="og:description" content="We help students get verified for discounts on Spotify, Amazon, Apple, and hundreds more. No .edu required. Fast and reliable." />
+    <meta property="og:url" content="https://studentverify.online" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="StudentVerify" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Student Verification – Get Verified on SheerID, ID.me & More" />
+    <meta name="twitter:description" content="We help students get verified for discounts on Spotify, Amazon, Apple, and hundreds more. No .edu required. Fast and reliable." />
+    <link rel="canonical" href="https://studentverify.online" />
+    <meta name="theme-color" content="#2563eb" />
+
+    <style>
+        /* --- Reset & Base --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f4f6fc;
+            color: #1a1a2e;
+            line-height: 1.6;
+            padding: 1.5rem 1rem;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.07);
+            padding: 2.5rem 2rem;
+        }
+        h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.25rem; }
+        h2 { font-size: 1.8rem; font-weight: 600; margin-top: 2.8rem; margin-bottom: 1rem; }
+        h3 { font-size: 1.3rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; color: #2d2d44; }
+        a { color: #2563eb; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+
+        .hero { text-align: center; padding: 0.5rem 0; }
+        .hero .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.3rem 1.5rem;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+        .hero h1 span { color: #2563eb; }
+        .hero .sub { font-size: 1.2rem; color: #4b4b6b; max-width: 640px; margin: 0 auto 0.75rem; }
+        .hero .platform-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1rem;
+            margin: 0.5rem 0 0.25rem;
+        }
+        .hero .platform-badges span {
+            background: #eef2f9;
+            padding: 0.15rem 1rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .timer-wrap {
+            background: #1a1a2e;
+            color: #fff;
+            border-radius: 60px;
+            padding: 0.6rem 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 0.5rem auto 0.5rem;
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .timer-wrap .label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: #a5b4fc; }
+        .timer-wrap .time {
+            display: flex;
+            gap: 0.25rem;
+            font-size: 1.6rem;
+            font-variant-numeric: tabular-nums;
+        }
+        .timer-wrap .time span {
+            background: #2d2d4a;
+            padding: 0.1rem 0.4rem;
+            border-radius: 8px;
+            min-width: 2.4rem;
+            text-align: center;
+        }
+        .timer-wrap .time .sep { background: transparent; padding: 0 0.1rem; color: #a5b4fc; }
+        .timer-wrap .expiry-note { font-size: 0.75rem; color: #a5b4fc; font-weight: 400; }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .service-card {
+            background: #f8faff;
+            border-radius: 24px;
+            padding: 1.5rem 1.2rem;
+            border: 2px solid #eef2f9;
+            transition: 0.2s;
+            text-align: center;
+        }
+        .service-card:hover { border-color: #2563eb; box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08); }
+        .service-card .price { font-size: 2.2rem; font-weight: 700; color: #2563eb; margin: 0.5rem 0; }
+        .service-card .price small { font-size: 1rem; font-weight: 400; color: #4b4b6b; }
+        .service-card .badge-service {
+            background: #2563eb;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0.15rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .service-card ul { text-align: left; padding-left: 1.2rem; font-size: 0.95rem; margin: 0.5rem 0 0; }
+        .service-card ul li { margin-bottom: 0.3rem; color: #2d2d44; }
+        .service-card .cta-small {
+            display: inline-block;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 0.4rem 2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 0.8rem;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .service-card .cta-small:hover { background: #2563eb; transform: scale(1.02); }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .payment-card {
+            background: #f8faff;
+            border-radius: 20px;
+            padding: 1.2rem 1.2rem 1rem;
+            border: 1px solid #eef2f9;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .payment-card:hover { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08); }
+        .payment-card .method-icon { font-size: 1.8rem; display: block; margin-bottom: 0.2rem; }
+        .payment-card h4 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .payment-card p { font-size: 0.9rem; margin-bottom: 0.3rem; color: #3d3d5c; }
+        .payment-card .pay-detail {
+            background: #fff;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            border: 1px dashed #cdd9ed;
+            font-size: 0.85rem;
+            word-break: break-all;
+            margin: 0.3rem 0;
+            font-weight: 500;
+        }
+        .payment-card .pay-link {
+            display: inline-block;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            text-align: center;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .payment-card .pay-link:hover { background: #2563eb; transform: scale(1.02); }
+        .payment-card .crypto-address {
+            background: #1e1e2f;
+            color: #e0e0ff;
+            padding: 0.3rem 0.7rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.7rem;
+            word-break: break-all;
+            display: inline-block;
+            max-width: 100%;
+            margin-top: 0.2rem;
+        }
+        .payment-card .g2a-row {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-top: 0.4rem;
+        }
+        .payment-card .g2a-row .g2a-btn {
+            background: #f7931a;
+            color: #fff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            text-align: center;
+        }
+        .payment-card .g2a-row .g2a-btn:hover { background: #e07c0a; transform: scale(1.02); }
+        .payment-card .kofi-btn {
+            background: #13c3a1;
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.4rem;
+            box-shadow: 0 2px 8px rgba(19, 195, 161, 0.3);
+        }
+        .payment-card .kofi-btn:hover { background: #0fa88a; transform: scale(1.02); }
+
+        .nowpayments-btn {
+            background: #0d8c73;
+            color: #fff;
+            padding: 0.6rem 2rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0.4rem;
+            box-shadow: 0 2px 8px rgba(13, 140, 115, 0.3);
+        }
+        .nowpayments-btn:hover { background: #0a6f5c; transform: scale(1.02); }
+
+        .sendwave-steps { margin: 0.5rem 0 0 0; padding-left: 1.2rem; font-size: 0.9rem; }
+        .sendwave-steps li { margin-bottom: 0.2rem; color: #2d2d44; }
+        .sendwave-steps li strong { color: #1a1a2e; }
+
+        .testimonials {
+            background: #f0f4ff;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .testimonials blockquote {
+            font-style: italic;
+            color: #1a1a2e;
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            border-left: 3px solid #2563eb;
+            padding-left: 1rem;
+        }
+        .testimonials blockquote footer { font-style: normal; font-weight: 600; color: #4b4b6b; margin-top: 0.2rem; }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+        .platform-card {
+            background: #f8faff;
+            border-radius: 16px;
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border: 1px solid #eef2f9;
+            transition: 0.2s;
+        }
+        .platform-card:hover { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.06); }
+        .platform-card .platform-icon { font-size: 1.6rem; display: block; margin-bottom: 0.1rem; }
+        .platform-card strong { display: block; font-size: 0.95rem; }
+        .platform-card small { font-size: 0.75rem; color: #6b6b8a; }
+
+        .brand-list-wrap {
+            background: #f8faff;
+            border-radius: 20px;
+            padding: 0.5rem 1.2rem 1.2rem;
+            margin: 1rem 0 1.5rem;
+        }
+        .brand-list-wrap details { cursor: pointer; }
+        .brand-list-wrap summary { font-weight: 600; padding: 0.75rem 0; color: #1a1a2e; }
+        .brand-list-wrap summary:hover { color: #2563eb; }
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 0.2rem 0.8rem;
+            max-height: 320px;
+            overflow-y: auto;
+            padding: 0.5rem 0.2rem 0.2rem;
+            font-size: 0.9rem;
+        }
+        .brand-grid span { display: block; padding: 0.15rem 0; border-bottom: 1px solid #eef2f9; }
+
+        .faq { margin: 2rem 0 1rem; }
+        .faq details {
+            background: #f8faff;
+            border-radius: 14px;
+            padding: 0.5rem 1.2rem;
+            margin-bottom: 0.6rem;
+            transition: 0.2s;
+        }
+        .faq details:hover { background: #eef4ff; }
+        .faq summary { font-weight: 600; padding: 0.5rem 0; cursor: pointer; color: #1a1a2e; }
+        .faq summary:hover { color: #2563eb; }
+        .faq details p { padding: 0 0 0.5rem 0; margin: 0; color: #2d2d44; }
+
+        .cta-box {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 2rem 2rem 1.8rem;
+            border-radius: 28px;
+            margin: 2.5rem 0 1rem;
+            text-align: center;
+        }
+        .cta-box h2 { color: #fff; margin-top: 0; font-size: 1.8rem; }
+        .cta-box p { color: #d0d0ea; font-size: 1.1rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .cta-box .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem 1.5rem;
+            margin: 0.5rem 0 0.25rem;
+        }
+        .cta-box .contact-row a { color: #a5b4fc; font-weight: 600; font-size: 1.1rem; }
+        .cta-box .contact-row a:hover { color: #fff; text-decoration: none; }
+        .cta-box .guarantee { font-size: 0.9rem; color: #a5b4fc; margin-top: 0.75rem; }
+
+        footer { text-align: center; margin-top: 2.5rem; font-size: 0.85rem; color: #6b6b8a; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; }
+        .footnote { font-size: 0.8rem; color: #6b6b8a; text-align: center; margin-top: 1.5rem; }
+
+        /* --- Modal Styles --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(6px);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+        .modal-overlay.active { display: flex; }
+        .modal-box {
+            background: #ffffff;
+            border-radius: 28px;
+            max-width: 520px;
+            width: 100%;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            position: relative;
+            text-align: center;
+        }
+        .modal-box .close-modal {
+            position: absolute;
+            top: 14px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #6b6b8a;
+            line-height: 1;
+            transition: 0.2s;
+        }
+        .modal-box .close-modal:hover { color: #1a1a2e; transform: rotate(90deg); }
+        .modal-box .modal-icon { font-size: 3.6rem; margin-bottom: 0.2rem; }
+        .modal-box h3 { font-size: 1.5rem; margin-top: 0.2rem; margin-bottom: 0.5rem; }
+        .modal-box .badge-alt {
+            background: #f7931a20;
+            color: #b45a0a;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            border: 1px solid #f7931a40;
+        }
+        .modal-box p { text-align: left; font-size: 0.95rem; margin-bottom: 0.6rem; }
+        .modal-box .highlight-box {
+            background: #f8faff;
+            border-radius: 14px;
+            padding: 0.8rem 1.2rem;
+            margin: 0.8rem 0;
+            border-left: 4px solid #13c3a1;
+            text-align: left;
+        }
+        .modal-box .highlight-box strong { color: #1a1a2e; }
+        .modal-box .modal-actions {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: center;
+            margin-top: 1.4rem;
+            flex-wrap: wrap;
+        }
+        .modal-box .modal-actions .btn-primary {
+            background: #13c3a1;
+            color: #fff;
+            padding: 0.7rem 2.4rem;
+            border-radius: 60px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            font-size: 1rem;
+            box-shadow: 0 4px 16px rgba(19, 195, 161, 0.3);
+        }
+        .modal-box .modal-actions .btn-primary:hover { background: #0fa88a; transform: scale(1.03); }
+        .modal-box .modal-actions .btn-secondary {
+            background: #eef2f9;
+            color: #1a1a2e;
+            padding: 0.7rem 2rem;
+            border-radius: 60px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .modal-box .modal-actions .btn-secondary:hover { background: #dbe0ea; }
+        .modal-box .footnote-modal { font-size: 0.8rem; color: #6b6b8a; margin-top: 1rem; text-align: center; }
+
+        .np-toggle-group {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0.5rem 0 0.2rem;
+        }
+        .np-toggle-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #fff;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            border: 2px solid #d0e6e0;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        .np-toggle-group label:hover { border-color: #0d8c73; }
+        .np-toggle-group input[type="radio"] {
+            accent-color: #0d8c73;
+            width: 1rem;
+            height: 1rem;
+            cursor: pointer;
+        }
+        .np-toggle-group input[type="radio"]:checked + span {
+            font-weight: 700;
+            color: #0d8c73;
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+            .service-grid { grid-template-columns: 1fr; }
+            .payment-grid { grid-template-columns: 1fr; }
+            .timer-wrap { padding: 0.5rem 1rem; gap: 0.4rem; }
+            .timer-wrap .time { font-size: 1.2rem; }
+            .cta-box { padding: 1.5rem 1rem; }
+            .brand-grid { grid-template-columns: 1fr 1fr; }
+            .platform-grid { grid-template-columns: 1fr 1fr; }
+            .modal-box { padding: 1.8rem 1.2rem; }
+            .np-toggle-group label { padding: 0.3rem 0.8rem; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+        <span class="badge">✅ June 2026 – Service Active</span>
+        <h1>Get Verified on <span>Every</span> Student Platform</h1>
+        <p class="sub">SheerID, ID.me, UNiDAYS, Student Beans, VerifyPass – we get you verified on all of them. No .edu required for the premium service.</p>
+        <div class="platform-badges">
+            <span>SheerID</span><span>ID.me</span><span>UNiDAYS</span>
+            <span>Student Beans</span><span>VerifyPass</span><span>Clearinghouse</span>
+        </div>
+        <div class="timer-wrap" id="timerWrap">
+            <span class="label">⏳ Special pricing ends</span>
+            <span class="time" id="timerDisplay">
+                <span id="timerHours">00</span><span class="sep">:</span>
+                <span id="timerMinutes">00</span><span class="sep">:</span>
+                <span id="timerSeconds">00</span>
+            </span>
+            <span class="expiry-note">(midnight tonight)</span>
+        </div>
+        <p style="font-weight:700; font-size:1.2rem; color:#2563eb; margin:0.2rem 0 0.2rem;">
+            Choose your service – both are one‑time payments, no subscription.
+        </p>
+    </div>
+
+    <!-- SERVICE SELECTION -->
+    <div class="service-grid">
+        <div class="service-card" style="border-color: #2563eb;">
+            <span class="badge-service">🔥 Most Popular</span>
+            <h3 style="margin-top:0;">Premium Verification</h3>
+            <p style="font-size:0.95rem;">Get verified on SheerID, ID.me, VerifyPass, Clearinghouse &amp; more using any email (Gmail, Outlook, etc.)</p>
+            <div class="price">$50 <small>USD</small></div>
+            <ul>
+                <li>Works with <strong>any</strong> standard email – no .edu needed</li>
+                <li>Passes advanced verification (SheerID, ID.me, VerifyPass)</li>
+                <li>Instant access to Spotify, YouTube Premium, Apple, Amazon, and 200+ more</li>
+                <li>Lifetime access – no renewal fees</li>
+            </ul>
+            <a href="#payment" class="cta-small">Choose This</a>
+        </div>
+        <div class="service-card">
+            <span class="badge-service">📧 Basic</span>
+            <h3 style="margin-top:0;">.Edu Email Handle</h3>
+            <p style="font-size:0.95rem;">Get a brand‑new, unique .edu email address – works on UNiDAYS, Student Beans, and .edu‑only discount sites.</p>
+            <div class="price">$37 <small>USD</small></div>
+            <ul>
+                <li>Brand‑new, never shared .edu address</li>
+                <li>Works on Amazon Prime, Canva, JetBrains, Dell, and more</li>
+                <li>Accessible like any regular email</li>
+                <li>Perfect if you just need a .edu handle for UNiDAYS or Student Beans</li>
+            </ul>
+            <a href="#payment" class="cta-small">Choose This</a>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div style="background:#f0f4ff; border-left:4px solid #2563eb; padding:1.2rem 1.5rem; border-radius:16px; margin:0 0 1.5rem;">
+        <p style="margin-bottom:0.3rem;"><strong>How we get you verified:</strong> We use a combination of verification methods – including document upload, digital data matching, and email verification – to get you past every platform's checks using your own email. No .edu required for the premium service.</p>
+    </div>
+
+    <!-- PLATFORMS -->
+    <h2>🔐 Verified on all major platforms</h2>
+    <p style="color:#4b4b6b;">We get you through the verification process on every major student discount platform – so you can start saving immediately.</p>
+    <div class="platform-grid">
+        <div class="platform-card"><span class="platform-icon">🛡️</span><strong>SheerID</strong><small>Used by Spotify, Amazon, Groupon</small></div>
+        <div class="platform-card"><span class="platform-icon">✅</span><strong>ID.me</strong><small>Trusted by Apple, LinkedIn, Verizon</small></div>
+        <div class="platform-card"><span class="platform-icon">🎓</span><strong>UNiDAYS</strong><small>Hundreds of fashion &amp; tech brands</small></div>
+        <div class="platform-card"><span class="platform-icon">🫘</span><strong>Student Beans</strong><small>Aggregates student deals</small></div>
+        <div class="platform-card"><span class="platform-icon">🔍</span><strong>VerifyPass</strong><small>Documents, email &amp; digital data</small></div>
+        <div class="platform-card"><span class="platform-icon">📋</span><strong>Clearinghouse</strong><small>National Student Clearinghouse</small></div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="testimonials">
+        <h3 style="margin-top:0;">⭐ What our customers say</h3>
+        <blockquote>"Hey, I just bought two academic vouchers for CompTIA A+ testing, and the email totally worked! I got a 50% discount on it. I cannot thank you enough. You just saved me over $200 bucks. Seriously, bless you." <footer>— Walker</footer></blockquote>
+        <blockquote>"Perfect! Item was exactly as described and worked like a charm!!" <footer>— Benji</footer></blockquote>
+        <blockquote>"Arrived as promised with excellent documentation; worked as described… and with bonus, almost paid for itself. Recommend… and Thank you!" <footer>— Tom</footer></blockquote>
+        <blockquote>"Great thus far!" <footer>— King</footer></blockquote>
+    </div>
+
+    <!-- PAYMENT METHODS -->
+    <h2 id="payment">💳 How to pay – choose your method</h2>
+    <p style="color:#4b4b6b;">All payments are one‑time. Select the service you want and send the correct amount.</p>
+
+    <div class="payment-grid">
+
+        <!-- Sendwave (Recommended) -->
+        <div class="payment-card" style="grid-column: 1 / -1; background: #eef4ff; border-color: #2563eb;">
+            <span class="method-icon">📲</span>
+            <h4>Sendwave (Recommended – No Holds)</h4>
+            <p><strong>Why Sendwave?</strong> No 21‑day holds, instant delivery, and flexible payment options. Follow these steps:</p>
+            <ol class="sendwave-steps">
+                <li><strong>Download the app</strong> – Get Sendwave from the <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank">App Store</a> or <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank">Google Play</a>.</li>
+                <li><strong>Sign up</strong> – Verify your phone number.</li>
+                <li><strong>Set destination</strong> – Choose <strong>Kenya</strong> as the country.</li>
+                <li><strong>Select payment method</strong> – Pick <strong>M‑PESA</strong> as the delivery method.</li>
+                <li><strong>Enter recipient</strong> – Full name: <strong>Abel Ochieng</strong> &amp; Mobile: <strong>722 869 570</strong>.</li>
+                <li><strong>Send the correct amount</strong> – <strong>$50</strong> for Premium, or <strong>$37</strong> for .Edu.</li>
+            </ol>
+            <div style="margin-top: 0.2rem;">
+                <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" class="pay-link" style="background: #2563eb;">Download Sendwave</a>
+            </div>
+        </div>
+
+        <!-- Ko-fi (PayPal) -->
+        <div class="payment-card" style="grid-column: 1 / -1; background: #f0faf7; border-color: #13c3a1;">
+            <span class="method-icon">☕</span>
+            <h4>PayPal via Ko-fi (Seamless)</h4>
+            <p><strong>Why Ko-fi?</strong> Ko-fi acts as a merchant, so you can pay with PayPal even if direct buttons fail. It's fast, secure, and hassle‑free.</p>
+            <div style="background:#fff; padding:0.6rem 1rem; border-radius:12px; margin:0.4rem 0; border:1px solid #d0e6e0;">
+                <p style="margin:0; font-weight:600;">💰 Pricing on Ko-fi:</p>
+                <p style="margin:0; font-size:0.9rem;">
+                    <strong>$37</strong> for .Edu Email (default) – you can <strong>increase the amount</strong> to <strong>$50</strong> for Premium Verification.
+                    <span style="display:block; font-weight:400; color:#4b6b6b; font-size:0.85rem;">Just adjust the amount on the Ko-fi page.</span>
+                </p>
+            </div>
+            <button onclick="openKofiModal()" class="kofi-btn" style="font-size:1rem; padding:0.6rem 2rem; background:#13c3a1; box-shadow:0 4px 16px rgba(19,195,161,0.4);">
+                ☕ Pay with Ko-fi
+            </button>
+            <p style="font-size:0.8rem; margin-top:0.4rem;">Ko-fi takes a small fee – we handle the difference.</p>
+            <p style="font-size:0.8rem; margin-top:0.2rem; color:#b45a0a; font-weight:500;">
+                ⚡ If you have trouble with PayPal, use the G2A gift card option below as an alternative.
+            </p>
+        </div>
+
+        <!-- NOWPayments with Toggle -->
+        <div class="payment-card" style="grid-column: 1 / -1; background: #e6f7f2; border-color: #0d8c73;">
+            <span class="method-icon">₿</span>
+            <h4>Pay with Crypto (NOWPayments)</h4>
+            <p>Pay with Bitcoin, Ethereum, USDT, and <strong>100+ other cryptocurrencies</strong> – instant checkout, no account needed.</p>
+
+            <div class="np-toggle-group">
+                <label>
+                    <input type="radio" name="npService" value="37" checked onchange="updateNowPayments()">
+                    <span>.Edu Email – $37</span>
+                </label>
+                <label>
+                    <input type="radio" name="npService" value="50" onchange="updateNowPayments()">
+                    <span>Premium Verification – $50</span>
+                </label>
+            </div>
+
+            <a id="nowpaymentsBtn" href="https://nowpayments.io/payment/?iid=5785713700&source=button" target="_blank" class="nowpayments-btn" style="display:inline-block; margin-top:0.6rem; padding:0.6rem 2rem; background:#0d8c73; color:#fff; border-radius:40px; font-weight:700; text-decoration:none; box-shadow:0 2px 8px rgba(13,140,115,0.3);">
+                🚀 Pay with Crypto
+            </a>
+            <p style="font-size:0.8rem; margin-top:0.4rem;">Simply send the correct amount in your preferred crypto.</p>
+        </div>
+
+        <!-- Direct Crypto (Manual addresses) -->
+        <div class="payment-card">
+            <span class="method-icon">🔗</span>
+            <h4>Direct Crypto Transfer</h4>
+            <p>For advanced users – send the equivalent of your service price directly to:</p>
+            <span class="crypto-address">BTC: 148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</span><br />
+            <span class="crypto-address">ETH: 0xb1f4f70928095b593564a3cf7809b75550cda9a5</span><br />
+            <span class="crypto-address">SOL: 0xb1f4f70928095b593564a3cf7809b75550cda9a5</span>
+            <p style="font-size:0.75rem; margin-top:0.4rem;">⚠️ Double‑check the address before sending.</p>
+        </div>
+
+        <!-- Skrill -->
+        <div class="payment-card">
+            <span class="method-icon">💳</span>
+            <h4>Skrill</h4>
+            <p>Send the equivalent of your service price to:</p>
+            <div class="pay-detail">jmaclive101@gmail.com</div>
+            <a href="https://skrill.com" target="_blank" class="pay-link">Visit Skrill</a>
+        </div>
+
+        <!-- G2A (Alternative for PayPal issues) -->
+        <div class="payment-card" style="grid-column: 1 / -1; background: #fff8ec; border-color: #f7931a;">
+            <span class="method-icon">🎁</span>
+            <h4>Alternative: G2A Gift Card</h4>
+            <p style="font-weight:500; color:#b45a0a;">
+                ⚡ Use this if you're having trouble with PayPal on Ko-fi.
+            </p>
+            <p>Pay with PayPal or credit card on G2A to buy a Binance BTC gift card. Send us the code and we'll activate your service.</p>
+            <div class="g2a-row">
+                <span style="font-weight:600; font-size:0.9rem;">For .Edu Email ($37)</span>
+                <button class="g2a-btn" onclick="openG2AModal('edu')">Buy $30 BTC Gift Card</button>
+                <span style="font-size:0.75rem; color:#6b6b8a;">Seller fees apply – we cover the difference.</span>
+            </div>
+            <div class="g2a-row" style="margin-top:0.6rem; border-top:1px dashed #cdd9ed; padding-top:0.6rem;">
+                <span style="font-weight:600; font-size:0.9rem;">For Premium Verification ($50)</span>
+                <button class="g2a-btn" onclick="openG2AModal('premium')">Buy $40 BTC Gift Card</button>
+                <span style="font-size:0.75rem; color:#6b6b8a;">Seller fees apply – we cover the difference.</span>
+            </div>
+            <p style="font-size:0.8rem; margin-top:0.5rem;">After purchase, email the gift card code to <strong>jmaclive101@gmail.com</strong>.</p>
+        </div>
+    </div>
+
+    <!-- SUPPORTED BRANDS -->
+    <div class="brand-list-wrap">
+        <details>
+            <summary><strong>✅ See the full list of supported discounts (200+)</strong></summary>
+            <div class="brand-grid">
+                <span>Ikon Pass</span><span>Adobe Creative Cloud</span><span>Amazon Prime</span>
+                <span>Spotify Premium</span><span>YouTube Premium</span><span>Apple Music</span>
+                <span>NFL Sunday Ticket</span><span>Ad Age</span><span>Adorama</span>
+                <span>Alibaba Cloud</span><span>Alo Moves</span><span>Alpha Industries</span>
+                <span>Alteryx</span><span>American Giant</span><span>Ancestry</span>
+                <span>Ariat</span><span>ASICS</span><span>AT&T</span><span>Autodesk</span>
+                <span>Aveda</span><span>Back Market</span><span>Bass Pro Shops</span>
+                <span>Beaches Resorts</span><span>Birdies</span><span>Boden</span>
+                <span>Bonobos</span><span>Calm</span><span>Canva Pro</span><span>Capture One</span>
+                <span>Champs Sports</span><span>Charles & Colvard</span><span>CheapCaribbean</span>
+                <span>Codecademy</span><span>Converse</span><span>Copper Mountain Resort</span>
+                <span>CorePower Yoga</span><span>Crocs</span><span>DC Shoes</span><span>Dell</span>
+                <span>Dickies</span><span>Discovery</span><span>Dockers</span><span>Doordash</span>
+                <span>DreamCloud</span><span>Dunlop Sports</span><span>Eargo</span><span>Eastbay</span>
+                <span>edX</span><span>Encyclopaedia Britannica</span><span>Evenflo</span>
+                <span>Final Draft</span><span>Flexispot</span><span>Foot Locker</span>
+                <span>Fox News Media</span><span>Gainful Health</span><span>GelPro</span>
+                <span>Gerber Gear</span><span>Give'r</span><span>GolfPass</span><span>Groupon</span>
+                <span>Grown Brilliance</span><span>Happiest Baby</span><span>Headspace</span>
+                <span>Helly Hansen</span><span>Helzberg Diamonds</span><span>Holland America Line</span>
+                <span>Holt’s Cigar</span><span>Huel</span><span>Hulu</span><span>Intuit</span>
+                <span>J.Crew</span><span>JanSport</span><span>JetBrains</span><span>Karen Kane</span>
+                <span>Kids Foot Locker</span><span>Kipling</span><span>KitchenAid</span>
+                <span>L.L.Bean</span><span>Leatherman</span><span>Levi’s</span><span>LinkedIn</span>
+                <span>LiTime</span><span>Lovehoney</span><span>Lovesac</span><span>Lufthansa</span>
+                <span>Lumion</span><span>M·A·C Cosmetics</span><span>Mack Weldon</span>
+                <span>Madewell</span><span>MarketWatch</span><span>Marshall Headphones</span>
+                <span>Maxi-Cosi</span><span>Maytag</span><span>MDR Legal</span><span>Michaels</span>
+                <span>Microsoft (Office & Windows)</span><span>Military Tee Times</span>
+                <span>Modern Healthcare</span><span>Molekule</span><span>Monarch Mountain</span>
+                <span>Morningstar, Inc.</span><span>Musician’s Friend</span><span>Naturesage</span>
+                <span>NBA</span><span>Nectar</span><span>Nike</span><span>Nine27 Athletics</span>
+                <span>Origins</span><span>OUI the People</span><span>Pandora</span><span>Peacock</span>
+                <span>Peloton</span><span>Pensacola News Journal</span><span>Perfectly Clear</span>
+                <span>PODS</span><span>Princess Cruises</span><span>Puffy</span><span>Purple</span>
+                <span>Pvolve</span><span>Quiksilver</span><span>Red Kap</span><span>Reolink</span>
+                <span>Rollick</span><span>Rothys</span><span>Roxy</span><span>RVCA</span>
+                <span>Safety 1st</span><span>Salomon</span><span>Sandals Resorts</span><span>Seed</span>
+                <span>Shooter’s Pro Shop</span><span>Simple</span><span>Singapore Airlines</span>
+                <span>SiriusXM</span><span>Sleep Number</span><span>SoundCloud</span>
+                <span>Spec Ops Tools</span><span>STAHLS'</span><span>Sticker Mule</span>
+                <span>StudentUniverse</span><span>SurveyMonkey</span><span>T-Mobile</span>
+                <span>Tableau</span><span>Targus</span><span>The Arizona Republic</span>
+                <span>The Courier-Journal</span><span>The Economist</span><span>The North Face</span>
+                <span>The Oklahoman</span><span>The Sculpt Society</span><span>The Times</span>
+                <span>The Wall Street Journal</span><span>The Washington Post</span><span>Thule</span>
+                <span>TIDAL</span><span>Too Faced</span><span>UGG</span><span>Unity Technologies</span>
+                <span>USA Today</span><span>USCellular</span><span>Vectorworks</span>
+                <span>vineyard vines</span><span>Vivaia</span><span>Whirlpool</span><span>Willow</span>
+                <span>WM</span><span>Xfinity</span><span>… and many more</span>
+            </div>
+            <p style="font-size:0.85rem; margin-top:0.5rem; color:#4b4b6b;">
+                <a href="mailto:jmaclive101@gmail.com">Inbox us</a> if you want a specific one tested.
+            </p>
+        </details>
+    </div>
+
+    <!-- FAQ -->
+    <h2>❓ Frequently Asked Questions</h2>
+    <div class="faq">
+        <details><summary>What student verification platforms do you work with?</summary><p>We get you verified on <strong>SheerID</strong>, <strong>ID.me</strong>, <strong>UNiDAYS</strong>, <strong>Student Beans</strong>, <strong>VerifyPass</strong>, and the National Student Clearinghouse.</p></details>
+        <details><summary>Are these Edu emails valid with Amazon Student Prime?</summary><p>We guarantee they work flawlessly on Amazon. 80% of our customers use it for this purpose. Two‑day shipping works for the US; Prime video/music work globally.</p></details>
+        <details><summary>Should I open a new Amazon Prime account or add it to my old one?</summary><p>We recommend creating a new Amazon account for the best experience.</p></details>
+        <details><summary>Are there any sites these emails do not work on?</summary><p>Anything that requires <strong>SheerID</strong> or <strong>ID.me</strong> (Spotify, YouTube Premium, Apple Music). For those, you need our <strong>Premium Verification</strong> service.</p></details>
+        <details><summary>Can I always access this email? Do I need to change my IP?</summary><p>Yes, access it like any other email. No VPN required.</p></details>
+        <details><summary>What is the domain of these emails? Which college?</summary><p>Various top US colleges – the exact domain will be shared upon delivery.</p></details>
+        <details><summary>Can I use this email for Google Apps for Education?</summary><p>Yeah, sure.</p></details>
+        <details><summary>This sounds too good to be true…</summary><p>We've been doing this for years. We use trusted payment methods (Ko-fi, Skrill) because we're confident in our service.</p></details>
+        <details><summary>Do you do college ID cards?</summary><p>No – only digital verification and email services.</p></details>
+        <details><summary>What about the TOS?</summary><p>By purchasing, you agree you have read this page, you will not dispute without contacting us first, and our emails work on the sites listed. We resolve any issues promptly.</p></details>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="cta-box">
+        <h2>Ready to start saving thousands?</h2>
+        <p>Send your payment, then reach out with your <strong>full name(s)</strong> and the <strong>email</strong> you want verified (or the .edu address you need). We'll deliver within hours.</p>
+        <div class="contact-row">
+            <a href="mailto:jmaclive101@gmail.com">📧 jmaclive101@gmail.com</a>
+            <a href="tel:+13477667259">📞 +1 (347) 766‑7259</a>
+        </div>
+        <div class="guarantee">✅ Under 24h turnaround • Usually 2 hours • Full refund if we miss the deadline</div>
+    </div>
+
+    <p class="footnote">No third‑party holds • Direct payment • Both services are one‑time, lifetime access</p>
+    <footer>
+        <p>© 2026 StudentVerify – Helping students save smarter.</p>
+    </footer>
+
+</div>
+
+<!-- MODAL: Ko-fi -->
+<div class="modal-overlay" id="kofiModal">
+    <div class="modal-box">
+        <button class="close-modal" onclick="closeKofiModal()">&times;</button>
+        <div class="modal-icon">☕</div>
+        <h3>Pay with PayPal via Ko-fi</h3>
+        <span class="badge-alt">🔒 Secure Checkout</span>
+        <div class="highlight-box">
+            <p style="margin-bottom:0.2rem;"><strong>How it works:</strong></p>
+            <p style="margin-bottom:0;">You'll be redirected to Ko-fi to complete your payment using <strong>PayPal</strong> (or credit card). Ko-fi handles the merchant processing, so it works even if direct PayPal buttons fail.</p>
+        </div>
+        <p style="text-align:center; font-weight:600; margin:0.4rem 0 0.2rem;">
+            Default amount is <strong>$37</strong> – increase to <strong>$50</strong> for Premium Verification.
+        </p>
+        <p style="font-size:0.9rem; text-align:center; color:#4b4b6b;">
+            Ko-fi takes a small fee – <strong>we cover it</strong> on our end.
+        </p>
+        <div class="modal-actions">
+            <a href="https://ko-fi.com/s/dddd0b4e8f" target="_blank" class="btn-primary">☕ Pay with Ko-fi</a>
+            <button class="btn-secondary" onclick="closeKofiModal()">Cancel</button>
+        </div>
+        <p class="footnote-modal">Opens in a new tab. Complete your purchase, then close the tab and return here.</p>
+        <p style="font-size:0.8rem; margin-top:0.8rem; color:#b45a0a; font-weight:500;">
+            ⚡ If PayPal gives you trouble, use the <strong>G2A gift card</strong> option on this page instead.
+        </p>
+    </div>
+</div>
+
+<!-- MODAL: G2A -->
+<div class="modal-overlay" id="g2aModal">
+    <div class="modal-box">
+        <button class="close-modal" onclick="closeG2AModal()">&times;</button>
+        <div class="modal-icon">🎁</div>
+        <h3>Pay via G2A – PayPal Alternative</h3>
+        <span class="badge-alt">⚡ Backup for PayPal issues</span>
+        <div class="highlight-box">
+            <p style="margin-bottom:0.2rem;"><strong>Why use G2A?</strong></p>
+            <p style="margin-bottom:0;">If you're having trouble with PayPal on Ko-fi, you can use PayPal (or credit card) on G2A to buy a Binance gift card. Send us the code and we'll activate your service.</p>
+        </div>
+        <p style="text-align:center; font-weight:600; margin:0.4rem 0 0.2rem;">
+            You are about to purchase a <strong id="g2aAmount">$30</strong> Binance BTC gift card.
+        </p>
+        <p style="font-size:0.9rem; text-align:center; color:#4b4b6b;">
+            Seller fees apply – <strong>we cover the extra cost</strong>.
+        </p>
+        <div class="modal-actions">
+            <a href="#" id="g2aProceedBtn" target="_blank" class="btn-primary" style="background:#f7931a; box-shadow:0 4px 16px rgba(247,147,26,0.3);">▶ Proceed to G2A</a>
+            <button class="btn-secondary" onclick="closeG2AModal()">Cancel</button>
+        </div>
+        <p class="footnote-modal">Opens in a new tab. After purchase, email the gift card code to <strong>jmaclive101@gmail.com</strong>.</p>
+    </div>
+</div>
+
+<script>
+    // --- Timer ---
+    (function() {
+        const now = new Date();
+        const target = new Date(now);
+        target.setHours(24, 0, 0, 0);
+        if (target <= now) target.setDate(target.getDate() + 1);
+        const h = document.getElementById('timerHours'), m = document.getElementById('timerMinutes'), s = document.getElementById('timerSeconds');
+        function pad(n) { return String(n).padStart(2, '0'); }
+        function updateTimer() {
+            let diff = target - new Date();
+            if (diff <= 0) { h.textContent='00'; m.textContent='00'; s.textContent='00'; return; }
+            const hrs = Math.floor(diff/3600000), mins = Math.floor((diff%3600000)/60000), secs = Math.floor((diff%60000)/1000);
+            h.textContent = pad(hrs); m.textContent = pad(mins); s.textContent = pad(secs);
+        }
+        updateTimer(); setInterval(updateTimer, 1000);
+    })();
+
+    // --- Ko-fi Modal ---
+    const kofiModal = document.getElementById('kofiModal');
+    function openKofiModal() {
+        kofiModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeKofiModal() {
+        kofiModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    kofiModal.addEventListener('click', function(e) {
+        if (e.target === kofiModal) closeKofiModal();
+    });
+
+    // --- G2A Modal ---
+    const g2aModal = document.getElementById('g2aModal');
+    const g2aAmount = document.getElementById('g2aAmount');
+    const g2aProceedBtn = document.getElementById('g2aProceedBtn');
+
+    function openG2AModal(service) {
+        let amount, link;
+        if (service === 'edu') { amount = '$30'; link = 'https://www.g2a.com/binance-gift-card-btc-30-usd-key-i10000301475076?suid=06cec4ef-3bd6-450e-ac4b-b90e0388388b'; }
+        else if (service === 'premium') { amount = '$40'; link = 'https://www.g2a.com/binance-gift-card-btc-40-usd-key-i10000301475075'; }
+        else return;
+        g2aAmount.textContent = amount;
+        g2aProceedBtn.href = link;
+        g2aModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeG2AModal() {
+        g2aModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    g2aModal.addEventListener('click', function(e) {
+        if (e.target === g2aModal) closeG2AModal();
+    });
+
+    // --- NOWPayments toggle ---
+    function updateNowPayments() {
+        const selected = document.querySelector('input[name="npService"]:checked');
+        const btn = document.getElementById('nowpaymentsBtn');
+        if (selected.value === '37') {
+            btn.href = 'https://nowpayments.io/payment/?iid=5785713700&source=button';
+        } else {
+            btn.href = 'https://nowpayments.io/payment/?iid=4997429310&source=button';
+        }
+    }
+
+    // Close modals on Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (kofiModal.classList.contains('active')) closeKofiModal();
+            if (g2aModal.classList.contains('active')) closeG2AModal();
+        }
+    });
+</script>
+
+</body>
+</html>

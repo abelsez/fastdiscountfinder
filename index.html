@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fast Discount Finder — Live Student Discounts</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f4f7fc; color: #0d1b2a; padding: 1.5rem; min-height: 100vh; display: flex; justify-content: center; }
+    .container { max-width: 1400px; width: 100%; }
+    .header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-bottom: 2rem; gap: 1rem; }
+    .logo { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.5rem; }
+    .logo span { background: linear-gradient(135deg, #1a6cff, #0044cc); color: #fff; font-size: 0.8rem; font-weight: 600; padding: 0.2rem 0.8rem; border-radius: 40px; }
+    .btn-verify { background: #1a6cff; color: #fff; padding: 0.6rem 1.6rem; border-radius: 40px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 12px rgba(26,108,255,0.25); transition: background 0.2s; }
+    .btn-verify:hover { background: #0044cc; }
+    .stats { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; background: #fff; padding: 1rem 1.8rem; border-radius: 60px; border: 1px solid #e2e8f0; }
+    .stat-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 500; color: #2d3748; }
+    .stat-item strong { color: #0d1b2a; font-weight: 700; }
+    .stat-item .badge { background: #eef3ff; color: #1a6cff; padding: 0.1rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+    .search-box { background: #fff; border-radius: 60px; padding: 0.2rem 0.2rem 0.2rem 2rem; display: flex; align-items: center; border: 1px solid #e2e8f0; margin-bottom: 2rem; }
+    .search-box input { flex: 1; border: none; outline: none; font-size: 1.05rem; padding: 1rem 0; background: transparent; font-family: inherit; }
+    .search-box button { background: #1a6cff; border: none; color: #fff; font-weight: 600; padding: 0.8rem 2.2rem; border-radius: 40px; cursor: pointer; font-size: 1rem; }
+    .search-box button:hover { background: #0044cc; }
+    .categories { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+    .category-tag { background: #fff; border: 1px solid #e2e8f0; padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.85rem; font-weight: 500; color: #2d3748; cursor: pointer; }
+    .category-tag:hover { border-color: #1a6cff; color: #1a6cff; }
+    .category-tag.active { background: #1a6cff; color: #fff; border-color: #1a6cff; }
+    .results-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.5rem; }
+    .results-header h2 { font-size: 1.2rem; font-weight: 600; }
+    .results-header .count-badge { font-size: 0.85rem; color: #6a7a9a; background: #f0f2f6; padding: 0.2rem 1rem; border-radius: 20px; }
+    .discount-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; margin-bottom: 2.5rem; }
+    .discount-card { background: #fff; border-radius: 16px; padding: 1.2rem; border: 1px solid #eef2f6; transition: all 0.2s; display: flex; flex-direction: column; }
+    .discount-card:hover { border-color: #d0dcff; box-shadow: 0 8px 24px rgba(0,0,0,0.04); transform: translateY(-2px); }
+    .discount-card .brand { font-weight: 700; font-size: 1.1rem; color: #0d1b2a; }
+    .discount-card .offer { font-size: 0.95rem; color: #2d3748; margin: 0.3rem 0 0.6rem; flex: 1; }
+    .discount-card .meta { display: flex; justify-content: space-between; align-items: center; padding-top: 0.7rem; border-top: 1px solid #f0f2f6; font-size: 0.75rem; color: #6a7a9a; }
+    .discount-card .source-tag { background: #f4f6fa; padding: 0.15rem 0.7rem; border-radius: 12px; font-weight: 500; }
+    .discount-card .category-tag-small { background: #eef3ff; color: #1a6cff; padding: 0.15rem 0.7rem; border-radius: 12px; font-size: 0.7rem; font-weight: 600; }
+    .upgrade-banner { background: linear-gradient(135deg, #0d1b2a, #1b3a5c); border-radius: 20px; padding: 1.8rem 2.5rem; color: #fff; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .upgrade-banner .text h3 { font-size: 1.3rem; font-weight: 700; }
+    .upgrade-banner .text p { font-size: 0.95rem; color: #b0c8ff; max-width: 600px; }
+    .upgrade-banner .btn-verify-large { background: #ffcc00; color: #0d1b2a; padding: 0.8rem 2.2rem; border-radius: 40px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 16px rgba(255,204,0,0.3); transition: 0.2s; }
+    .upgrade-banner .btn-verify-large:hover { background: #ffd633; transform: scale(1.02); }
+    .footer { text-align: center; font-size: 0.8rem; color: #8a9ab0; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; margin-top: 1rem; }
+    .last-updated { font-size: 0.75rem; color: #8a9ab0; margin-top: 0.5rem; }
+    @media (max-width: 640px) { body { padding: 1rem; } .header { flex-direction: column; align-items: stretch; gap: 0.8rem; } .stats { padding: 0.8rem 1.2rem; border-radius: 30px; flex-wrap: wrap; } .search-box { padding-left: 1rem; border-radius: 30px; } .search-box input { font-size: 0.95rem; padding: 0.8rem 0; } .search-box button { padding: 0.6rem 1.4rem; font-size: 0.9rem; } .upgrade-banner { padding: 1.2rem 1.5rem; flex-direction: column; text-align: center; } .upgrade-banner .btn-verify-large { width: 100%; text-align: center; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="logo">🔍 FastDiscountFinder <span>LIVE</span></div>
+    <a href="/eduverify.html" class="btn-verify">🎓 Get Verified &amp; Unlock All</a>
+  </header>
+
+  <div class="stats" id="stats">
+    <div class="stat-item"><strong id="totalCount">0</strong> discounts found</div>
+    <div class="stat-item"><strong id="brandCount">0</strong> brands</div>
+    <div class="stat-item"><span class="badge">Student Beans</span> <span id="sbCount">0</span></div>
+    <div class="stat-item"><span class="badge">UNiDAYS</span> <span id="udCount">0</span></div>
+    <div class="stat-item"><span class="badge">SheerID</span> <span id="siCount">0</span></div>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search brands, offers, categories..." />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <div class="categories" id="categoryContainer">
+    <span class="category-tag active" data-cat="all">All</span>
+    <span class="category-tag" data-cat="Fashion">Fashion</span>
+    <span class="category-tag" data-cat="Tech">Tech</span>
+    <span class="category-tag" data-cat="Food &amp; Drink">Food &amp; Drink</span>
+    <span class="category-tag" data-cat="Travel">Travel</span>
+    <span class="category-tag" data-cat="Software">Software</span>
+    <span class="category-tag" data-cat="Health &amp; Fitness">Health &amp; Fitness</span>
+    <span class="category-tag" data-cat="Entertainment">Entertainment</span>
+    <span class="category-tag" data-cat="Education">Education</span>
+    <span class="category-tag" data-cat="Shopping">Shopping</span>
+  </div>
+
+  <div class="results-header">
+    <h2>🔥 Live Discounts</h2>
+    <span class="count-badge" id="resultCount">0 results</span>
+  </div>
+  <div class="discount-grid" id="discountGrid"></div>
+  <div id="lastUpdated" class="last-updated"></div>
+
+  <div class="upgrade-banner">
+    <div class="text">
+      <h3>🎓 Want all these discounts in one click?</h3>
+      <p>Most offers require verification via SheerID, UNiDAYS, or Student Beans. We verify you instantly — and give you a custom .edu email so you never get rejected again.</p>
+    </div>
+    <a href="/eduverify.html" class="btn-verify-large">⚡ Unlock Everything</a>
+  </div>
+
+  <div class="footer">&copy; 2026 FastDiscountFinder — Live student discounts, updated daily.</div>
+</div>
+
+<script>
+  const DISCOUNTS_URL = window.location.origin + '/discounts.json';
+  let currentCategory = 'all';
+  let currentSearch = '';
+
+  async function fetchDiscounts() {
+    try {
+      const resp = await fetch(DISCOUNTS_URL + '?_=' + Date.now());
+      if (!resp.ok) throw new Error('Failed to fetch');
+      const data = await resp.json();
+      render(data);
+    } catch (e) {
+      document.getElementById('discountGrid').innerHTML = '<p style="text-align:center;padding:2rem;color:#6a7a9a;">Unable to load discounts. Please refresh later.</p>';
+    }
+  }
+
+  function render(discounts) {
+    const total = discounts.length;
+    const brands = new Set(discounts.map(d => d.brand));
+    const sb = discounts.filter(d => d.source === 'Student Beans').length;
+    const ud = discounts.filter(d => d.source === 'UNiDAYS').length;
+    const si = discounts.filter(d => d.source === 'SheerID').length;
+    document.getElementById('totalCount').textContent = total;
+    document.getElementById('brandCount').textContent = brands.size;
+    document.getElementById('sbCount').textContent = sb;
+    document.getElementById('udCount').textContent = ud;
+    document.getElementById('siCount').textContent = si;
+
+    let filtered = discounts;
+    if (currentCategory !== 'all') filtered = filtered.filter(d => d.category === currentCategory);
+    if (currentSearch.trim()) {
+      const q = currentSearch.toLowerCase().trim();
+      filtered = filtered.filter(d => d.brand.toLowerCase().includes(q) || d.offer.toLowerCase().includes(q) || d.category.toLowerCase().includes(q) || d.source.toLowerCase().includes(q));
+    }
+    document.getElementById('resultCount').textContent = filtered.length + ' results';
+    const grid = document.getElementById('discountGrid');
+    if (!filtered.length) { grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:2rem;color:#6a7a9a;">No discounts match your search.</p>'; return; }
+    grid.innerHTML = filtered.map(d => `
+      <div class="discount-card">
+        <div class="brand">${d.brand}</div>
+        <div class="offer">${d.offer}</div>
+        <div class="meta"><span class="source-tag">${d.source}</span><span class="category-tag-small">${d.category}</span></div>
+      </div>
+    `).join('');
+  }
+
+  document.getElementById('searchInput').addEventListener('input', e => { currentSearch = e.target.value; fetchDiscounts(); });
+  document.getElementById('searchBtn').addEventListener('click', () => { currentSearch = document.getElementById('searchInput').value; fetchDiscounts(); });
+  document.querySelectorAll('.category-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
+      tag.classList.add('active');
+      currentCategory = tag.dataset.cat;
+      fetchDiscounts();
+    });
+  });
+  fetchDiscounts();
+</script>
+</body>
+</html>

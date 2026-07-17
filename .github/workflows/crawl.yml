@@ -1,0 +1,29 @@
+name: Auto-Crawl Discounts
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+      - name: Run crawler
+        run: python crawler.py
+      - name: Commit updated discounts.json
+        run: |
+          git config --local user.name "github-actions"
+          git config --local user.email "actions@github.com"
+          git add discounts.json last_updated.txt
+          git diff --staged --quiet || git commit -m "Auto-update discounts [skip ci]"
+          git push

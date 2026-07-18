@@ -1,35 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ─── CHARSET & VIEWPORT ─── -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ─── PRIMARY META ─── -->
     <title>Fast Discount Finder — Live Student Discounts Search Engine</title>
-    <meta name="description" content="Search thousands of verified student discounts from Student Beans, UNiDAYS &amp; SheerID. Updated live. Find discounts for Nike, Spotify, Apple, and 200+ brands." />
-    <meta name="keywords" content="student discounts, student beans, unidays, sheerid, student deals, edu email, student savings, discount search" />
+    <meta name="description" content="Search thousands of verified student discounts from Student Beans, UNiDAYS &amp; SheerID. Updated live." />
     <link rel="canonical" href="https://fastdiscountfinder.com/" />
-
-    <!-- ─── OPEN GRAPH (Social Sharing) ─── -->
     <meta property="og:title" content="Fast Discount Finder — Live Student Discounts Search Engine" />
     <meta property="og:description" content="Search thousands of verified student discounts from Student Beans, UNiDAYS &amp; SheerID. Updated live." />
     <meta property="og:url" content="https://fastdiscountfinder.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://fastdiscountfinder.com/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!-- ─── TWITTER CARD ─── -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Fast Discount Finder — Live Student Discounts" />
     <meta name="twitter:description" content="Search thousands of verified student discounts. Updated live." />
-    <meta name="twitter:image" content="https://fastdiscountfinder.com/og-image.png" />
-
-    <!-- ─── FAVICON ─── -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
-
-    <!-- ─── JSON‑LD STRUCTURED DATA ─── -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -44,9 +29,7 @@
         }
     }
     </script>
-
     <style>
-        /* ─── Same beautiful styles from before ─── */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif; background: #f6f9fc; color: #0a1a2e; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
         .container { width: 100%; max-width: 1280px; padding: 1.5rem 1.2rem; }
@@ -58,10 +41,15 @@
         .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.6rem; }
         .hero h1 .highlight { background: linear-gradient(135deg, #ffcc00, #ff8800); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .hero p { font-size: 1.1rem; color: #c0d8f0; max-width: 600px; margin: 0 auto 1.8rem; opacity: 0.9; }
-        .hero .stats-mini { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; font-size: 0.95rem; color: #a0c0e0; }
+        .hero .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
+        .hero .btn-primary { background: #ffcc00; color: #0a1a2e; padding: 0.9rem 2.5rem; border-radius: 60px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 24px rgba(255, 204, 0, 0.3); transition: all 0.2s; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .hero .btn-primary:hover { background: #ffd633; transform: scale(1.02); box-shadow: 0 12px 32px rgba(255, 204, 0, 0.4); }
+        .hero .btn-secondary { background: rgba(255,255,255,0.15); color: #fff; padding: 0.9rem 2.5rem; border-radius: 60px; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); transition: all 0.2s; font-size: 1.1rem; }
+        .hero .btn-secondary:hover { background: rgba(255,255,255,0.25); transform: scale(1.02); }
+        .hero .stats-mini { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; font-size: 0.95rem; color: #a0c0e0; margin-top: 1.5rem; }
         .hero .stats-mini span { display: flex; align-items: center; gap: 0.3rem; }
         .hero .stats-mini strong { color: #fff; font-weight: 700; font-size: 1.2rem; }
-        .search-wrapper { margin-top: 2rem; width: 100%; max-width: 640px; }
+        .search-wrapper { margin-top: 1.5rem; width: 100%; max-width: 640px; }
         .search-box { display: flex; align-items: center; background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border-radius: 60px; padding: 0.2rem 0.2rem 0.2rem 1.8rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
         .search-box:focus-within { background: rgba(255,255,255,0.2); border-color: #ffcc00; box-shadow: 0 8px 48px rgba(255,204,0,0.15); }
         .search-box input { flex: 1; border: none; outline: none; background: transparent; color: #fff; font-size: 1.1rem; padding: 1rem 0; font-family: inherit; }
@@ -95,7 +83,7 @@
         .upgrade-banner .btn-verify-large:hover { background: #ffd633; transform: scale(1.03); box-shadow: 0 12px 32px rgba(255,204,0,0.4); }
         .footer { text-align: center; font-size: 0.8rem; color: #8a9ab0; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; margin-top: 1rem; }
         .last-updated { font-size: 0.75rem; color: #8a9ab0; margin-top: 0.5rem; text-align: center; }
-        @media (max-width: 640px) { .hero { padding: 2rem 1.2rem; border-radius: 20px; } .hero h1 { font-size: 1.8rem; } .search-box { padding-left: 1.2rem; flex-wrap: nowrap; } .search-box input { font-size: 0.95rem; padding: 0.8rem 0; } .search-box button { padding: 0.6rem 1.2rem; font-size: 0.9rem; } .stats-bar { padding: 0.6rem 1.2rem; border-radius: 30px; gap: 0.8rem; flex-wrap: wrap; justify-content: center; } .upgrade-banner { padding: 1.5rem; flex-direction: column; text-align: center; } .upgrade-banner .btn-verify-large { width: 100%; text-align: center; } .discount-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 640px) { .hero { padding: 2rem 1.2rem; border-radius: 20px; } .hero h1 { font-size: 1.8rem; } .search-box { padding-left: 1.2rem; flex-wrap: nowrap; } .search-box input { font-size: 0.95rem; padding: 0.8rem 0; } .search-box button { padding: 0.6rem 1.2rem; font-size: 0.9rem; } .stats-bar { padding: 0.6rem 1.2rem; border-radius: 30px; gap: 0.8rem; flex-wrap: wrap; justify-content: center; } .upgrade-banner { padding: 1.5rem; flex-direction: column; text-align: center; } .upgrade-banner .btn-verify-large { width: 100%; text-align: center; } .discount-grid { grid-template-columns: 1fr; } .hero .btn-primary, .hero .btn-secondary { width: 100%; text-align: center; justify-content: center; } }
     </style>
 </head>
 <body>
@@ -111,6 +99,11 @@
                 in One Place
             </h1>
             <p>Search thousands of verified offers from Student Beans, UNiDAYS &amp; SheerID — all updated live.</p>
+
+            <div class="cta-row">
+                <a href="/eduverify.html" class="btn-primary">🎓 Get Verified &amp; Unlock All</a>
+                <a href="#discounts" class="btn-secondary">Browse Discounts ↓</a>
+            </div>
 
             <div class="search-wrapper" role="search">
                 <div class="search-box">
@@ -136,6 +129,15 @@
         <div class="stat-item"><span class="badge">SheerID</span> <span class="num" id="siCount">0</span></div>
     </section>
 
+    <!-- ─── PROMINENT UPGRADE BANNER (Moved up) ─── -->
+    <aside class="upgrade-banner" aria-label="Unlock all discounts">
+        <div class="text">
+            <h3>🎓 Want all these discounts in one click?</h3>
+            <p>Most offers require verification via SheerID, UNiDAYS, or Student Beans. We verify you instantly — and give you a custom .edu email so you never get rejected again.</p>
+        </div>
+        <a href="/eduverify.html" class="btn-verify-large">⚡ Unlock Everything</a>
+    </aside>
+
     <!-- ─── CATEGORIES ─── -->
     <nav class="categories" id="categoryContainer" aria-label="Filter by category">
         <span class="category-tag active" data-cat="all">All</span>
@@ -151,22 +153,13 @@
     </nav>
 
     <!-- ─── RESULTS ─── -->
-    <section class="results-header">
+    <section class="results-header" id="discounts">
         <h2>🔥 Live Discounts</h2>
         <span class="count-badge" id="resultCount">0 results</span>
     </section>
 
     <div class="discount-grid" id="discountGrid" aria-live="polite"></div>
     <div id="lastUpdated" class="last-updated"></div>
-
-    <!-- ─── UPGRADE BANNER (Conversion) ─── -->
-    <aside class="upgrade-banner" aria-label="Unlock all discounts">
-        <div class="text">
-            <h3>🎓 Want all these discounts in one click?</h3>
-            <p>Most offers require verification via SheerID, UNiDAYS, or Student Beans. We verify you instantly — and give you a custom .edu email so you never get rejected again.</p>
-        </div>
-        <a href="/eduverify.html" class="btn-verify-large">⚡ Unlock Everything</a>
-    </aside>
 
     <footer class="footer">&copy; 2026 FastDiscountFinder — Live student discounts, updated daily.</footer>
 </div>

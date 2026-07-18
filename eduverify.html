@@ -359,12 +359,16 @@
         <div class="toggle-group" role="radiogroup" aria-label="Select payment amount">
             <button class="toggle-btn active" role="radio" aria-checked="true" data-amount="50" id="btn50">
                 $50
-                <span class="badge-label">Recommended</span>
+                <span class="badge-label">✅ Full Support</span>
             </button>
             <button class="toggle-btn" role="radio" aria-checked="false" data-amount="37" id="btn37">
                 $37
-                <span class="badge-label">🔥 Save $13</span>
+                <span class="badge-label">📧 .edu Only</span>
             </button>
+        </div>
+
+        <div style="text-align:center;font-size:13px;color:#6a7a9a;margin:-8px 0 8px;">
+            <span id="planDesc">$50 includes .edu email + SheerID/Student Clearinghouse verification support</span>
         </div>
 
         <!-- ─── PAYMENT METHODS ─── -->
@@ -404,7 +408,8 @@
                 <strong>2.</strong> Send the gift card code to:<br />
                 📧 <a href="mailto:sheeredudeals@gmail.com">sheeredudeals@gmail.com</a> or<br />
                 📱 WhatsApp <a href="https://wa.me/13477667259" target="_blank">+1 (347) 766‑7259</a><br />
-                <strong>3.</strong> We'll verify your account within minutes!
+                <strong>3.</strong> We'll verify your account within minutes!<br />
+                <span style="font-size:13px;color:#6a7a9a;">(Please state whether you want the $37 .edu‑only or $50 full support plan.)</span>
             </div>
         </div>
 
@@ -446,6 +451,7 @@
             const priceDisplay = document.getElementById('priceDisplay');
             const priceOriginal = document.getElementById('priceOriginal');
             const priceNote = document.getElementById('priceNote');
+            const planDesc = document.getElementById('planDesc');
             const paymentNow = document.getElementById('paymentNowPayments');
 
             const BASE_URL = 'https://nowpayments.io/payment/?iid=4997429310&source=button';
@@ -455,10 +461,12 @@
                 priceDisplay.textContent = '$' + amount;
                 if (amount === 37) {
                     priceOriginal.style.display = 'inline';
-                    priceNote.textContent = '🔥 Sale price — originally $67';
+                    priceNote.textContent = '🔥 .edu email only — originally $67';
+                    planDesc.textContent = '$37 includes .edu email only (no verification support).';
                 } else {
                     priceOriginal.style.display = 'inline';
                     priceNote.textContent = 'One‑time payment · Lifetime savings';
+                    planDesc.textContent = '$50 includes .edu email + SheerID/Student Clearinghouse verification support.';
                 }
                 btn50.setAttribute('aria-checked', amount === 50);
                 btn37.setAttribute('aria-checked', amount === 37);

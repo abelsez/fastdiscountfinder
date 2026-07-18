@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fast Discount Finder — Live Student Discounts Search Engine</title>
-    <meta name="description" content="Search thousands of verified student discounts from Student Beans, UNiDAYS &amp; SheerID. Updated live." />
+    <title>Fast Discount Finder — Student Deals, Savings & Verification</title>
+    <meta name="description" content="Search 200+ verified student discounts from UNiDAYS, Student Beans, and SheerID. Save on fashion, tech, travel, and more. Get verified in minutes." />
     <link rel="canonical" href="https://fastdiscountfinder.com/" />
-    <meta property="og:title" content="Fast Discount Finder — Live Student Discounts Search Engine" />
-    <meta property="og:description" content="Search thousands of verified student discounts from Student Beans, UNiDAYS &amp; SheerID. Updated live." />
+    <meta property="og:title" content="Fast Discount Finder — Student Deals, Savings & Verification" />
+    <meta property="og:description" content="Search 200+ verified student discounts from UNiDAYS, Student Beans, and SheerID. Save on fashion, tech, travel, and more. Get verified in minutes." />
     <meta property="og:url" content="https://fastdiscountfinder.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://fastdiscountfinder.com/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fast Discount Finder — Live Student Discounts" />
-    <meta name="twitter:description" content="Search thousands of verified student discounts. Updated live." />
+    <meta name="twitter:title" content="Fast Discount Finder — Student Deals, Savings & Verification" />
+    <meta name="twitter:description" content="Search 200+ verified student discounts from UNiDAYS, Student Beans, and SheerID. Save on fashion, tech, travel, and more. Get verified in minutes." />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
     <script type="application/ld+json">
     {
@@ -40,7 +40,7 @@
         .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); backdrop-filter: blur(6px); padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: #b0d4ff; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 1.2rem; }
         .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.6rem; }
         .hero h1 .highlight { background: linear-gradient(135deg, #ffcc00, #ff8800); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero p { font-size: 1.1rem; color: #c0d8f0; max-width: 600px; margin: 0 auto 1.8rem; opacity: 0.9; }
+        .hero p { font-size: 1.1rem; color: #c0d8f0; max-width: 700px; margin: 0 auto 1.8rem; opacity: 0.9; }
         .hero .cta-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 0.5rem; }
         .hero .btn-primary { background: #ffcc00; color: #0a1a2e; padding: 0.9rem 2.5rem; border-radius: 60px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 24px rgba(255, 204, 0, 0.3); transition: all 0.2s; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 0.5rem; }
         .hero .btn-primary:hover { background: #ffd633; transform: scale(1.02); box-shadow: 0 12px 32px rgba(255, 204, 0, 0.4); }
@@ -93,16 +93,16 @@
     <!-- ─── HERO ─── -->
     <section class="hero" aria-label="Hero section">
         <div class="hero-content">
-            <div class="hero-badge">🔍 Live Student Discount Search</div>
+            <div class="hero-badge">🔍 Live Student Deal Search</div>
             <h1>
-                Find <span class="highlight">Every</span> Student Discount<br />
+                Find <span class="highlight">Every</span> Student Deal<br />
                 in One Place
             </h1>
-            <p>Search thousands of verified offers from Student Beans, UNiDAYS &amp; SheerID — all updated live.</p>
+            <p>Search 200+ verified student savings from UNiDAYS, Student Beans, and SheerID — all updated live. Whether you're looking for fashion discounts, tech offers, travel perks, or student verification, we've got you covered.</p>
 
             <div class="cta-row">
                 <a href="/eduverify.html" class="btn-primary">🎓 Get Verified &amp; Unlock All</a>
-                <a href="#discounts" class="btn-secondary">Browse Discounts ↓</a>
+                <a href="#discounts" class="btn-secondary">Browse Deals ↓</a>
             </div>
 
             <div class="search-wrapper" role="search">
@@ -113,7 +113,7 @@
             </div>
 
             <div class="stats-mini">
-                <span>📊 <strong id="heroTotal">0</strong> discounts</span>
+                <span>📊 <strong id="heroTotal">0</strong> deals</span>
                 <span>🏷️ <strong id="heroBrands">0</strong> brands</span>
                 <span>⚡ updated <span id="heroTime">just now</span></span>
             </div>
@@ -122,18 +122,18 @@
 
     <!-- ─── STATS BAR ─── -->
     <section class="stats-bar" id="statsBar" aria-label="Statistics">
-        <div class="stat-item"><span class="num" id="totalCount">0</span> discounts</div>
+        <div class="stat-item"><span class="num" id="totalCount">0</span> deals</div>
         <div class="stat-item"><span class="num" id="brandCount">0</span> brands</div>
         <div class="stat-item"><span class="badge">Student Beans</span> <span class="num" id="sbCount">0</span></div>
         <div class="stat-item"><span class="badge">UNiDAYS</span> <span class="num" id="udCount">0</span></div>
         <div class="stat-item"><span class="badge">SheerID</span> <span class="num" id="siCount">0</span></div>
     </section>
 
-    <!-- ─── PROMINENT UPGRADE BANNER (Moved up) ─── -->
+    <!-- ─── PROMINENT UPGRADE BANNER ─── -->
     <aside class="upgrade-banner" aria-label="Unlock all discounts">
         <div class="text">
-            <h3>🎓 Want all these discounts in one click?</h3>
-            <p>Most offers require verification via SheerID, UNiDAYS, or Student Beans. We verify you instantly — and give you a custom .edu email so you never get rejected again.</p>
+            <h3>🎓 Want to unlock every deal in one click?</h3>
+            <p>Most offers require student verification via SheerID, UNiDAYS, or Student Beans. We verify you instantly — and give you a custom .edu email so you never get rejected again.</p>
         </div>
         <a href="/eduverify.html" class="btn-verify-large">⚡ Unlock Everything</a>
     </aside>
@@ -154,14 +154,14 @@
 
     <!-- ─── RESULTS ─── -->
     <section class="results-header" id="discounts">
-        <h2>🔥 Live Discounts</h2>
+        <h2>🔥 Live Deals</h2>
         <span class="count-badge" id="resultCount">0 results</span>
     </section>
 
     <div class="discount-grid" id="discountGrid" aria-live="polite"></div>
     <div id="lastUpdated" class="last-updated"></div>
 
-    <footer class="footer">&copy; 2026 FastDiscountFinder — Live student discounts, updated daily.</footer>
+    <footer class="footer">&copy; 2026 FastDiscountFinder — Live student deals, updated daily.</footer>
 </div>
 
 <script>
@@ -194,7 +194,7 @@
             const data = await resp.json();
             render(data);
         } catch (e) {
-            grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;padding:2rem;color:#6a7a9a;">Unable to load discounts. Please refresh later.</p>`;
+            grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;padding:2rem;color:#6a7a9a;">Unable to load deals. Please refresh later.</p>`;
         }
     }
 
@@ -233,7 +233,7 @@
         resultCount.textContent = filtered.length + ' results';
 
         if (!filtered.length) {
-            grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;padding:2rem;color:#6a7a9a;">No discounts match your search.</p>`;
+            grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;padding:2rem;color:#6a7a9a;">No deals match your search.</p>`;
             return;
         }
 

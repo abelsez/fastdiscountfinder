@@ -1,412 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ─── CHARSET & VIEWPORT ─── -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fast Discount Finder — Student Discounts Search Engine</title>
-    <meta name="description" content="Search live student discounts from Student Beans, UNiDAYS &amp; SheerID. All in one place." />
+
+    <!-- ─── PRIMARY META ─── -->
+    <title>Fast Discount Finder — Live Student Discounts Search Engine</title>
+    <meta name="description" content="Search thousands of verified student discounts from Student Beans, UNiDAYS &amp; SheerID. Updated live. Find discounts for Nike, Spotify, Apple, and 200+ brands." />
+    <meta name="keywords" content="student discounts, student beans, unidays, sheerid, student deals, edu email, student savings, discount search" />
+    <link rel="canonical" href="https://fastdiscountfinder.com/" />
+
+    <!-- ─── OPEN GRAPH (Social Sharing) ─── -->
+    <meta property="og:title" content="Fast Discount Finder — Live Student Discounts Search Engine" />
+    <meta property="og:description" content="Search thousands of verified student discounts from Student Beans, UNiDAYS &amp; SheerID. Updated live." />
+    <meta property="og:url" content="https://fastdiscountfinder.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://fastdiscountfinder.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ─── TWITTER CARD ─── -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fast Discount Finder — Live Student Discounts" />
+    <meta name="twitter:description" content="Search thousands of verified student discounts. Updated live." />
+    <meta name="twitter:image" content="https://fastdiscountfinder.com/og-image.png" />
+
+    <!-- ─── FAVICON ─── -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>" />
+
+    <!-- ─── JSON‑LD STRUCTURED DATA ─── -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Fast Discount Finder",
+        "url": "https://fastdiscountfinder.com/",
+        "description": "Live student discount search engine aggregating offers from Student Beans, UNiDAYS, and SheerID.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://fastdiscountfinder.com/?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
     <style>
-        /* ─── Reset & Base ─── */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
-            background: #f6f9fc;
-            color: #0a1a2e;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            padding: 1.5rem 1.2rem;
-        }
-
-        /* ─── Animated Gradient Background ─── */
-        .hero {
-            background: linear-gradient(135deg, #0a1a2e 0%, #1a3a5c 60%, #2a5a7a 100%);
-            border-radius: 32px;
-            padding: 3rem 2.5rem 2.5rem;
-            margin-bottom: 2.5rem;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(10, 26, 46, 0.3);
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: -50%;
-            background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.06) 0%, transparent 60%);
-            pointer-events: none;
-            animation: shimmer 8s ease-in-out infinite alternate;
-        }
-        @keyframes shimmer {
-            0% { transform: translate(-10%, -10%) scale(1); }
-            100% { transform: translate(10%, 10%) scale(1.2); }
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-        }
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(6px);
-            padding: 0.4rem 1.2rem;
-            border-radius: 40px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            color: #b0d4ff;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            margin-bottom: 1.2rem;
-        }
-        .hero h1 {
-            font-size: clamp(2.2rem, 5vw, 3.6rem);
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            margin-bottom: 0.6rem;
-        }
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, #ffcc00, #ff8800);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .hero p {
-            font-size: 1.1rem;
-            color: #c0d8f0;
-            max-width: 600px;
-            margin: 0 auto 1.8rem;
-            opacity: 0.9;
-        }
-        .hero .stats-mini {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            font-size: 0.95rem;
-            color: #a0c0e0;
-        }
-        .hero .stats-mini span {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        .hero .stats-mini strong {
-            color: #fff;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        /* ─── Search Box ─── */
-        .search-wrapper {
-            margin-top: 2rem;
-            width: 100%;
-            max-width: 640px;
-        }
-        .search-box {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(12px);
-            border-radius: 60px;
-            padding: 0.2rem 0.2rem 0.2rem 1.8rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-        }
-        .search-box:focus-within {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: #ffcc00;
-            box-shadow: 0 8px 48px rgba(255, 204, 0, 0.15);
-        }
-        .search-box input {
-            flex: 1;
-            border: none;
-            outline: none;
-            background: transparent;
-            color: #fff;
-            font-size: 1.1rem;
-            padding: 1rem 0;
-            font-family: inherit;
-        }
-        .search-box input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-        .search-box button {
-            background: #ffcc00;
-            border: none;
-            color: #0a1a2e;
-            font-weight: 700;
-            padding: 0.8rem 2rem;
-            border-radius: 40px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.2s, transform 0.1s;
-            font-family: inherit;
-        }
-        .search-box button:hover {
-            background: #ffd633;
-            transform: scale(1.02);
-        }
-
-        /* ─── Stats Bar ─── */
-        .stats-bar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 1rem;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            border-radius: 60px;
-            padding: 0.8rem 1.8rem;
-            margin-bottom: 2.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-        }
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #2a3a5a;
-        }
-        .stat-item .num {
-            font-weight: 800;
-            font-size: 1.2rem;
-            color: #0a1a2e;
-            min-width: 2rem;
-        }
-        .stat-item .badge {
-            background: #eef3ff;
-            color: #1a6cff;
-            padding: 0.1rem 0.7rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-        }
-
-        /* ─── Categories ─── */
-        .categories {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin-bottom: 2rem;
-            justify-content: center;
-        }
-        .category-tag {
-            background: #fff;
-            border: 1px solid #e2e8f0;
-            padding: 0.5rem 1.4rem;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #2a3a5a;
-            cursor: pointer;
-            transition: all 0.2s;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-        .category-tag:hover {
-            border-color: #1a6cff;
-            color: #1a6cff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(26, 108, 255, 0.08);
-        }
-        .category-tag.active {
-            background: #1a6cff;
-            color: #fff;
-            border-color: #1a6cff;
-            box-shadow: 0 4px 12px rgba(26, 108, 255, 0.25);
-        }
-
-        /* ─── Results ─── */
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1.2rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .results-header h2 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #0a1a2e;
-        }
-        .results-header .count-badge {
-            font-size: 0.85rem;
-            color: #5a6a8a;
-            background: #eef2f6;
-            padding: 0.2rem 1.2rem;
-            border-radius: 40px;
-            font-weight: 500;
-        }
-
-        .discount-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .discount-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 1.5rem 1.5rem 1.2rem;
-            border: 1px solid #eef2f6;
-            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-            position: relative;
-            overflow: hidden;
-        }
-        .discount-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, transparent 60%, rgba(26, 108, 255, 0.02) 100%);
-            pointer-events: none;
-        }
-        .discount-card:hover {
-            border-color: #d0dcff;
-            box-shadow: 0 16px 40px rgba(26, 108, 255, 0.06);
-            transform: translateY(-6px);
-        }
-        .discount-card .brand {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #0a1a2e;
-            margin-bottom: 0.3rem;
-        }
-        .discount-card .offer {
-            font-size: 0.95rem;
-            color: #2a3a5a;
-            margin-bottom: 0.8rem;
-            flex: 1;
-            line-height: 1.4;
-        }
-        .discount-card .meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 0.8rem;
-            border-top: 1px solid #f0f2f6;
-            font-size: 0.75rem;
-            color: #6a7a9a;
-        }
-        .discount-card .source-tag {
-            background: #f4f6fa;
-            padding: 0.15rem 0.8rem;
-            border-radius: 20px;
-            font-weight: 500;
-        }
-        .discount-card .category-tag-small {
-            background: #eef3ff;
-            color: #1a6cff;
-            padding: 0.15rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 600;
-        }
-
-        /* ─── Upgrade Banner ─── */
-        .upgrade-banner {
-            background: linear-gradient(135deg, #0a1a2e, #1a3a5c);
-            border-radius: 24px;
-            padding: 2rem 2.5rem;
-            color: #fff;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 12px 40px rgba(10, 26, 46, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-        .upgrade-banner .text h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.3rem;
-        }
-        .upgrade-banner .text p {
-            font-size: 0.95rem;
-            color: #b0c8ff;
-            max-width: 600px;
-            opacity: 0.9;
-        }
-        .upgrade-banner .btn-verify-large {
-            background: #ffcc00;
-            color: #0a1a2e;
-            padding: 0.9rem 2.5rem;
-            border-radius: 60px;
-            font-weight: 700;
-            text-decoration: none;
-            box-shadow: 0 8px 24px rgba(255, 204, 0, 0.3);
-            transition: all 0.2s;
-            white-space: nowrap;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        .upgrade-banner .btn-verify-large:hover {
-            background: #ffd633;
-            transform: scale(1.03);
-            box-shadow: 0 12px 32px rgba(255, 204, 0, 0.4);
-        }
-
-        /* ─── Footer ─── */
-        .footer {
-            text-align: center;
-            font-size: 0.8rem;
-            color: #8a9ab0;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 1.5rem;
-            margin-top: 1rem;
-        }
-        .last-updated {
-            font-size: 0.75rem;
-            color: #8a9ab0;
-            margin-top: 0.5rem;
-            text-align: center;
-        }
-
-        /* ─── Responsive ─── */
-        @media (max-width: 640px) {
-            .hero { padding: 2rem 1.2rem; border-radius: 20px; }
-            .hero h1 { font-size: 1.8rem; }
-            .search-box { padding-left: 1.2rem; flex-wrap: nowrap; }
-            .search-box input { font-size: 0.95rem; padding: 0.8rem 0; }
-            .search-box button { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
-            .stats-bar { padding: 0.6rem 1.2rem; border-radius: 30px; gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
-            .upgrade-banner { padding: 1.5rem; flex-direction: column; text-align: center; }
-            .upgrade-banner .btn-verify-large { width: 100%; text-align: center; }
-            .discount-grid { grid-template-columns: 1fr; }
-        }
+        /* ─── Same beautiful styles from before ─── */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif; background: #f6f9fc; color: #0a1a2e; min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 100%; max-width: 1280px; padding: 1.5rem 1.2rem; }
+        .hero { background: linear-gradient(135deg, #0a1a2e 0%, #1a3a5c 60%, #2a5a7a 100%); border-radius: 32px; padding: 3rem 2.5rem 2.5rem; margin-bottom: 2.5rem; position: relative; overflow: hidden; box-shadow: 0 20px 60px rgba(10, 26, 46, 0.3); }
+        .hero::before { content: ''; position: absolute; inset: -50%; background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.06) 0%, transparent 60%); pointer-events: none; animation: shimmer 8s ease-in-out infinite alternate; }
+        @keyframes shimmer { 0% { transform: translate(-10%, -10%) scale(1); } 100% { transform: translate(10%, 10%) scale(1.2); } }
+        .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; color: #fff; }
+        .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); backdrop-filter: blur(6px); padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; color: #b0d4ff; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 1.2rem; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 0.6rem; }
+        .hero h1 .highlight { background: linear-gradient(135deg, #ffcc00, #ff8800); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.1rem; color: #c0d8f0; max-width: 600px; margin: 0 auto 1.8rem; opacity: 0.9; }
+        .hero .stats-mini { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; font-size: 0.95rem; color: #a0c0e0; }
+        .hero .stats-mini span { display: flex; align-items: center; gap: 0.3rem; }
+        .hero .stats-mini strong { color: #fff; font-weight: 700; font-size: 1.2rem; }
+        .search-wrapper { margin-top: 2rem; width: 100%; max-width: 640px; }
+        .search-box { display: flex; align-items: center; background: rgba(255,255,255,0.12); backdrop-filter: blur(12px); border-radius: 60px; padding: 0.2rem 0.2rem 0.2rem 1.8rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.3s ease; box-shadow: 0 8px 32px rgba(0,0,0,0.15); }
+        .search-box:focus-within { background: rgba(255,255,255,0.2); border-color: #ffcc00; box-shadow: 0 8px 48px rgba(255,204,0,0.15); }
+        .search-box input { flex: 1; border: none; outline: none; background: transparent; color: #fff; font-size: 1.1rem; padding: 1rem 0; font-family: inherit; }
+        .search-box input::placeholder { color: rgba(255,255,255,0.6); }
+        .search-box button { background: #ffcc00; border: none; color: #0a1a2e; font-weight: 700; padding: 0.8rem 2rem; border-radius: 40px; cursor: pointer; font-size: 1rem; transition: background 0.2s, transform 0.1s; font-family: inherit; }
+        .search-box button:hover { background: #ffd633; transform: scale(1.02); }
+        .stats-bar { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 1rem; background: rgba(255,255,255,0.7); backdrop-filter: blur(12px); border-radius: 60px; padding: 0.8rem 1.8rem; margin-bottom: 2.5rem; border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+        .stat-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; font-weight: 500; color: #2a3a5a; }
+        .stat-item .num { font-weight: 800; font-size: 1.2rem; color: #0a1a2e; min-width: 2rem; }
+        .stat-item .badge { background: #eef3ff; color: #1a6cff; padding: 0.1rem 0.7rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; }
+        .categories { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; justify-content: center; }
+        .category-tag { background: #fff; border: 1px solid #e2e8f0; padding: 0.5rem 1.4rem; border-radius: 40px; font-size: 0.85rem; font-weight: 500; color: #2a3a5a; cursor: pointer; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+        .category-tag:hover { border-color: #1a6cff; color: #1a6cff; transform: translateY(-2px); box-shadow: 0 8px 16px rgba(26,108,255,0.08); }
+        .category-tag.active { background: #1a6cff; color: #fff; border-color: #1a6cff; box-shadow: 0 4px 12px rgba(26,108,255,0.25); }
+        .results-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 0.5rem; }
+        .results-header h2 { font-size: 1.3rem; font-weight: 700; color: #0a1a2e; }
+        .results-header .count-badge { font-size: 0.85rem; color: #5a6a8a; background: #eef2f6; padding: 0.2rem 1.2rem; border-radius: 40px; font-weight: 500; }
+        .discount-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+        .discount-card { background: #fff; border-radius: 20px; padding: 1.5rem 1.5rem 1.2rem; border: 1px solid #eef2f6; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.02); position: relative; overflow: hidden; }
+        .discount-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 60%, rgba(26,108,255,0.02) 100%); pointer-events: none; }
+        .discount-card:hover { border-color: #d0dcff; box-shadow: 0 16px 40px rgba(26,108,255,0.06); transform: translateY(-6px); }
+        .discount-card .brand { font-weight: 700; font-size: 1.2rem; color: #0a1a2e; margin-bottom: 0.3rem; }
+        .discount-card .offer { font-size: 0.95rem; color: #2a3a5a; margin-bottom: 0.8rem; flex: 1; line-height: 1.4; }
+        .discount-card .meta { display: flex; justify-content: space-between; align-items: center; padding-top: 0.8rem; border-top: 1px solid #f0f2f6; font-size: 0.75rem; color: #6a7a9a; }
+        .discount-card .source-tag { background: #f4f6fa; padding: 0.15rem 0.8rem; border-radius: 20px; font-weight: 500; }
+        .discount-card .category-tag-small { background: #eef3ff; color: #1a6cff; padding: 0.15rem 0.8rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; }
+        .upgrade-banner { background: linear-gradient(135deg, #0a1a2e, #1a3a5c); border-radius: 24px; padding: 2rem 2.5rem; color: #fff; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; margin-bottom: 2rem; box-shadow: 0 12px 40px rgba(10,26,46,0.2); border: 1px solid rgba(255,255,255,0.06); }
+        .upgrade-banner .text h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.3rem; }
+        .upgrade-banner .text p { font-size: 0.95rem; color: #b0c8ff; max-width: 600px; opacity: 0.9; }
+        .upgrade-banner .btn-verify-large { background: #ffcc00; color: #0a1a2e; padding: 0.9rem 2.5rem; border-radius: 60px; font-weight: 700; text-decoration: none; box-shadow: 0 8px 24px rgba(255,204,0,0.3); transition: all 0.2s; white-space: nowrap; border: none; cursor: pointer; font-size: 1rem; }
+        .upgrade-banner .btn-verify-large:hover { background: #ffd633; transform: scale(1.03); box-shadow: 0 12px 32px rgba(255,204,0,0.4); }
+        .footer { text-align: center; font-size: 0.8rem; color: #8a9ab0; border-top: 1px solid #e2e8f0; padding-top: 1.5rem; margin-top: 1rem; }
+        .last-updated { font-size: 0.75rem; color: #8a9ab0; margin-top: 0.5rem; text-align: center; }
+        @media (max-width: 640px) { .hero { padding: 2rem 1.2rem; border-radius: 20px; } .hero h1 { font-size: 1.8rem; } .search-box { padding-left: 1.2rem; flex-wrap: nowrap; } .search-box input { font-size: 0.95rem; padding: 0.8rem 0; } .search-box button { padding: 0.6rem 1.2rem; font-size: 0.9rem; } .stats-bar { padding: 0.6rem 1.2rem; border-radius: 30px; gap: 0.8rem; flex-wrap: wrap; justify-content: center; } .upgrade-banner { padding: 1.5rem; flex-direction: column; text-align: center; } .upgrade-banner .btn-verify-large { width: 100%; text-align: center; } .discount-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+
 <div class="container">
 
     <!-- ─── HERO ─── -->
-    <div class="hero">
+    <section class="hero" aria-label="Hero section">
         <div class="hero-content">
             <div class="hero-badge">🔍 Live Student Discount Search</div>
             <h1>
@@ -415,11 +112,10 @@
             </h1>
             <p>Search thousands of verified offers from Student Beans, UNiDAYS &amp; SheerID — all updated live.</p>
 
-            <!-- Search -->
-            <div class="search-wrapper">
+            <div class="search-wrapper" role="search">
                 <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Search brands, offers..." autofocus />
-                    <button id="searchBtn">Search</button>
+                    <input type="text" id="searchInput" placeholder="Search brands, offers..." aria-label="Search for discounts" autofocus />
+                    <button id="searchBtn" aria-label="Search discounts">Search</button>
                 </div>
             </div>
 
@@ -429,19 +125,19 @@
                 <span>⚡ updated <span id="heroTime">just now</span></span>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- ─── STATS BAR ─── -->
-    <div class="stats-bar" id="statsBar">
+    <section class="stats-bar" id="statsBar" aria-label="Statistics">
         <div class="stat-item"><span class="num" id="totalCount">0</span> discounts</div>
         <div class="stat-item"><span class="num" id="brandCount">0</span> brands</div>
         <div class="stat-item"><span class="badge">Student Beans</span> <span class="num" id="sbCount">0</span></div>
         <div class="stat-item"><span class="badge">UNiDAYS</span> <span class="num" id="udCount">0</span></div>
         <div class="stat-item"><span class="badge">SheerID</span> <span class="num" id="siCount">0</span></div>
-    </div>
+    </section>
 
     <!-- ─── CATEGORIES ─── -->
-    <div class="categories" id="categoryContainer">
+    <nav class="categories" id="categoryContainer" aria-label="Filter by category">
         <span class="category-tag active" data-cat="all">All</span>
         <span class="category-tag" data-cat="Fashion">Fashion</span>
         <span class="category-tag" data-cat="Tech">Tech</span>
@@ -452,26 +148,27 @@
         <span class="category-tag" data-cat="Entertainment">Entertainment</span>
         <span class="category-tag" data-cat="Education">Education</span>
         <span class="category-tag" data-cat="Shopping">Shopping</span>
-    </div>
+    </nav>
 
     <!-- ─── RESULTS ─── -->
-    <div class="results-header">
+    <section class="results-header">
         <h2>🔥 Live Discounts</h2>
         <span class="count-badge" id="resultCount">0 results</span>
-    </div>
-    <div class="discount-grid" id="discountGrid"></div>
+    </section>
+
+    <div class="discount-grid" id="discountGrid" aria-live="polite"></div>
     <div id="lastUpdated" class="last-updated"></div>
 
-    <!-- ─── UPGRADE BANNER ─── -->
-    <div class="upgrade-banner">
+    <!-- ─── UPGRADE BANNER (Conversion) ─── -->
+    <aside class="upgrade-banner" aria-label="Unlock all discounts">
         <div class="text">
             <h3>🎓 Want all these discounts in one click?</h3>
             <p>Most offers require verification via SheerID, UNiDAYS, or Student Beans. We verify you instantly — and give you a custom .edu email so you never get rejected again.</p>
         </div>
         <a href="/eduverify.html" class="btn-verify-large">⚡ Unlock Everything</a>
-    </div>
+    </aside>
 
-    <div class="footer">&copy; 2026 FastDiscountFinder — Live student discounts, updated daily.</div>
+    <footer class="footer">&copy; 2026 FastDiscountFinder — Live student discounts, updated daily.</footer>
 </div>
 
 <script>
@@ -515,7 +212,6 @@
         const ud = discounts.filter(d => d.source === 'UNiDAYS').length;
         const si = discounts.filter(d => d.source === 'SheerID').length;
 
-        // Update stats
         totalCount.textContent = total;
         brandCount.textContent = brands.size;
         sbCount.textContent = sb;
@@ -524,12 +220,10 @@
         heroTotal.textContent = total;
         heroBrands.textContent = brands.size;
 
-        // Last updated
         const now = new Date();
         heroTime.textContent = now.toLocaleTimeString();
         lastUpdated.textContent = `Last updated: ${now.toLocaleString()}`;
 
-        // Filter
         let filtered = discounts;
         if (currentCategory !== 'all') {
             filtered = filtered.filter(d => d.category === currentCategory);
@@ -563,14 +257,8 @@
     }
 
     // ─── Event Listeners ───
-    searchInput.addEventListener('input', e => {
-        currentSearch = e.target.value;
-        fetchDiscounts();
-    });
-    searchBtn.addEventListener('click', () => {
-        currentSearch = searchInput.value;
-        fetchDiscounts();
-    });
+    searchInput.addEventListener('input', e => { currentSearch = e.target.value; fetchDiscounts(); });
+    searchBtn.addEventListener('click', () => { currentSearch = searchInput.value; fetchDiscounts(); });
     categoryTags.forEach(tag => {
         tag.addEventListener('click', () => {
             categoryTags.forEach(t => t.classList.remove('active'));

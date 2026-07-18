@@ -5,212 +5,498 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Verification — Unlock All Discounts</title>
     <meta name="description" content="Get verified for student discounts. Custom .edu email included. Pay via crypto, PayPal, or gift cards." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f4f7fc;
-            color: #0d1b2a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: #f0f4f9;
             min-height: 100vh;
-            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background-image: radial-gradient(ellipse at 20% 50%, rgba(26, 108, 255, 0.04) 0%, transparent 60%),
+                              radial-gradient(ellipse at 80% 50%, rgba(255, 204, 0, 0.04) 0%, transparent 60%);
         }
+
         .container {
-            max-width: 540px;
+            max-width: 560px;
             width: 100%;
             background: #ffffff;
-            border-radius: 24px;
-            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
-            padding: 48px 40px 32px;
+            border-radius: 32px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.03);
+            padding: 48px 40px 36px;
+            position: relative;
+            overflow: hidden;
         }
-        .badge { display: inline-block; background: #eef3ff; color: #1a6cff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; }
-        h1 { font-size: 28px; font-weight: 800; color: #0d1b2a; letter-spacing: -0.5px; margin-bottom: 6px; }
-        .subhead { font-size: 16px; color: #4a5a7a; margin-bottom: 28px; }
-        .subhead strong { color: #0d1b2a; }
-        .price-display { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin-bottom: 8px; }
-        .price-display .current { font-size: 44px; font-weight: 800; color: #0d1b2a; line-height: 1; }
-        .price-display .original { font-size: 20px; font-weight: 400; color: #8a9ab0; text-decoration: line-through; }
-        .price-note { font-size: 14px; color: #6a7a9a; margin-bottom: 24px; text-align: center; }
-        .toggle-group { display: flex; gap: 10px; justify-content: center; background: #f1f4f9; padding: 6px; border-radius: 14px; margin-bottom: 28px; }
-        .toggle-btn { flex: 1; padding: 12px 18px; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; background: transparent; color: #3a4a6a; transition: all 0.2s; }
-        .toggle-btn:hover { color: #0d1b2a; }
-        .toggle-btn.active { background: #ffffff; color: #0d1b2a; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-        .toggle-btn .badge-label { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: #1a6cff; margin-top: 2px; opacity: 0; transition: opacity 0.2s; }
-        .toggle-btn.active .badge-label { opacity: 1; }
 
-        /* ─── Payment Methods ─── */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1a6cff, #ffcc00, #1a6cff);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .badge {
+            display: inline-block;
+            background: #eef3ff;
+            color: #1a6cff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 800;
+            color: #0a1a2e;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .subhead {
+            font-size: 16px;
+            color: #5a6a8a;
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
+        .subhead strong {
+            color: #0a1a2e;
+        }
+
+        .price-section {
+            background: #f8faff;
+            border-radius: 20px;
+            padding: 20px 24px 18px;
+            margin-bottom: 24px;
+            border: 1px solid #eef3ff;
+        }
+
+        .price-display {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 12px;
+        }
+        .price-display .current {
+            font-size: 48px;
+            font-weight: 800;
+            color: #0a1a2e;
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+        .price-display .original {
+            font-size: 20px;
+            font-weight: 500;
+            color: #8a9ab0;
+            text-decoration: line-through;
+        }
+        .price-note {
+            text-align: center;
+            font-size: 14px;
+            color: #6a7a9a;
+            margin-top: 4px;
+        }
+
+        .toggle-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            background: #f1f4f9;
+            padding: 5px;
+            border-radius: 16px;
+            margin-bottom: 6px;
+        }
+        .toggle-btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            background: transparent;
+            color: #4a5a7a;
+            transition: all 0.25s ease;
+            font-family: inherit;
+            text-align: center;
+            position: relative;
+        }
+        .toggle-btn:hover {
+            color: #0a1a2e;
+        }
+        .toggle-btn.active {
+            background: #ffffff;
+            color: #0a1a2e;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+        .toggle-btn .badge-label {
+            display: block;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #1a6cff;
+            margin-top: 3px;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+        .toggle-btn.active .badge-label {
+            opacity: 1;
+        }
+
         .payment-methods {
             display: flex;
             flex-direction: column;
             gap: 12px;
-            margin: 20px 0 18px;
+            margin: 20px 0 20px;
         }
         .payment-method {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #f8faff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 14px 18px;
-            transition: border-color 0.2s;
+            background: #ffffff;
+            border: 1.5px solid #eef2f6;
+            border-radius: 16px;
+            padding: 16px 20px;
+            transition: all 0.2s ease;
             text-decoration: none;
-            color: #0d1b2a;
+            color: #0a1a2e;
         }
-        .payment-method:hover { border-color: #1a6cff; }
-        .payment-method .left { display: flex; align-items: center; gap: 12px; }
-        .payment-method .icon { font-size: 24px; }
-        .payment-method .name { font-weight: 600; font-size: 15px; }
-        .payment-method .desc { font-size: 12px; color: #6a7a9a; }
-        .payment-method .arrow { color: #1a6cff; font-size: 18px; }
+        .payment-method:hover {
+            border-color: #1a6cff;
+            box-shadow: 0 4px 16px rgba(26, 108, 255, 0.06);
+            transform: translateY(-1px);
+        }
+        .payment-method .left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .payment-method .icon {
+            font-size: 26px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8faff;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+        .payment-method .name {
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .payment-method .desc {
+            font-size: 13px;
+            color: #6a7a9a;
+            margin-top: 1px;
+        }
+        .payment-method .arrow {
+            color: #1a6cff;
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+        .payment-method:hover .arrow {
+            opacity: 1;
+        }
 
-        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 18px; text-align: left; }
-        .feature-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #2d3748; }
-        .feature-item .icon { font-size: 18px; flex-shrink: 0; }
+        .gift-card-box {
+            background: #f8faff;
+            border: 1.5px solid #eef3ff;
+            border-radius: 16px;
+            padding: 18px 20px 16px;
+            margin: 8px 0 16px;
+        }
+        .gift-card-box .title {
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        .gift-card-box .title .icon {
+            font-size: 22px;
+        }
+        .gift-card-box .steps {
+            font-size: 14px;
+            color: #2a3a5a;
+            line-height: 1.6;
+            margin-left: 4px;
+        }
+        .gift-card-box .steps a {
+            color: #1a6cff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .gift-card-box .steps a:hover {
+            text-decoration: underline;
+        }
 
-        .footer { border-top: 1px solid #eef2f6; padding-top: 18px; margin-top: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 13px; color: #8a9ab0; }
-        .footer .secure { display: flex; align-items: center; gap: 6px; }
-        .footer .trust { display: flex; align-items: center; gap: 12px; }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 16px 0 18px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2a3a5a;
+        }
+        .feature-item .icon {
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .footer {
+            border-top: 1px solid #eef2f6;
+            padding-top: 18px;
+            margin-top: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+            color: #8a9ab0;
+        }
+        .footer .secure {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .footer .trust {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .contact-info {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f0f2f6;
+            text-align: center;
+            font-size: 14px;
+            color: #4a5a7a;
+            line-height: 1.8;
+        }
+        .contact-info a {
+            color: #1a6cff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footnote {
+            text-align: center;
+            font-size: 12px;
+            color: #8a9ab0;
+            margin-top: 12px;
+        }
 
         @media (max-width: 480px) {
-            .container { padding: 30px 18px 24px; }
+            .container { padding: 32px 20px 24px; }
             h1 { font-size: 24px; }
-            .price-display .current { font-size: 36px; }
-            .features { grid-template-columns: 1fr; gap: 8px; }
+            .price-display .current { font-size: 38px; }
+            .features { grid-template-columns: 1fr; gap: 6px; }
             .footer { flex-direction: column; text-align: center; }
-            .payment-method { flex-wrap: wrap; gap: 4px; }
+            .payment-method { padding: 14px 16px; }
+            .gift-card-box { padding: 14px 16px; }
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="badge">🔥 Limited Offer</div>
-    <h1>Student Discount Verification</h1>
-    <p class="subhead">Get verified via <strong>Student Clearinghouse</strong> &bull; Custom <strong>.edu email</strong> included</p>
+    <div class="container">
 
-    <div class="price-display">
-        <span class="current" id="price-display">$50</span>
-        <span class="original" id="price-original">$67</span>
-    </div>
-    <p class="price-note" id="price-note">One‑time payment &bull; Lifetime savings</p>
+        <div class="badge">🔥 Limited Offer</div>
 
-    <div class="toggle-group" role="group" aria-label="Payment amount">
-        <button class="toggle-btn active" data-amount="50" id="btn-50">
-            $50
-            <span class="badge-label">Standard</span>
-        </button>
-        <button class="toggle-btn" data-amount="37" id="btn-37">
-            $37
-            <span class="badge-label">🔥 Save $13</span>
-        </button>
-    </div>
+        <h1>Student Discount Verification</h1>
+        <p class="subhead">
+            Get verified via <strong>Student Clearinghouse</strong> &bull; Custom <strong>.edu email</strong> included
+        </p>
 
-    <!-- ─── PAYMENT METHODS ─── -->
-    <div class="payment-methods">
-        <a class="payment-method" href="https://nowpayments.io/payment/?iid=4997429310&source=button&amount=50" target="_blank" rel="noreferrer noopener" id="payment-nowpayments">
-            <div class="left">
-                <span class="icon">₿</span>
-                <div>
-                    <div class="name">NOWPayments</div>
-                    <div class="desc">Crypto · Bitcoin, Ethereum, USDC</div>
-                </div>
+        <div class="price-section">
+            <div class="price-display">
+                <span class="current" id="priceDisplay">$50</span>
+                <span class="original" id="priceOriginal">$67</span>
             </div>
-            <span class="arrow">→</span>
-        </a>
-
-        <a class="payment-method" href="https://ko-fi.com/yourkoflink" target="_blank" rel="noreferrer noopener" id="payment-kofi">
-            <div class="left">
-                <span class="icon">☕</span>
-                <div>
-                    <div class="name">Ko‑fi</div>
-                    <div class="desc">PayPal · Credit Card · Apple Pay</div>
-                </div>
-            </div>
-            <span class="arrow">→</span>
-        </a>
-
-        <a class="payment-method" href="https://www.g2a.com/your-g2a-link" target="_blank" rel="noreferrer noopener" id="payment-g2a">
-            <div class="left">
-                <span class="icon">🎮</span>
-                <div>
-                    <div class="name">G2A Gift Cards</div>
-                    <div class="desc">Pay with gift cards · Full anonymity</div>
-                </div>
-            </div>
-            <span class="arrow">→</span>
-        </a>
-    </div>
-
-    <div class="features">
-        <div class="feature-item"><span class="icon">✅</span> 200+ Brands Verified</div>
-        <div class="feature-item"><span class="icon">🎓</span> .edu Email Included</div>
-        <div class="feature-item"><span class="icon">🔒</span> Student Clearinghouse</div>
-        <div class="feature-item"><span class="icon">⭐</span> 24+ 5‑Star Reviews</div>
-    </div>
-
-    <div class="footer">
-        <div class="secure"><span class="lock">🔒</span> Secure checkout</div>
-        <div class="trust">
-            <span>💳 Card</span>
-            <span>₿ Crypto</span>
-            <span>🎁 Gift Cards</span>
+            <p class="price-note" id="priceNote">One‑time payment · Lifetime savings</p>
         </div>
+
+        <div class="toggle-group" role="radiogroup" aria-label="Select payment amount">
+            <button class="toggle-btn active" role="radio" aria-checked="true" data-amount="50" id="btn50">
+                $50
+                <span class="badge-label">Recommended</span>
+            </button>
+            <button class="toggle-btn" role="radio" aria-checked="false" data-amount="37" id="btn37">
+                $37
+                <span class="badge-label">🔥 Save $13</span>
+            </button>
+        </div>
+
+        <!-- ─── PAYMENT METHODS ─── -->
+        <div class="payment-methods">
+
+            <a class="payment-method" id="paymentNowPayments" href="https://nowpayments.io/payment/?iid=4997429310&source=button&amount=50" target="_blank" rel="noreferrer noopener">
+                <div class="left">
+                    <span class="icon">₿</span>
+                    <div>
+                        <div class="name">NOWPayments</div>
+                        <div class="desc">Bitcoin · Ethereum · USDC · +50 more</div>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+
+            <a class="payment-method" href="https://ko-fi.com/s/dddd0b4e8f" target="_blank" rel="noreferrer noopener" id="paymentKofi">
+                <div class="left">
+                    <span class="icon">☕</span>
+                    <div>
+                        <div class="name">Ko‑fi</div>
+                        <div class="desc">PayPal · Credit Card · Apple Pay</div>
+                    </div>
+                </div>
+                <span class="arrow">→</span>
+            </a>
+
+        </div>
+
+        <!-- ─── GIFT CARD OPTION ─── -->
+        <div class="gift-card-box">
+            <div class="title">
+                <span class="icon">🎁</span> Gift Card (Anonymous)
+            </div>
+            <div class="steps">
+                <strong>1.</strong> Buy a <a href="https://www.g2a.com/binance-gift-card-40-usdt-key-i10000301475065" target="_blank" rel="noreferrer noopener">Binance $40 USDT Gift Card</a> on G2A.<br />
+                <strong>2.</strong> Send the gift card code to:<br />
+                📧 <a href="mailto:sheeredudeals@gmail.com">sheeredudeals@gmail.com</a> or<br />
+                📱 WhatsApp <a href="https://wa.me/13477667259" target="_blank">+1 (347) 766‑7259</a><br />
+                <strong>3.</strong> We'll verify your account within minutes!
+            </div>
+        </div>
+
+        <!-- ─── FEATURES ─── -->
+        <div class="features">
+            <div class="feature-item"><span class="icon">✅</span> 200+ Brands Verified</div>
+            <div class="feature-item"><span class="icon">🎓</span> .edu Email Included</div>
+            <div class="feature-item"><span class="icon">🔒</span> Student Clearinghouse</div>
+            <div class="feature-item"><span class="icon">⭐</span> 24+ 5‑Star Reviews</div>
+        </div>
+
+        <div class="footer">
+            <div class="secure"><span>🔒</span> Secure checkout</div>
+            <div class="trust">
+                <span>💳 Card</span>
+                <span>₿ Crypto</span>
+                <span>🎁 Gift Card</span>
+            </div>
+        </div>
+
+        <!-- ─── CONTACT INFO ─── -->
+        <div class="contact-info">
+            📧 <a href="mailto:sheeredudeals@gmail.com">sheeredudeals@gmail.com</a> &nbsp;·&nbsp;
+            📱 <a href="https://wa.me/13477667259" target="_blank">+1 (347) 766‑7259</a>
+            <br />
+            <span style="font-size: 13px; color: #8a9ab0;">We reply within 2–3 hours.</span>
+        </div>
+
+        <div class="footnote">
+            💡 For gift card payments, send the code to us directly.
+        </div>
+
     </div>
-</div>
 
-<script>
-    // ─── Price Toggle (also updates payment links) ───
-    const nowPaymentsLink = document.getElementById('payment-nowpayments');
-    const btn50 = document.getElementById('btn-50');
-    const btn37 = document.getElementById('btn-37');
-    const priceDisplay = document.getElementById('price-display');
-    const priceOriginal = document.getElementById('price-original');
-    const priceNote = document.getElementById('price-note');
-    const BASE_URL = 'https://nowpayments.io/payment/?iid=4997429310&source=button';
+    <script>
+        (function() {
+            const btn50 = document.getElementById('btn50');
+            const btn37 = document.getElementById('btn37');
+            const priceDisplay = document.getElementById('priceDisplay');
+            const priceOriginal = document.getElementById('priceOriginal');
+            const priceNote = document.getElementById('priceNote');
+            const paymentNow = document.getElementById('paymentNowPayments');
 
-    function setAmount(amount) {
-        nowPaymentsLink.href = BASE_URL + '&amount=' + amount;
-        priceDisplay.textContent = '$' + amount;
-        if (amount === 37) {
-            priceOriginal.style.display = 'inline';
-            priceNote.textContent = '🔥 Sale price — originally $67';
-        } else {
-            priceOriginal.style.display = 'inline';
-            priceNote.textContent = 'One‑time payment · Lifetime savings';
-        }
-    }
+            const BASE_URL = 'https://nowpayments.io/payment/?iid=4997429310&source=button';
 
-    function setActive(activeBtn, otherBtn) {
-        activeBtn.classList.add('active');
-        otherBtn.classList.remove('active');
-        activeBtn.setAttribute('aria-checked', 'true');
-        otherBtn.setAttribute('aria-checked', 'false');
-    }
+            function setAmount(amount) {
+                paymentNow.href = BASE_URL + '&amount=' + amount;
+                priceDisplay.textContent = '$' + amount;
+                if (amount === 37) {
+                    priceOriginal.style.display = 'inline';
+                    priceNote.textContent = '🔥 Sale price — originally $67';
+                } else {
+                    priceOriginal.style.display = 'inline';
+                    priceNote.textContent = 'One‑time payment · Lifetime savings';
+                }
+                btn50.setAttribute('aria-checked', amount === 50);
+                btn37.setAttribute('aria-checked', amount === 37);
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'select_content', {
+                        content_type: 'payment_amount',
+                        item_id: amount.toString()
+                    });
+                }
+            }
 
-    btn50.addEventListener('click', function(e) {
-        e.preventDefault();
-        setAmount(50);
-        setActive(btn50, btn37);
-    });
-    btn37.addEventListener('click', function(e) {
-        e.preventDefault();
-        setAmount(37);
-        setActive(btn37, btn50);
-    });
+            function setActive(activeBtn, otherBtn) {
+                activeBtn.classList.add('active');
+                otherBtn.classList.remove('active');
+            }
 
-    // Default: $50
-    setAmount(50);
+            btn50.addEventListener('click', function(e) {
+                e.preventDefault();
+                setAmount(50);
+                setActive(btn50, btn37);
+            });
 
-    // ─── ARIA for toggle ───
-    const group = document.querySelector('.toggle-group');
-    group.setAttribute('role', 'radiogroup');
-    group.setAttribute('aria-label', 'Select payment amount');
-    btn50.setAttribute('role', 'radio');
-    btn50.setAttribute('aria-checked', 'true');
-    btn37.setAttribute('role', 'radio');
-    btn37.setAttribute('aria-checked', 'false');
-</script>
+            btn37.addEventListener('click', function(e) {
+                e.preventDefault();
+                setAmount(37);
+                setActive(btn37, btn50);
+            });
+
+            setAmount(50);
+
+            const group = document.querySelector('.toggle-group');
+            group.setAttribute('role', 'radiogroup');
+            group.setAttribute('aria-label', 'Select payment amount');
+            btn50.setAttribute('role', 'radio');
+            btn50.setAttribute('aria-checked', 'true');
+            btn37.setAttribute('role', 'radio');
+            btn37.setAttribute('aria-checked', 'false');
+        })();
+    </script>
 </body>
 </html>

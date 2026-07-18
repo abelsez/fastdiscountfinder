@@ -1,8 +1,10 @@
-name: Auto-Crawl Discounts
+name: 3-Hour Discount Crawler
+
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */3 * * *'  # Every 3 hours
   workflow_dispatch:
+
 jobs:
   crawl:
     runs-on: ubuntu-latest
@@ -16,7 +18,7 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install playwright
           playwright install chromium
       - name: Run crawler
         run: python crawler.py
@@ -25,5 +27,5 @@ jobs:
           git config --local user.name "github-actions"
           git config --local user.email "actions@github.com"
           git add discounts.json last_updated.txt
-          git diff --staged --quiet || git commit -m "Auto-update discounts [skip ci]"
+          git diff --staged --quiet || git commit -m "Auto-update discounts (3h) [skip ci]"
           git push

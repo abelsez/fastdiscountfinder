@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Verification — Unlock All Discounts</title>
+    <meta name="description" content="Get verified for student discounts. Custom .edu email included. Pay via crypto, PayPal, or gift cards." />
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -21,146 +22,65 @@
             width: 100%;
             background: #ffffff;
             border-radius: 24px;
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
             padding: 48px 40px 32px;
         }
-        .badge {
-            display: inline-block;
-            background: #eef3ff;
-            color: #1a6cff;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 4px 14px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-        }
-        h1 {
-            font-size: 28px;
-            font-weight: 800;
-            color: #0d1b2a;
-            letter-spacing: -0.5px;
-            margin-bottom: 6px;
-        }
-        .subhead {
-            font-size: 16px;
-            color: #4a5a7a;
-            margin-bottom: 28px;
-        }
+        .badge { display: inline-block; background: #eef3ff; color: #1a6cff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 4px 14px; border-radius: 20px; margin-bottom: 12px; }
+        h1 { font-size: 28px; font-weight: 800; color: #0d1b2a; letter-spacing: -0.5px; margin-bottom: 6px; }
+        .subhead { font-size: 16px; color: #4a5a7a; margin-bottom: 28px; }
         .subhead strong { color: #0d1b2a; }
-        .price-display {
-            display: flex;
-            align-items: baseline;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-        .price-display .current {
-            font-size: 44px;
-            font-weight: 800;
-            color: #0d1b2a;
-            line-height: 1;
-        }
-        .price-display .original {
-            font-size: 20px;
-            font-weight: 400;
-            color: #8a9ab0;
-            text-decoration: line-through;
-        }
-        .price-note {
-            font-size: 14px;
-            color: #6a7a9a;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-        .toggle-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            background: #f1f4f9;
-            padding: 6px;
-            border-radius: 14px;
-            margin-bottom: 28px;
-        }
-        .toggle-btn {
-            flex: 1;
-            padding: 12px 18px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            background: transparent;
-            color: #3a4a6a;
-            transition: all 0.2s;
-        }
+        .price-display { display: flex; align-items: baseline; justify-content: center; gap: 10px; margin-bottom: 8px; }
+        .price-display .current { font-size: 44px; font-weight: 800; color: #0d1b2a; line-height: 1; }
+        .price-display .original { font-size: 20px; font-weight: 400; color: #8a9ab0; text-decoration: line-through; }
+        .price-note { font-size: 14px; color: #6a7a9a; margin-bottom: 24px; text-align: center; }
+        .toggle-group { display: flex; gap: 10px; justify-content: center; background: #f1f4f9; padding: 6px; border-radius: 14px; margin-bottom: 28px; }
+        .toggle-btn { flex: 1; padding: 12px 18px; border: none; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; background: transparent; color: #3a4a6a; transition: all 0.2s; }
         .toggle-btn:hover { color: #0d1b2a; }
-        .toggle-btn.active {
-            background: #ffffff;
-            color: #0d1b2a;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-        .toggle-btn .badge-label {
-            display: block;
-            font-size: 10px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            color: #1a6cff;
-            margin-top: 2px;
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
+        .toggle-btn.active { background: #ffffff; color: #0d1b2a; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+        .toggle-btn .badge-label { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; color: #1a6cff; margin-top: 2px; opacity: 0; transition: opacity 0.2s; }
         .toggle-btn.active .badge-label { opacity: 1; }
-        .payment-wrapper {
-            margin: 6px 0 20px;
-            text-align: center;
-        }
-        .payment-wrapper img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            transition: opacity 0.15s;
-        }
-        .payment-wrapper a:hover img { opacity: 0.85; }
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+
+        /* ─── Payment Methods ─── */
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
             gap: 12px;
             margin: 20px 0 18px;
-            text-align: left;
         }
-        .feature-item {
+        .payment-method {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: #2d3748;
-        }
-        .feature-item .icon { font-size: 18px; flex-shrink: 0; }
-        .footer {
-            border-top: 1px solid #eef2f6;
-            padding-top: 18px;
-            margin-top: 8px;
-            display: flex;
             justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            font-size: 13px;
-            color: #8a9ab0;
+            background: #f8faff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 14px 18px;
+            transition: border-color 0.2s;
+            text-decoration: none;
+            color: #0d1b2a;
         }
+        .payment-method:hover { border-color: #1a6cff; }
+        .payment-method .left { display: flex; align-items: center; gap: 12px; }
+        .payment-method .icon { font-size: 24px; }
+        .payment-method .name { font-weight: 600; font-size: 15px; }
+        .payment-method .desc { font-size: 12px; color: #6a7a9a; }
+        .payment-method .arrow { color: #1a6cff; font-size: 18px; }
+
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0 18px; text-align: left; }
+        .feature-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #2d3748; }
+        .feature-item .icon { font-size: 18px; flex-shrink: 0; }
+
+        .footer { border-top: 1px solid #eef2f6; padding-top: 18px; margin-top: 8px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 13px; color: #8a9ab0; }
         .footer .secure { display: flex; align-items: center; gap: 6px; }
         .footer .trust { display: flex; align-items: center; gap: 12px; }
+
         @media (max-width: 480px) {
             .container { padding: 30px 18px 24px; }
             h1 { font-size: 24px; }
             .price-display .current { font-size: 36px; }
             .features { grid-template-columns: 1fr; gap: 8px; }
             .footer { flex-direction: column; text-align: center; }
+            .payment-method { flex-wrap: wrap; gap: 4px; }
         }
     </style>
 </head>
@@ -187,12 +107,39 @@
         </button>
     </div>
 
-    <div class="payment-wrapper">
-        <a id="payment-link"
-           href="https://nowpayments.io/payment/?iid=4997429310&source=button&amount=50"
-           target="_blank" rel="noreferrer noopener">
-            <img src="https://nowpayments.io/images/embeds/payments-button-white.svg"
-                 alt="Cryptocurrency & Bitcoin payment button by NOWPayments" />
+    <!-- ─── PAYMENT METHODS ─── -->
+    <div class="payment-methods">
+        <a class="payment-method" href="https://nowpayments.io/payment/?iid=4997429310&source=button&amount=50" target="_blank" rel="noreferrer noopener" id="payment-nowpayments">
+            <div class="left">
+                <span class="icon">₿</span>
+                <div>
+                    <div class="name">NOWPayments</div>
+                    <div class="desc">Crypto · Bitcoin, Ethereum, USDC</div>
+                </div>
+            </div>
+            <span class="arrow">→</span>
+        </a>
+
+        <a class="payment-method" href="https://ko-fi.com/yourkoflink" target="_blank" rel="noreferrer noopener" id="payment-kofi">
+            <div class="left">
+                <span class="icon">☕</span>
+                <div>
+                    <div class="name">Ko‑fi</div>
+                    <div class="desc">PayPal · Credit Card · Apple Pay</div>
+                </div>
+            </div>
+            <span class="arrow">→</span>
+        </a>
+
+        <a class="payment-method" href="https://www.g2a.com/your-g2a-link" target="_blank" rel="noreferrer noopener" id="payment-g2a">
+            <div class="left">
+                <span class="icon">🎮</span>
+                <div>
+                    <div class="name">G2A Gift Cards</div>
+                    <div class="desc">Pay with gift cards · Full anonymity</div>
+                </div>
+            </div>
+            <span class="arrow">→</span>
         </a>
     </div>
 
@@ -208,13 +155,14 @@
         <div class="trust">
             <span>💳 Card</span>
             <span>₿ Crypto</span>
-            <span>📱 Apple Pay</span>
+            <span>🎁 Gift Cards</span>
         </div>
     </div>
 </div>
 
 <script>
-    const link = document.getElementById('payment-link');
+    // ─── Price Toggle (also updates payment links) ───
+    const nowPaymentsLink = document.getElementById('payment-nowpayments');
     const btn50 = document.getElementById('btn-50');
     const btn37 = document.getElementById('btn-37');
     const priceDisplay = document.getElementById('price-display');
@@ -223,7 +171,7 @@
     const BASE_URL = 'https://nowpayments.io/payment/?iid=4997429310&source=button';
 
     function setAmount(amount) {
-        link.href = BASE_URL + '&amount=' + amount;
+        nowPaymentsLink.href = BASE_URL + '&amount=' + amount;
         priceDisplay.textContent = '$' + amount;
         if (amount === 37) {
             priceOriginal.style.display = 'inline';
@@ -232,10 +180,6 @@
             priceOriginal.style.display = 'inline';
             priceNote.textContent = 'One‑time payment · Lifetime savings';
         }
-        if (typeof window.gtag !== 'undefined') {
-            gtag('event', 'select_content', { content_type: 'payment_amount', item_id: amount.toString() });
-        }
-        console.log('[CHIMERA] Amount set to $' + amount);
     }
 
     function setActive(activeBtn, otherBtn) {
@@ -255,8 +199,11 @@
         setAmount(37);
         setActive(btn37, btn50);
     });
+
+    // Default: $50
     setAmount(50);
 
+    // ─── ARIA for toggle ───
     const group = document.querySelector('.toggle-group');
     group.setAttribute('role', 'radiogroup');
     group.setAttribute('aria-label', 'Select payment amount');

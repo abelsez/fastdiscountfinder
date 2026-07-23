@@ -1,120 +1,1952 @@
 [
-  {"brand":"Nike","offer":"10% off student discount","category":"Fashion","source":"Student Beans"},
-  {"brand":"Adidas","offer":"15% off full-price items","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"ASOS","offer":"10% off online orders","category":"Fashion","source":"Student Beans"},
-  {"brand":"H&M","offer":"Student discount on fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Levi's","offer":"Student discount on denim & apparel","category":"Fashion","source":"SheerID"},
-  {"brand":"The North Face","offer":"10% off student discount","category":"Fashion","source":"SheerID"},
-  {"brand":"Converse","offer":"Student discount on footwear & apparel","category":"Fashion","source":"SheerID"},
-  {"brand":"J.Crew","offer":"Student discount on preppy fashion","category":"Fashion","source":"SheerID"},
-  {"brand":"UGG","offer":"Student discount on footwear & accessories","category":"Fashion","source":"SheerID"},
-  {"brand":"Rothy's","offer":"Student discount on sustainable footwear","category":"Fashion","source":"SheerID"},
-  {"brand":"Vineyard Vines","offer":"Student discounts on preppy clothing","category":"Fashion","source":"SheerID"},
-  {"brand":"Bonobos","offer":"Student discount on men's apparel","category":"Fashion","source":"SheerID"},
-  {"brand":"Madewell","offer":"Student discount on denim & accessories","category":"Fashion","source":"SheerID"},
-  {"brand":"Quiksilver","offer":"Student discount on surf & outdoor apparel","category":"Fashion","source":"SheerID"},
-  {"brand":"Roxy","offer":"Student discount on surf & outdoor apparel","category":"Fashion","source":"SheerID"},
-  {"brand":"Vans","offer":"15% off student discount on footwear & apparel","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Crocs","offer":"Student discount on footwear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Puma","offer":"Student discount on sportswear & footwear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Reebok","offer":"Student discount on sportswear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Under Armour","offer":"Student discount on sportswear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Champion","offer":"Student discount on casual & athletic wear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"New Balance","offer":"Student discount on footwear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"ASICS","offer":"Student discount on running shoes","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Boohoo","offer":"Student discount on fast fashion","category":"Fashion","source":"Student Beans"},
-  {"brand":"Missguided","offer":"Student discount on fast fashion","category":"Fashion","source":"Student Beans"},
-  {"brand":"PrettyLittleThing","offer":"Student discount on fast fashion","category":"Fashion","source":"Student Beans"},
-  {"brand":"Shein","offer":"Student discount on fast fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Zara","offer":"Student discount on fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Mango","offer":"Student discount on fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Pull&Bear","offer":"Student discount on fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Bershka","offer":"Student discount on fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Stradivarius","offer":"Student discount on fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Hollister","offer":"Student discount on casual wear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"American Eagle","offer":"Student discount on jeans & apparel","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Forever 21","offer":"Student discount on fast fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Urban Outfitters","offer":"Student discount on vintage & streetwear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Free People","offer":"Student discount on bohemian fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Anthropologie","offer":"Student discount on fashion & home","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Gymshark","offer":"Student discount on activewear","category":"Fashion","source":"Student Beans"},
-  {"brand":"Lululemon","offer":"Student discount on yoga & activewear","category":"Fashion","source":"Student Beans"},
-  {"brand":"Farfetch","offer":"Student discount on luxury fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Cotton On","offer":"Student discount on casual fashion","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"JD Sports","offer":"Student discount on sportswear","category":"Fashion","source":"UNiDAYS"},
-  {"brand":"Samsung","offer":"Student discounts on smartphones & tablets","category":"Tech","source":"UNiDAYS"},
-  {"brand":"Dell","offer":"Student discount on laptops & monitors","category":"Tech","source":"UNiDAYS"},
-  {"brand":"HP","offer":"Up to 30% off laptops & printers","category":"Tech","source":"UNiDAYS"},
-  {"brand":"Lenovo","offer":"Student discount on laptops","category":"Tech","source":"UNiDAYS"},
-  {"brand":"Acer","offer":"Student discount on laptops & monitors","category":"Tech","source":"Student Beans"},
-  {"brand":"Asus","offer":"Student discount on laptops & components","category":"Tech","source":"Student Beans"},
-  {"brand":"Microsoft","offer":"Student pricing on Office 365 & Windows","category":"Software","source":"UNiDAYS"},
-  {"brand":"Adobe Creative Cloud","offer":"$35/year student pricing — full suite","category":"Software","source":"SheerID"},
-  {"brand":"Autodesk","offer":"Free education software (AutoCAD, Maya, etc.)","category":"Software","source":"SheerID"},
-  {"brand":"Tableau","offer":"Student pricing on data visualization","category":"Software","source":"SheerID"},
-  {"brand":"Unity Technologies","offer":"Student pricing on game development tools","category":"Software","source":"SheerID"},
-  {"brand":"Codecademy","offer":"Student discounts on coding platform","category":"Software","source":"SheerID"},
-  {"brand":"SurveyMonkey","offer":"Student pricing on survey tools","category":"Software","source":"SheerID"},
-  {"brand":"Roxio","offer":"Student discounts on photo & video editing","category":"Software","source":"SheerID"},
-  {"brand":"Capture One","offer":"Student discounts on professional photo editing","category":"Software","source":"SheerID"},
-  {"brand":"Final Draft","offer":"Student discounts on screenwriting software","category":"Software","source":"SheerID"},
-  {"brand":"Vectorworks","offer":"Student pricing on CAD & BIM software","category":"Software","source":"SheerID"},
-  {"brand":"Lumion","offer":"Student pricing on 3D rendering software","category":"Software","source":"SheerID"},
-  {"brand":"Norton","offer":"Student discount on antivirus software","category":"Software","source":"Student Beans"},
-  {"brand":"Dropbox","offer":"Student discount on cloud storage","category":"Software","source":"UNiDAYS"},
-  {"brand":"Evernote","offer":"50% off student discount on note-taking","category":"Software","source":"UNiDAYS"},
-  {"brand":"Slack","offer":"Free for student teams","category":"Software","source":"UNiDAYS"},
-  {"brand":"Zoom","offer":"Free Zoom Pro for students","category":"Tech","source":"Student Beans"},
-  {"brand":"GitHub","offer":"Student Developer Pack (free)","category":"Software","source":"Student Beans"},
-  {"brand":"Apple","offer":"Student pricing on Macs, iPads & accessories","category":"Tech","source":"UNiDAYS"},
-  {"brand":"Amazon Prime","offer":"6 months free + 50% off ($7.49/mo)","category":"Shopping","source":"Student Beans"},
-  {"brand":"Target","offer":"Student discounts on select items","category":"Shopping","source":"SheerID"},
-  {"brand":"Best Buy","offer":"Student discounts on electronics","category":"Shopping","source":"SheerID"},
-  {"brand":"Walmart","offer":"Student discounts on select items","category":"Shopping","source":"SheerID"},
-  {"brand":"Costco","offer":"Student discounts on select items","category":"Shopping","source":"SheerID"},
-  {"brand":"Groupon","offer":"Student discounts on deals & experiences","category":"Shopping","source":"SheerID"},
-  {"brand":"Sticker Mule","offer":"Student discounts on custom stickers","category":"Shopping","source":"SheerID"},
-  {"brand":"Michaels","offer":"Student discounts on arts & crafts","category":"Shopping","source":"SheerID"},
-  {"brand":"Disney+","offer":"Student discount on streaming","category":"Entertainment","source":"UNiDAYS"},
-  {"brand":"Ticketmaster","offer":"Student discount on event tickets","category":"Entertainment","source":"UNiDAYS"},
-  {"brand":"Spotify Premium","offer":"$6.99/month for students","category":"Entertainment","source":"SheerID"},
-  {"brand":"Hulu","offer":"Student discount on streaming service","category":"Entertainment","source":"SheerID"},
-  {"brand":"Peacock","offer":"Student discount on streaming service","category":"Entertainment","source":"SheerID"},
-  {"brand":"YouTube Premium","offer":"Student discount on ad-free videos & music","category":"Entertainment","source":"SheerID"},
-  {"brand":"TIDAL","offer":"Student discount on high-fidelity music streaming","category":"Entertainment","source":"SheerID"},
-  {"brand":"SoundCloud","offer":"Student discount on music platform","category":"Entertainment","source":"SheerID"},
-  {"brand":"SiriusXM","offer":"Exclusive student offer on satellite radio","category":"Entertainment","source":"SheerID"},
-  {"brand":"NBA","offer":"Student discount on league pass","category":"Entertainment","source":"SheerID"},
-  {"brand":"NFL Sunday Ticket","offer":"Student discount on football games","category":"Entertainment","source":"SheerID"},
-  {"brand":"GolfPass","offer":"Student discount on golf content","category":"Entertainment","source":"SheerID"},
-  {"brand":"BookBeat","offer":"Student discounts on audiobooks","category":"Entertainment","source":"SheerID"},
-  {"brand":"Discovery","offer":"Student discounts on streaming","category":"Entertainment","source":"SheerID"},
-  {"brand":"StudentUniverse","offer":"Up to 60% off flights & hotels","category":"Travel","source":"SheerID"},
-  {"brand":"Singapore Airlines","offer":"Exclusive student benefits & discounts","category":"Travel","source":"SheerID"},
-  {"brand":"Lufthansa","offer":"Student fares on international flights","category":"Travel","source":"SheerID"},
-  {"brand":"Princess Cruises","offer":"Student discounts on cruises","category":"Travel","source":"SheerID"},
-  {"brand":"Sandals Resorts","offer":"Student discounts on all-inclusive stays","category":"Travel","source":"SheerID"},
-  {"brand":"Beaches Resorts","offer":"Student discounts on all-inclusive family resorts","category":"Travel","source":"SheerID"},
-  {"brand":"Holland America Line","offer":"Student discounts on cruises","category":"Travel","source":"SheerID"},
-  {"brand":"Airbnb","offer":"Student discounts on stays","category":"Travel","source":"Student Beans"},
-  {"brand":"Booking.com","offer":"Student discounts on hotels","category":"Travel","source":"Student Beans"},
-  {"brand":"Expedia","offer":"Student discounts on travel packages","category":"Travel","source":"Student Beans"},
-  {"brand":"Ikon Pass","offer":"College discount - $589+ for Base Pass","category":"Travel","source":"SheerID"},
-  {"brand":"Alo Moves","offer":"1 month free + 20% off student discount","category":"Health & Fitness","source":"SheerID"},
-  {"brand":"CorePower Yoga","offer":"Student discount on yoga classes","category":"Health & Fitness","source":"SheerID"},
-  {"brand":"Headspace","offer":"Student discount on meditation app","category":"Health & Fitness","source":"SheerID"},
-  {"brand":"Calm","offer":"Student discount on meditation & sleep app","category":"Health & Fitness","source":"SheerID"},
-  {"brand":"Peloton","offer":"Student discount on fitness subscriptions","category":"Health & Fitness","source":"SheerID"},
-  {"brand":"The Sculpt Society","offer":"Student discounts on fitness app","category":"Health & Fitness","source":"SheerID"},
-  {"brand":"Pvolve","offer":"Student discounts on fitness memberships","category":"Health & Fitness","source":"SheerID"},
-  {"brand":"The Wall Street Journal","offer":"Student pricing on digital news","category":"Education","source":"SheerID"},
-  {"brand":"The Washington Post","offer":"Student pricing on digital news","category":"Education","source":"SheerID"},
-  {"brand":"The Economist","offer":"Student pricing on global news","category":"Education","source":"SheerID"},
-  {"brand":"Barron's","offer":"Student pricing on financial news","category":"Education","source":"SheerID"},
-  {"brand":"MarketWatch","offer":"Student pricing on financial news","category":"Education","source":"SheerID"},
-  {"brand":"edX","offer":"Student discounts on online courses","category":"Education","source":"SheerID"},
-  {"brand":"Ancestry","offer":"Student discount on genealogy service","category":"Education","source":"SheerID"},
-  {"brand":"Encyclopaedia Britannica","offer":"Student discounts on reference content","category":"Education","source":"SheerID"},
-  {"brand":"Chegg","offer":"Student discounts on textbooks & study help","category":"Education","source":"SheerID"},
-  {"brand":"Course Hero","offer":"Student discounts on study resources","category":"Education","source":"SheerID"}
+  {
+    "brand": "Nike",
+    "offer": "10% off student discount",
+    "category": "Fashion",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Adidas",
+    "offer": "15% off full-price items",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "ASOS",
+    "offer": "10% off online orders",
+    "category": "Fashion",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "H&M",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Levi's",
+    "offer": "Student discount on denim & apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The North Face",
+    "offer": "10% off student discount",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Converse",
+    "offer": "Student discount on footwear & apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "J.Crew",
+    "offer": "Student discount on preppy fashion",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "UGG",
+    "offer": "Student discount on footwear & accessories",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Rothy's",
+    "offer": "Student discount on sustainable footwear",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Vineyard Vines",
+    "offer": "Student discounts on preppy clothing",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Bonobos",
+    "offer": "Student discount on men's apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Madewell",
+    "offer": "Student discount on denim & accessories",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Quiksilver",
+    "offer": "Student discount on surf & outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Roxy",
+    "offer": "Student discount on surf & outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Vans",
+    "offer": "15% off student discount on footwear & apparel",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Crocs",
+    "offer": "Student discount on footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Puma",
+    "offer": "Student discount on sportswear & footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Reebok",
+    "offer": "Student discount on sportswear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Under Armour",
+    "offer": "Student discount on sportswear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Champion",
+    "offer": "Student discount on casual & athletic wear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "New Balance",
+    "offer": "Student discount on footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "ASICS",
+    "offer": "Student discount on running shoes",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Boohoo",
+    "offer": "Student discount on fast fashion",
+    "category": "Fashion",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Missguided",
+    "offer": "Student discount on fast fashion",
+    "category": "Fashion",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "PrettyLittleThing",
+    "offer": "Student discount on fast fashion",
+    "category": "Fashion",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Shein",
+    "offer": "Student discount on fast fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Zara",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Mango",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Pull&Bear",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Bershka",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Stradivarius",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Hollister",
+    "offer": "Student discount on casual wear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "American Eagle",
+    "offer": "Student discount on jeans & apparel",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Forever 21",
+    "offer": "Student discount on fast fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Urban Outfitters",
+    "offer": "Student discount on vintage & streetwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Free People",
+    "offer": "Student discount on bohemian fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Anthropologie",
+    "offer": "Student discount on fashion & home",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Gymshark",
+    "offer": "Student discount on activewear",
+    "category": "Fashion",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Lululemon",
+    "offer": "Student discount on yoga & activewear",
+    "category": "Fashion",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Farfetch",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Cotton On",
+    "offer": "Student discount on casual fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "JD Sports",
+    "offer": "Student discount on sportswear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Polo Ralph Lauren",
+    "offer": "Student discount on apparel",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Tommy Hilfiger",
+    "offer": "Student discount on apparel",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Calvin Klein",
+    "offer": "Student discount on apparel",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Hugo Boss",
+    "offer": "Student discount on apparel",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Michael Kors",
+    "offer": "Student discount on accessories",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Kate Spade",
+    "offer": "Student discount on handbags",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Tory Burch",
+    "offer": "Student discount on footwear & accessories",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Coach",
+    "offer": "Student discount on bags & accessories",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Furla",
+    "offer": "Student discount on bags",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Longchamp",
+    "offer": "Student discount on bags",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "MCM",
+    "offer": "Student discount on luxury bags",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Bally",
+    "offer": "Student discount on luxury accessories",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Salvatore Ferragamo",
+    "offer": "Student discount on footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Jimmy Choo",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Manolo Blahnik",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Christian Louboutin",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Giuseppe Zanotti",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Stuart Weitzman",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Aquazzura",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Rene Caovilla",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Sergio Rossi",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Gianvito Rossi",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Charlotte Olympia",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Nicholas Kirkwood",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Tabitha Simmons",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Sophia Webster",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Paul Andrew",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Malone Souliers",
+    "offer": "Student discount on luxury footwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "AllSaints",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Armani",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Balenciaga",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Bottega Veneta",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Burberry",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Celine",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Chanel",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Dior",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Fendi",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Givenchy",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Gucci",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Herm\u00e8s",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Louis Vuitton",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Prada",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Saint Laurent",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Valentino",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Versace",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Alexander McQueen",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Balmain",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Dolce & Gabbana",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Kenzo",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Marni",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Miu Miu",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Off-White",
+    "offer": "Student discount on streetwear",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Rag & Bone",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Stella McCartney",
+    "offer": "Student discount on sustainable fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Tom Ford",
+    "offer": "Student discount on luxury fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Diesel",
+    "offer": "Student discount on denim & apparel",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "COS",
+    "offer": "Student discount on minimalist fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "& Other Stories",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Weekday",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Monki",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Arket",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Uniqlo",
+    "offer": "Student discount on basics",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Muji",
+    "offer": "Student discount on minimalist lifestyle",
+    "category": "Fashion",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Patagonia",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Columbia",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Arc'teryx",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Marmot",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Mountain Hardwear",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Rab",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Outdoor Research",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Smartwool",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Icebreaker",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Woolrich",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Filson",
+    "offer": "Student discount on outdoor apparel",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Carhartt",
+    "offer": "Student discount on workwear",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Dickies",
+    "offer": "Student discount on workwear",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Wrangler",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Lee",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Rock & Republic",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "True Religion",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "7 For All Mankind",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Citizens of Humanity",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Paige",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "AG Jeans",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Frame",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Mother",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "DL1961",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "J Brand",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Current/Elliott",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "MiH Jeans",
+    "offer": "Student discount on denim",
+    "category": "Fashion",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Acne Studios",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "APC",
+    "offer": "Student discount on minimalist fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Isabel Marant",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Vanessa Bruno",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Maje",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Sandro",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Claudie Pierlot",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Ba&sh",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Iro",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Zadig & Voltaire",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Ganni",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Rotate",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Cecilie Copenhagen",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "By Malene Birger",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "House of Dagmar",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Sams\u00f8e Sams\u00f8e",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Stine Goya",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Baum und Pferdgarten",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "The Kooples",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Mugler",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Patou",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Rochas",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Carven",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Leonard Paris",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Nina Ricci",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Chlo\u00e9",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Loewe",
+    "offer": "Student discount on fashion",
+    "category": "Fashion",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Apple",
+    "offer": "Student pricing on Macs, iPads & accessories",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Samsung",
+    "offer": "Student discounts on smartphones & tablets",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Dell",
+    "offer": "Student discount on laptops & monitors",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "HP",
+    "offer": "Up to 30% off laptops & printers",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Lenovo",
+    "offer": "Student discount on laptops",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Acer",
+    "offer": "Student discount on laptops & monitors",
+    "category": "Tech",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Asus",
+    "offer": "Student discount on laptops & components",
+    "category": "Tech",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Microsoft",
+    "offer": "Student pricing on Office 365 & Windows",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Adobe Creative Cloud",
+    "offer": "Student pricing on full suite",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Autodesk",
+    "offer": "Free education software (AutoCAD, Maya, etc.)",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Tableau",
+    "offer": "Student pricing on data visualization",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Unity Technologies",
+    "offer": "Student pricing on game development tools",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Codecademy",
+    "offer": "Student discounts on coding platform",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "SurveyMonkey",
+    "offer": "Student pricing on survey tools",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Roxio",
+    "offer": "Student discounts on photo & video editing",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Capture One",
+    "offer": "Student discounts on professional photo editing",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Final Draft",
+    "offer": "Student discounts on screenwriting software",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Vectorworks",
+    "offer": "Student pricing on CAD & BIM software",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Lumion",
+    "offer": "Student pricing on 3D rendering software",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Norton",
+    "offer": "Student discount on antivirus software",
+    "category": "Tech",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Dropbox",
+    "offer": "Student discount on cloud storage",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Evernote",
+    "offer": "50% off student discount on note-taking",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Slack",
+    "offer": "Free for student teams",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Zoom",
+    "offer": "Free Zoom Pro for students",
+    "category": "Tech",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "GitHub",
+    "offer": "Student Developer Pack (free)",
+    "category": "Tech",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Alibaba Cloud",
+    "offer": "Special student offer on cloud services",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "AT&T",
+    "offer": "Student discounts on phone plans",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "T-Mobile",
+    "offer": "Student discounts on phone plans",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Xfinity",
+    "offer": "Student discounts on internet plans",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "USCellular",
+    "offer": "Student discounts on phone plans",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Verizon",
+    "offer": "Student discount on phone plans",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Vodafone",
+    "offer": "Student discount on phone plans",
+    "category": "Tech",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Direct Energy",
+    "offer": "Student discounts on energy plans",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "PODS",
+    "offer": "Student discounts on moving & storage",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "DISHForMyRV",
+    "offer": "Student discounts on satellite TV for RVs",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Reolink",
+    "offer": "Student discounts on security cameras",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Molekule",
+    "offer": "Student discounts on air purifiers",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "LiTime",
+    "offer": "Student discounts on tech products",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Tech Perks",
+    "offer": "Student discounts on tech accessories",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Targus",
+    "offer": "Student discounts on laptop bags & accessories",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Marshall Headphones",
+    "offer": "Student discounts on audio gear",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "WM",
+    "offer": "Student discounts on waste management",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "COBB Tuning",
+    "offer": "Student discounts on auto performance parts",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Ferrea Racing Components",
+    "offer": "Student discounts on auto parts",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Flexispot",
+    "offer": "Student discounts on standing desks",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Perfectly Clear",
+    "offer": "Student discounts on photo editing",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "IDM Computer Solutions",
+    "offer": "Student discounts on software tools",
+    "category": "Tech",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Spotify Premium",
+    "offer": ".99/month for students",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Hulu",
+    "offer": "Student discount on streaming service",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Peacock",
+    "offer": "Student discount on streaming service",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "YouTube Premium",
+    "offer": "Student discount on ad-free videos & music",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "TIDAL",
+    "offer": "Student discount on high-fidelity music streaming",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "SoundCloud",
+    "offer": "Student discount on music platform",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "SiriusXM",
+    "offer": "Exclusive student offer on satellite radio",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "NBA",
+    "offer": "Student discount on league pass",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "NFL Sunday Ticket",
+    "offer": "Student discount on football games",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "GolfPass",
+    "offer": "Student discount on golf content",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "BookBeat",
+    "offer": "Student discounts on audiobooks",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Discovery",
+    "offer": "Student discounts on streaming",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Disney+",
+    "offer": "Student discount on streaming",
+    "category": "Entertainment",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Ticketmaster",
+    "offer": "Student discount on event tickets",
+    "category": "Entertainment",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Musician's Friend",
+    "offer": "Student discounts on music equipment",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Discovery",
+    "offer": "Student discounts on streaming",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "GolfPass",
+    "offer": "Student discounts",
+    "category": "Entertainment",
+    "source": "SheerID"
+  },
+  {
+    "brand": "StudentUniverse",
+    "offer": "Up to 60% off flights & hotels",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Singapore Airlines",
+    "offer": "Exclusive student benefits & discounts",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Lufthansa",
+    "offer": "Student fares on international flights",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Princess Cruises",
+    "offer": "Student discounts on cruises",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Sandals Resorts",
+    "offer": "Student discounts on all-inclusive stays",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Beaches Resorts",
+    "offer": "Student discounts on all-inclusive family resorts",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Holland America Line",
+    "offer": "Student discounts on cruises",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Airbnb",
+    "offer": "Student discounts on stays",
+    "category": "Travel",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Booking.com",
+    "offer": "Student discounts on hotels",
+    "category": "Travel",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Expedia",
+    "offer": "Student discounts on travel packages",
+    "category": "Travel",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Ikon Pass",
+    "offer": "College discount - 89+ for Base Pass",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Copper Mountain Resort",
+    "offer": "Student discounts on ski passes",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Monarch Mountain",
+    "offer": "Student discounts on lift tickets",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Vail Valley Anglers",
+    "offer": "Student discounts on guided fishing trips",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Rollick",
+    "offer": "Student discounts on outdoor recreation",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "NursesWantCruises.com",
+    "offer": "Student discounts on cruises",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "CheapCaribbean",
+    "offer": "Student discounts on Caribbean vacations",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Airstream",
+    "offer": "Student discounts on RVs",
+    "category": "Travel",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Alo Moves",
+    "offer": "1 month free + 20% off student discount",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "CorePower Yoga",
+    "offer": "Student discount on yoga classes",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Headspace",
+    "offer": "Student discount on meditation app",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Calm",
+    "offer": "Student discount on meditation & sleep app",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Peloton",
+    "offer": "Student discount on fitness subscriptions",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Sculpt Society",
+    "offer": "Student discounts on fitness app",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Pvolve",
+    "offer": "Student discounts on fitness memberships",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Gainful Health Inc.",
+    "offer": "Student discounts on personalized nutrition",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Novex Biotech",
+    "offer": "Student discounts on supplements",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Rookie Wellness",
+    "offer": "Student discounts on wellness products",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Seed",
+    "offer": "Student discounts on probiotics",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Eargo",
+    "offer": "Student discounts on hearing aids",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "CURVD Earplugs",
+    "offer": "Student discounts on hearing protection",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Atkins",
+    "offer": "Student discounts on nutrition products",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Huel",
+    "offer": "Student discounts on nutrition shakes",
+    "category": "Health & Fitness",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Wall Street Journal",
+    "offer": "Student pricing on digital news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Washington Post",
+    "offer": "Student pricing on digital news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Economist",
+    "offer": "Student pricing on global news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Barron's",
+    "offer": "Student pricing on financial news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "MarketWatch",
+    "offer": "Student pricing on financial news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "edX",
+    "offer": "Student discounts on online courses",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Ancestry",
+    "offer": "Student discount on genealogy service",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Encyclopaedia Britannica",
+    "offer": "Student discounts on reference content",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Chegg",
+    "offer": "Student discounts on textbooks & study help",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Course Hero",
+    "offer": "Student discounts on study resources",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Ad Age",
+    "offer": "Student discounts on advertising news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Automotive News",
+    "offer": "Student discounts on industry news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Modern Healthcare",
+    "offer": "Student discounts on healthcare news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "MDR Legal",
+    "offer": "Student discounts on legal news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Times",
+    "offer": "Student discounts on UK news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "USA Today",
+    "offer": "Student discounts on US news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Arizona Republic",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Courier-Journal",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Florida Times-Union",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "The Oklahoman",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Austin American-Statesman",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Corpus Christi Caller-Times",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Pensacola News Journal",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Portsmouth Herald",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Wilmington Star-News",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Kitsap Sun",
+    "offer": "Student discounts on local news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Crain's Chicago Business",
+    "offer": "Student discounts on business news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Crain's Cleveland Business",
+    "offer": "Student discounts on business news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Crain's Detroit Business",
+    "offer": "Student discounts on business news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Crain's New York Business",
+    "offer": "Student discounts on business news",
+    "category": "Education",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Amazon Prime",
+    "offer": "6 months free + 50% off (.49/mo)",
+    "category": "Shopping",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Target",
+    "offer": "Student discounts on select items",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Best Buy",
+    "offer": "Student discounts on electronics",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Walmart",
+    "offer": "Student discounts on select items",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Costco",
+    "offer": "Student discounts on select items",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Sam's Club",
+    "offer": "Student discounts on select items",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Groupon",
+    "offer": "Student discounts on deals & experiences",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Sticker Mule",
+    "offer": "Student discounts on custom stickers",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Michaels",
+    "offer": "Student discounts on arts & crafts",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Hobby Lobby",
+    "offer": "Student discounts on crafts",
+    "category": "Shopping",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Joann",
+    "offer": "Student discounts on fabric & crafts",
+    "category": "Shopping",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Dick's Sporting Goods",
+    "offer": "Student discounts on sporting gear",
+    "category": "Shopping",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "REI",
+    "offer": "Student discounts on outdoor gear",
+    "category": "Shopping",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Cabela's",
+    "offer": "Student discounts on outdoor gear",
+    "category": "Shopping",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Bass Pro Shops",
+    "offer": "Student discounts on outdoor gear",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "L.L.Bean",
+    "offer": "Student discounts on outdoor apparel",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Lovesac",
+    "offer": "Student discounts on furniture",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Nectar",
+    "offer": "Student discounts on mattresses",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Purple",
+    "offer": "Student discounts on mattresses",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Puffy",
+    "offer": "Student discounts on mattresses",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "DreamCloud",
+    "offer": "Student discounts on mattresses",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Awara",
+    "offer": "Student discounts on mattresses",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Ashley Furniture",
+    "offer": "Student discounts on furniture",
+    "category": "Shopping",
+    "source": "SheerID"
+  },
+  {
+    "brand": "Starbucks",
+    "offer": "Student discount on coffee",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Domino's",
+    "offer": "Student discount on pizza",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Deliveroo",
+    "offer": "Student discount on food delivery",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Uber Eats",
+    "offer": "Student discount on food delivery",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "McDonald's",
+    "offer": "Student discount on food",
+    "category": "Food & Drink",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "KFC",
+    "offer": "Student discount on fried chicken",
+    "category": "Food & Drink",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Krispy Kreme",
+    "offer": "Student discount on donuts",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Popeyes",
+    "offer": "Student discount on fast food",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Wasabi",
+    "offer": "Student discount on sushi",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "T4",
+    "offer": "Student discount on bubble tea",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Greggs",
+    "offer": "Student discount on bakery items",
+    "category": "Food & Drink",
+    "source": "Student Beans"
+  },
+  {
+    "brand": "Chipotle",
+    "offer": "Student discount on fast food",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Subway",
+    "offer": "Student discount on fast food",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Wendy's",
+    "offer": "Student discount on fast food",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  },
+  {
+    "brand": "Burger King",
+    "offer": "Student discount on fast food",
+    "category": "Food & Drink",
+    "source": "UNiDAYS"
+  }
 ]

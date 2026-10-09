@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--
+  FastDiscountFinder — $60 payment page
+  Themed to match eduverify.html (Inter, #1a6cff + #ffcc00, rounded cards).
+
+  PAYMENT LINKS TO SET (search for REPLACE_):
+    - Crypto: create a $60 invoice in the NOWPayments dashboard
+      (account.nowpayments.io -> Payments -> Invoices -> Create invoice,
+       amount 60 USD), then paste its link/ID into CRYPTO_LINK below.
+      The API key is NOT needed for a hosted invoice link and must NEVER be
+      put in this file.
+    - Gift card: your gift-card link (as in eduverify.html).
+    - Stripe: your Stripe Payment Link for $60.
+
+  Do NOT paste the NOWPayments API key here — this is a public static page.
+  For per-customer dynamic invoices, use a server-side Worker (see worker/README).
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Your Payment — $60 | FastDiscountFinder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f4f9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background-image: radial-gradient(ellipse at 20% 50%, rgba(26, 108, 255, 0.04) 0%, transparent 60%),
+                              radial-gradient(ellipse at 80% 50%, rgba(255, 204, 0, 0.04) 0%, transparent 60%);
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.03);
+            padding: 48px 40px 36px;
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #1a6cff, #ffcc00, #1a6cff);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+        .badge {
+            display: inline-block; background: #eef3ff; color: #1a6cff;
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px;
+        }
+
+        h1 { font-size: 30px; font-weight: 800; color: #0a1a2e; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 6px; }
+        .subhead { font-size: 16px; color: #5a6a8a; line-height: 1.5; margin-bottom: 28px; }
+        .subhead strong { color: #0a1a2e; }
+
+        .speed-note {
+            background: #f0f9ff; border-radius: 8px; padding: 10px 16px;
+            border: 1px solid #b3d9ff; font-size: 13px; color: #0055aa;
+            margin-bottom: 24px; text-align: center; font-weight: 500;
+        }
+
+        .plan-card {
+            background: #f0f7ff; border: 1px solid #1a6cff; border-radius: 16px;
+            padding: 22px 20px 20px; box-shadow: 0 4px 16px rgba(26, 108, 255, 0.08);
+            position: relative; margin-bottom: 22px;
+        }
+        .plan-card .plan-name { font-weight: 700; font-size: 18px; margin-bottom: 4px; }
+        .plan-card .plan-price { font-size: 40px; font-weight: 800; color: #0a1a2e; letter-spacing: -0.03em; }
+        .plan-card .plan-price span { font-size: 16px; font-weight: 600; color: #5a6a8a; letter-spacing: 0; }
+        .plan-card .plan-desc { font-size: 13px; color: #5a6a8a; margin: 6px 0 14px 0; line-height: 1.5; }
+        .plan-card ul { list-style: none; padding: 0; margin: 0 0 14px 0; font-size: 13.5px; color: #2a3a5a; line-height: 1.9; }
+        .plan-card ul li::before { content: "✓ "; color: #1a6cff; font-weight: 700; }
+        .plan-card .badge-recommended {
+            display: inline-block; background: #ffcc00; color: #0a1a2e;
+            font-size: 10px; font-weight: 700; text-transform: uppercase;
+            padding: 3px 12px; border-radius: 20px; letter-spacing: 0.05em; margin-bottom: 6px;
+        }
+
+        .payment-options { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+        .payment-option {
+            display: flex; align-items: center; justify-content: space-between;
+            background: #ffffff; border: 1px solid #eef2f6; border-radius: 10px;
+            padding: 12px 14px; text-decoration: none; color: #0a1a2e; font-size: 14px;
+            transition: border-color 0.2s, transform 0.1s;
+        }
+        .payment-option:hover { border-color: #1a6cff; }
+        .payment-option:active { transform: scale(0.99); }
+        .payment-option .label { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+        .payment-option .badge-instant { background: #d4edda; color: #155724; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+        .payment-option .badge-hold { background: #fff3cd; color: #856404; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; }
+        .payment-option .arrow { color: #1a6cff; font-weight: 300; }
+
+        .gift-card-note { font-size: 11.5px; color: #4a5a7a; margin-top: 10px; text-align: center; line-height: 1.6; }
+        .gift-card-note strong { color: #0a1a2e; }
+
+        /* --- Stylish verification buttons --- */
+        .verify-section { margin: 24px 0 8px; }
+        .verify-title {
+            font-size: 12px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: #8a9ab0; text-align: center; margin-bottom: 12px;
+        }
+        .verify-row { display: flex; gap: 12px; flex-wrap: wrap; }
+        .verify-btn {
+            flex: 1; min-width: 190px; display: flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 15px 18px; border-radius: 14px; text-decoration: none; color: #fff;
+            font-weight: 700; font-size: 15px; letter-spacing: -0.01em;
+            position: relative; overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,.12);
+            transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+        }
+        .verify-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,.20); filter: brightness(1.05); }
+        .verify-btn:active { transform: translateY(0); }
+        .verify-btn .v-ico { display: inline-flex; width: 22px; height: 22px; align-items: center; justify-content: center; font-size: 17px; }
+        .verify-btn .go { opacity: .85; font-weight: 400; margin-left: 2px; }
+        .verify-btn::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.28) 50%, transparent 70%);
+            transform: translateX(-130%); transition: transform .6s ease;
+        }
+        .verify-btn:hover::after { transform: translateX(130%); }
+        .verify-btn.sheerid { background: linear-gradient(135deg, #4b6bfb 0%, #7b4bff 55%, #a24bff 100%); }
+        .verify-btn.unidays { background: linear-gradient(135deg, #00e08a 0%, #00c2ff 100%); }
+
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0 18px; }
+        .feature-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: #2a3a5a; }
+        .feature-item .icon { font-size: 18px; flex-shrink: 0; }
+
+        .footer {
+            border-top: 1px solid #eef2f6; padding-top: 18px; margin-top: 6px;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 10px; font-size: 13px; color: #8a9ab0;
+        }
+        .footer .secure { display: flex; align-items: center; gap: 6px; }
+        .footer .trust { display: flex; align-items: center; gap: 14px; }
+
+        .contact-info { margin-top: 16px; padding-top: 16px; border-top: 1px solid #f0f2f6; text-align: center; font-size: 14px; color: #4a5a7a; line-height: 1.8; }
+        .contact-info a { color: #1a6cff; text-decoration: none; font-weight: 500; }
+        .contact-info a:hover { text-decoration: underline; }
+
+        .footnote { text-align: center; font-size: 12px; color: #8a9ab0; margin-top: 12px; }
+
+        @media (max-width: 480px) {
+            .container { padding: 32px 20px 24px; }
+            .features { grid-template-columns: 1fr; }
+            .footer { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="badge">🔥 Instant Access Available</div>
+
+        <h1>Complete Your $60 Payment</h1>
+        <p class="subhead">
+            Secure your <strong>Fast Discount Finder</strong> plan &bull; verified &amp; activated right away
+        </p>
+
+        <div class="speed-note">
+            ⚡ <strong>Crypto &amp; Gift Cards are INSTANT</strong> – we start working immediately.<br />
+            💳 Card takes <strong>up to 7 days</strong> to clear – we wait for settlement.
+        </div>
+
+        <!-- $60 Plan -->
+        <div class="plan-card">
+            <span class="badge-recommended">✅ Complete Access</span>
+            <div class="plan-name">🎓 Fast Discount Finder — Full Plan</div>
+            <div class="plan-price">$60 <span>USD</span></div>
+            <div class="plan-desc">One payment. Everything unlocked.</div>
+            <ul>
+                <li>Full access to 200+ verified student discounts</li>
+                <li>Priority verification &amp; onboarding</li>
+                <li>Activated within minutes of confirmation</li>
+                <li>Dedicated support (2–3 hour replies)</li>
+            </ul>
+
+            <div class="payment-options">
+                <!-- Crypto: create a $60 invoice in NOWPayments and paste its iid here -->
+                <!-- REPLACE_CRYPTO_IID e.g. https://nowpayments.io/payment/?iid=1234567890 -->
+                <a href="https://nowpayments.io/payment/?iid=5879860759" target="_blank" rel="noopener noreferrer" class="payment-option">
+                    <span class="label">₿ Crypto (NOWPayments)</span>
+                    <span class="badge-instant">Instant</span>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Gift card: REPLACE with your gift-card link -->
+                <a href="REPLACE_GIFTCARD_LINK" target="_blank" rel="noopener noreferrer" class="payment-option">
+                    <span class="label">🎁 Gift Card</span>
+                    <span class="badge-instant">Instant</span>
+                    <span class="arrow">→</span>
+                </a>
+                <!-- Stripe: REPLACE with your $60 Stripe Payment Link -->
+                <a href="REPLACE_STRIPE_LINK" target="_blank" rel="noopener noreferrer" class="payment-option">
+                    <span class="label">💳 Card / Stripe</span>
+                    <span class="badge-hold">7-day hold</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+
+            <div class="gift-card-note">
+                🎯 <strong>We absorb fees</strong> – pay $60, done.<br />
+                Gift cards can be bought with <strong>PayPal or any method</strong> (full anonymity) —<br />
+                send the code via <strong>email or WhatsApp</strong> and we start instantly.
+            </div>
+        </div>
+
+        <!-- Stylish verification CTAs -->
+        <div class="verify-section">
+            <div class="verify-title">Instant Student Verification</div>
+            <div class="verify-row">
+                <!-- REPLACE_SHEERID_LINK with your SheerID verification URL -->
+                <a class="verify-btn sheerid" href="REPLACE_SHEERID_LINK" target="_blank" rel="noopener noreferrer">
+                    <span class="v-ico">🎓</span> Verify with SheerID <span class="go">→</span>
+                </a>
+                <!-- REPLACE_UNIDAYS_LINK with your UNiDAYS verification URL -->
+                <a class="verify-btn unidays" href="REPLACE_UNIDAYS_LINK" target="_blank" rel="noopener noreferrer">
+                    <span class="v-ico">✅</span> Verify with UNiDAYS <span class="go">→</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Trust Features -->
+        <div class="features">
+            <div class="feature-item"><span class="icon">✅</span> 200+ Brands Verified</div>
+            <div class="feature-item"><span class="icon">🎓</span> .edu Email Included</div>
+            <div class="feature-item"><span class="icon">🔒</span> Secure Checkout</div>
+            <div class="feature-item"><span class="icon">⭐</span> 24+ 5-Star Reviews</div>
+        </div>
+
+        <div class="footer">
+            <div class="secure"><span>🔒</span> Secure checkout</div>
+            <div class="trust">
+                <span>💳 Card</span>
+                <span>₿ Crypto</span>
+                <span>🎁 Gift Card</span>
+            </div>
+        </div>
+
+        <div class="contact-info">
+            📧 <a href="mailto:sheeredudeals@gmail.com">sheeredudeals@gmail.com</a> &nbsp;·&nbsp;
+            📱 <a href="https://wa.me/13477667259" target="_blank">+1 (347) 766-7259</a>
+            <br />
+            <span style="font-size: 13px; color: #8a9ab0;">We reply within 2–3 hours.</span>
+        </div>
+
+        <div class="footnote">
+            💡 After crypto/gift-card payment, send us the confirmation and we activate instantly.
+        </div>
+
+    </div>
+</body>
+</html>

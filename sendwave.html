@@ -183,6 +183,18 @@
         .contact-info a { color: #1a6cff; text-decoration: none; font-weight: 500; }
         .contact-info a:hover { text-decoration: underline; }
 
+        .works-with {
+            display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
+            margin: 0 0 24px;
+        }
+        .works-with .ww-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #8a9ab0; }
+        .works-with .ww-badge {
+            background: #fff; border: 1px solid #e6eefb; color: #0a1a2e;
+            font-weight: 700; font-size: 12.5px; padding: 6px 13px; border-radius: 100px;
+            box-shadow: 0 2px 8px rgba(10, 26, 46, 0.04);
+        }
+        .works-with .ww-badge.check::before { content: "✓ "; color: #1a6cff; }
+
         .save-strip {
             display: inline-flex; align-items: center; gap: 8px; margin: 0 0 18px;
             background: #fff8e1; border: 1px solid #ffe08a; color: #8a5a00;
@@ -276,6 +288,7 @@
         <p class="subhead">
             Verified student email delivered in <strong>under 24 hours</strong>. Pay via
             <strong>Sendwave</strong> or <strong>crypto</strong> — no third‑party holds.
+            Works with <strong>UNiDAYS</strong>, <strong>SheerID</strong> and <strong>Student Beans</strong>.
         </p>
 
         <div class="speed-note">
@@ -292,6 +305,13 @@
             <div class="feature-item"><span class="icon">🔒</span> 100% private</div>
             <div class="feature-item"><span class="icon">💰</span> Up to 60% off</div>
             <div class="feature-item"><span class="icon">📧</span> Real .edu email</div>
+        </div>
+
+        <div class="works-with">
+            <span class="ww-label">Accepted by</span>
+            <span class="ww-badge check">UNiDAYS</span>
+            <span class="ww-badge check">SheerID</span>
+            <span class="ww-badge check">Student Beans</span>
         </div>
 
         <div class="section-title">How to pay</div>

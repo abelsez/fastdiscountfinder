@@ -89,6 +89,27 @@
         .store-badges img { height: 40px; display: block; }
         .store-badges img.apple { height: 40px; }
 
+        .getwave-btn {
+            display: inline-flex; align-items: center; gap: 8px; margin: 10px 0 12px;
+            background: linear-gradient(135deg, #00b8a9 0%, #00e08a 100%); color: #fff; text-decoration: none;
+            font-weight: 700; font-size: 14px; padding: 11px 20px; border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 190, 140, 0.30);
+            transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+        }
+        .getwave-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0, 190, 140, 0.42); filter: brightness(1.05); }
+        .getwave-btn:active { transform: translateY(0); }
+
+        .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .wa-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            background: linear-gradient(135deg, #25D366 0%, #1ebe5b 100%); color: #fff; text-decoration: none;
+            font-weight: 700; font-size: 16px; padding: 15px 26px; border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(37, 211, 102, 0.30);
+            transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+        }
+        .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(37, 211, 102, 0.42); filter: brightness(1.04); }
+        .wa-btn:active { transform: translateY(0); }
+
         .pill {
             display: inline-block; background: #eef3ff; color: #1a6cff; font-weight: 600;
             font-size: 12.5px; padding: 3px 10px; border-radius: 8px; margin: 2px 4px 2px 0;
@@ -201,6 +222,7 @@
                 <div class="step-body">
                     <div class="step-title">Download Sendwave</div>
                     <div class="step-desc">Get the app from the official stores:</div>
+                    <a class="getwave-btn" href="https://www.sendwave.com" target="_blank" rel="noopener">Get Sendwave →</a>
                     <div class="store-badges">
                         <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
                             <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
@@ -276,7 +298,10 @@
         <div class="cta-box">
             <h2>Ready to start saving?</h2>
             <p>Once your payment is sent, email us your preferred name and we’ll deliver your .edu address within hours.</p>
-            <a href="mailto:jmaclive101@gmail.com?subject=Sendwave%20payment%20sent%20-%20.edu%20request" class="email-btn">📧 Email Us Now</a>
+            <div class="cta-actions">
+                <a href="mailto:jmaclive101@gmail.com?subject=Sendwave%20payment%20sent%20-%20.edu%20request" class="email-btn">📧 Email Us Now</a>
+                <a href="https://wa.me/13477667259?text=Hi%2C%20I%20sent%20a%20Sendwave%20payment%20for%20my%20.edu" target="_blank" rel="noopener" class="wa-btn">💬 WhatsApp</a>
+            </div>
             <div class="guarantee">✅ 24‑hour delivery guarantee · Full refund if we miss it</div>
         </div>
 

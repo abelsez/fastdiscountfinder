@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Email Discount – Get Yours in Minutes</title>
+    <style>
+        /* --- Reset & Base --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f9fafc;
+            color: #1a1a2e;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem 2rem;
+        }
+
+        /* --- Typography --- */
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #2d2d44;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Hero --- */
+        .hero {
+            text-align: center;
+            padding: 1rem 0 0.5rem;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .hero h1 span {
+            color: #2563eb;
+        }
+        .hero .sub {
+            font-size: 1.2rem;
+            color: #4b4b6b;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+
+        /* --- Benefits grid --- */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0 2.5rem;
+            background: #f8faff;
+            padding: 1.5rem;
+            border-radius: 24px;
+        }
+        .benefit-item {
+            text-align: center;
+        }
+        .benefit-item .icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        .benefit-item strong {
+            display: block;
+            font-size: 1rem;
+        }
+        .benefit-item small {
+            font-size: 0.9rem;
+            color: #4b4b6b;
+        }
+
+        /* --- Steps --- */
+        .steps {
+            margin: 2rem 0;
+            padding: 0;
+            list-style: none;
+            counter-reset: step;
+        }
+        .steps li {
+            counter-increment: step;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.2rem;
+            background: #f8faff;
+            border-radius: 16px;
+            transition: background 0.2s;
+        }
+        .steps li:hover {
+            background: #eef4ff;
+        }
+        .steps li::before {
+            content: counter(step);
+            background: #2563eb;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        .steps li .step-content {
+            flex: 1;
+        }
+        .steps li .step-content strong {
+            display: block;
+            font-size: 1.05rem;
+        }
+        .steps li .step-content .detail {
+            font-size: 0.95rem;
+            color: #2d2d44;
+            margin-top: 0.2rem;
+        }
+        .steps li .step-content .detail a {
+            word-break: break-all;
+        }
+        .store-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.3rem;
+        }
+        .store-badges img {
+            height: 42px;
+            width: auto;
+            border-radius: 8px;
+            transition: transform 0.15s;
+        }
+        .store-badges img:hover {
+            transform: scale(1.02);
+        }
+        .crypto-address {
+            background: #1e1e2f;
+            color: #e0e0ff;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+            margin: 0.25rem 0;
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        /* --- CTA --- */
+        .cta-box {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 2rem 2rem 1.8rem;
+            border-radius: 28px;
+            margin: 2.5rem 0 1rem;
+            text-align: center;
+        }
+        .cta-box h2 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        .cta-box p {
+            color: #d0d0ea;
+            font-size: 1.1rem;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-box .email-btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #1a1a2e;
+            font-weight: 600;
+            padding: 0.8rem 2.5rem;
+            border-radius: 60px;
+            font-size: 1.1rem;
+            margin: 1rem 0 0.5rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            text-decoration: none;
+        }
+        .cta-box .email-btn:hover {
+            background: #e0e7ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+        .cta-box .guarantee {
+            font-size: 0.9rem;
+            color: #a5b4fc;
+            margin-top: 0.75rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            color: #6b6b8a;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.5rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 640px) {
+            .container { padding: 1.5rem 1rem; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+            .benefits { grid-template-columns: 1fr 1fr; gap: 1rem; }
+            .steps li { flex-direction: column; align-items: stretch; }
+            .steps li::before { margin-bottom: 0.25rem; }
+            .cta-box { padding: 1.5rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+        <span class="badge">🎓 Limited Offer</span>
+        <h1>Student Email <span>Discount</span> – Instant Access</h1>
+        <p class="sub">Get your verified .edu email in <strong>under 24 hours</strong> and start saving on Apple, Amazon, Spotify, and hundreds more.</p>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="benefits">
+        <div class="benefit-item">
+            <span class="icon">⚡</span>
+            <strong>Lightning‑fast</strong>
+            <small>Delivery in hours, not weeks</small>
+        </div>
+        <div class="benefit-item">
+            <span class="icon">🔒</span>
+            <strong>100% Private</strong>
+            <small>Your data stays confidential</small>
+        </div>
+        <div class="benefit-item">
+            <span class="icon">💰</span>
+            <strong>Huge Savings</strong>
+            <small>Up to 60% off on top brands</small>
+        </div>
+        <div class="benefit-item">
+            <span class="icon">📧</span>
+            <strong>Real .edu</strong>
+            <small>Works with all major student portals</small>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS + PAYMENT -->
+    <h2>How to get your student email</h2>
+    <p style="color:#4b4b6b;">Follow these simple steps – you’ll be saving in no time.</p>
+
+    <ol class="steps">
+        <li>
+            <div class="step-content">
+                <strong>Download Sendwave</strong>
+                <div class="detail">Get the app from the official stores:</div>
+                <div class="store-badges">
+                    <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" />
+                    </a>
+                    <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank">
+                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" style="height:42px;" />
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="step-content">
+                <strong>Sign up &amp; set your first transfer</strong>
+                <div class="detail">Choose <strong>Kenya</strong> as the country and <strong>M‑PESA</strong> as the payment method.</div>
+            </div>
+        </li>
+        <li>
+            <div class="step-content">
+                <strong>Enter recipient details</strong>
+                <div class="detail">Full name: <strong>Abel Ochieng</strong><br />Mobile: <strong>722 869 570</strong></div>
+            </div>
+        </li>
+        <li>
+            <div class="step-content">
+                <strong>Send $55 USD</strong>
+                <div class="detail">Review the amount and confirm. Funds arrive within minutes.</div>
+            </div>
+        </li>
+        <li>
+            <div class="step-content">
+                <strong>Prefer crypto?</strong>
+                <div class="detail">Send the equivalent of <strong>$50 USD</strong> to any of these wallets:</div>
+                <div style="margin-top:0.3rem;">
+                    <span class="crypto-address">Bitcoin: 148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</span><br />
+                    <span class="crypto-address">Ethereum: 0xb1f4f70928095b593564a3cf7809b75550cda9a5</span><br />
+                    <span class="crypto-address">Solana: 0xb1f4f70928095b593564a3cf7809b75550cda9a5</span>
+                </div>
+                <div class="detail" style="margin-top:0.4rem;font-size:0.9rem;">⚠️ Double‑check the address before sending.</div>
+            </div>
+        </li>
+    </ol>
+
+    <!-- FINAL CTA -->
+    <div class="cta-box">
+        <h2>Ready to start saving?</h2>
+        <p>Once your payment is sent, email us with your preferred name and we'll deliver your .edu address within hours.</p>
+        <a href="mailto:jmaclive101@gmail.com" class="email-btn">📧 Email Us Now</a>
+        <div class="guarantee">✅ 24‑hour delivery guarantee • Full refund if we miss the deadline</div>
+    </div>
+
+    <!-- TRUST / EXTRA -->
+    <p style="font-size:0.9rem;color:#6b6b8a;text-align:center;margin-top:1.5rem;">
+        No third‑party holds • Direct mobile wallet transfer • Fast &amp; discreet
+    </p>
+
+    <footer>
+        <p>© 2026 Fast Discount Finder – Helping students save smarter.</p>
+    </footer>
+
+</div>
+</body>
+</html>

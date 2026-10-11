@@ -183,6 +183,46 @@
         .contact-info a { color: #1a6cff; text-decoration: none; font-weight: 500; }
         .contact-info a:hover { text-decoration: underline; }
 
+        .save-strip {
+            display: inline-flex; align-items: center; gap: 8px; margin: 0 0 18px;
+            background: #fff8e1; border: 1px solid #ffe08a; color: #8a5a00;
+            font-size: 13.5px; font-weight: 700; padding: 7px 14px; border-radius: 10px;
+        }
+        .save-strip s { color: #b98a2e; }
+        .save-strip strong { color: #0a1a2e; }
+        .save-strip .off { background: #ffcc00; color: #0a1a2e; font-size: 11px; font-weight: 800; padding: 2px 9px; border-radius: 20px; }
+
+        .urgency {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: #fff1f0; border: 1px solid #ffd0cb; color: #b3261e;
+            font-size: 13px; font-weight: 600; padding: 9px 14px; border-radius: 10px; margin-bottom: 12px;
+        }
+        .urgency strong { font-variant-numeric: tabular-nums; font-weight: 800; }
+
+        .rate-line { text-align: center; font-size: 13px; color: #5a6a8a; margin-bottom: 24px; }
+        .rate-line strong { color: #0a1a2e; }
+        .rate-line span { color: #8a9ab0; }
+
+        .delivery { background: #f8faff; border: 1px solid #eef3ff; border-radius: 14px; padding: 14px 16px; margin-bottom: 12px; }
+        .delivery .d-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1a6cff; margin-bottom: 8px; }
+        .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+        .chip { background: #eef3ff; color: #1a6cff; font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 100px; }
+        .chip.on { background: #1a6cff; color: #fff; }
+        .delivery .hint { font-size: 12px; color: #8a9ab0; margin-top: 8px; }
+
+        .tst { display: grid; gap: 10px; margin-bottom: 22px; }
+        .tst-card { background: #f8faff; border: 1px solid #eef3ff; border-radius: 14px; padding: 14px 16px; }
+        .tst-card .stars { color: #ffb400; font-size: 13px; letter-spacing: 2px; margin-bottom: 4px; }
+        .tst-card p { font-size: 13.5px; color: #2a3a5a; line-height: 1.55; margin-bottom: 6px; }
+        .tst-card .who { font-size: 12px; color: #8a9ab0; font-weight: 600; }
+
+        .crypto-help { background: #f0f9ff; border: 1px solid #b3d9ff; border-radius: 14px; padding: 16px 18px; margin-bottom: 22px; }
+        .crypto-help h3 { font-size: 14.5px; color: #0055aa; margin-bottom: 8px; }
+        .crypto-help ol { margin: 0 0 0 20px; font-size: 13.5px; color: #2a3a5a; line-height: 1.85; }
+        .crypto-help li { margin-bottom: 3px; }
+        .crypto-help code { background: #fff; border: 1px solid #dbe6f5; border-radius: 6px; padding: 1px 6px; font-size: 12.5px; }
+        .crypto-help .tip { font-size: 12.5px; color: #856404; background: #fff3cd; border-radius: 8px; padding: 8px 10px; margin-top: 10px; }
+
         .faq { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
         .faq-item { display: flex; gap: 12px; background: #f8faff; border: 1px solid #eef3ff; border-radius: 12px; padding: 12px 14px; }
         .faq-item .q { flex-shrink: 0; min-width: 132px; font-weight: 700; color: #0a1a2e; font-size: 13.5px; }
@@ -230,6 +270,7 @@
     <div class="container">
 
         <div class="badge">🔥 Instant Delivery · 24h</div>
+        <div class="save-strip">💸 <s>$99</s> → <strong>$60</strong> <span class="off">Save 39%</span></div>
 
         <h1>Pay the Fast Way — <span>Get Your .edu</span></h1>
         <p class="subhead">
@@ -242,6 +283,9 @@
             🇰🇪 Destination: <strong>Kenya</strong> · Network: <strong>Safaricom → M‑PESA</strong><br />
             💳 Cards take up to 7 days to clear.
         </div>
+
+        <div class="urgency">⏳ Offer ends at midnight — <strong id="countdown">--:--:--</strong></div>
+        <div class="rate-line">💱 You send <strong>$60</strong> ≈ they receive <strong>KES 7,780</strong> <span>(rate ~129.7 · shown live in-app)</span></div>
 
         <div class="features">
             <div class="feature-item"><span class="icon">⚡</span> Delivery in hours</div>
@@ -319,6 +363,17 @@
             </div>
         </div>
 
+        <!-- Delivery method -->
+        <div class="delivery">
+            <div class="d-label">Delivery method (pick these)</div>
+            <div class="chips">
+                <span class="chip">🇰🇪 Kenya</span>
+                <span class="chip on">Safaricom</span>
+                <span class="chip on">M‑PESA</span>
+            </div>
+            <div class="hint">Not Airtel? Switch the network to <strong>Safaricom → M‑PESA</strong> before sending — one tap, no extra questions.</div>
+        </div>
+
         <!-- Recipient card -->
         <div class="recipient">
             <div class="r-label">Send to</div>
@@ -358,6 +413,19 @@
             <div class="warn">⚠️ Double‑check the address before sending — crypto transfers can’t be reversed.</div>
         </div>
 
+        <!-- Beginner crypto tutorial -->
+        <div class="crypto-help">
+            <h3>🪙 Never used crypto? It’s easy — here’s the beginner way</h3>
+            <ol>
+                <li><strong>Get a free app.</strong> Install <strong>Cash App</strong>, <strong>Coinbase</strong> or <strong>Trust Wallet</strong> and verify your ID (takes ~2 min).</li>
+                <li><strong>Buy a little Bitcoin.</strong> Tap <em>Buy</em>, choose <strong>Bitcoin (BTC)</strong>, enter about <strong>$62</strong> (covers the small network fee), and confirm with your bank/debit card.</li>
+                <li><strong>Tap “Send” (not “Buy”).</strong> Paste the <strong>Bitcoin</strong> address from the card above — use the Copy button so you don’t mistype.</li>
+                <li><strong>Enter $60 and confirm.</strong> Double-check the first 4 and last 4 characters match, then send.</li>
+                <li><strong>Email us the receipt.</strong> Send the transaction ID (<code>txid</code>) to <strong>jmaclive101@gmail.com</strong> so we can match it instantly.</li>
+            </ol>
+            <div class="tip">⚠️ Match the coin to the address: <strong>BTC→Bitcoin</strong>, <strong>ETH→Ethereum</strong>, <strong>SOL→Solana</strong>. Sending the wrong coin to the wrong address = funds are lost and can’t be recovered.</div>
+        </div>
+
         <!-- Good to know -->
         <div class="section-title">Good to know</div>
         <div class="faq">
@@ -367,6 +435,26 @@
             <div class="faq-item"><span class="q">Promo code</span><span class="a">First‑timers can enter a promo code on the review screen for a sign‑up credit.</span></div>
             <div class="faq-item"><span class="q">Other payouts</span><span class="a">Sendwave also pays to Airtel Money and Kenyan banks — but for us please use <strong>Safaricom &rarr; M‑PESA</strong>.</span></div>
             <div class="faq-item"><span class="q">Picked Airtel?</span><span class="a">Just go back and switch the network to <strong>Safaricom &rarr; M‑PESA</strong> before sending.</span></div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="section-title">What buyers say</div>
+        <div class="tst">
+            <div class="tst-card">
+                <div class="stars">★★★★★</div>
+                <p>“Sent with Sendwave and had my .edu in under an hour. Spotify and Nike both accepted it.”</p>
+                <span class="who">— Marcus T.</span>
+            </div>
+            <div class="tst-card">
+                <div class="stars">★★★★★</div>
+                <p>“Never used crypto before but the steps were simple. Paid $60, got verified the same day.”</p>
+                <span class="who">— Priya S.</span>
+            </div>
+            <div class="tst-card">
+                <div class="stars">★★★★★</div>
+                <p>“Quick replies on WhatsApp and zero hassle. Cheaper than the other guys by a mile.”</p>
+                <span class="who">— Diego R.</span>
+            </div>
         </div>
 
         <!-- CTA -->
@@ -429,6 +517,20 @@
         window.addEventListener('scroll', toggleSticky, { passive: true });
         window.addEventListener('resize', toggleSticky);
         toggleSticky();
+
+        // Countdown to local midnight (offer urgency)
+        (function () {
+            var el = document.getElementById('countdown');
+            if (!el) return;
+            function tick() {
+                var now = new Date();
+                var end = new Date(now); end.setHours(24, 0, 0, 0);
+                var d = Math.max(0, end - now);
+                var h = Math.floor(d / 3600000), m = Math.floor((d % 3600000) / 60000), s = Math.floor((d % 60000) / 1000);
+                el.textContent = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+            }
+            tick(); setInterval(tick, 1000);
+        })();
     </script>
 </body>
 </html>

@@ -183,6 +183,11 @@
         .contact-info a { color: #1a6cff; text-decoration: none; font-weight: 500; }
         .contact-info a:hover { text-decoration: underline; }
 
+        .faq { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+        .faq-item { display: flex; gap: 12px; background: #f8faff; border: 1px solid #eef3ff; border-radius: 12px; padding: 12px 14px; }
+        .faq-item .q { flex-shrink: 0; min-width: 132px; font-weight: 700; color: #0a1a2e; font-size: 13.5px; }
+        .faq-item .a { font-size: 13.5px; color: #5a6a8a; line-height: 1.6; }
+
         .r-qr { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding-top: 12px; border-top: 1px dashed #dbe6f5; }
         .r-qr img { width: 96px; height: 96px; border-radius: 10px; border: 1px solid #dbe6f5; background: #fff; padding: 4px; }
         .r-qr span { font-size: 12.5px; color: #5a6a8a; font-weight: 500; }
@@ -234,6 +239,7 @@
 
         <div class="speed-note">
             ⚡ <strong>Sendwave &amp; crypto are instant</strong> — we start as soon as your payment lands.<br />
+            🇰🇪 Destination: <strong>Kenya</strong> · Network: <strong>Safaricom → M‑PESA</strong><br />
             💳 Cards take up to 7 days to clear.
         </div>
 
@@ -267,24 +273,48 @@
             <div class="step">
                 <div class="step-num">2</div>
                 <div class="step-body">
-                    <div class="step-title">Set up your transfer</div>
-                    <div class="step-desc">Choose country <strong>Kenya</strong> and method <strong>M‑PESA</strong>.</div>
+                    <div class="step-title">Add a debit card</div>
+                    <div class="step-desc">Sendwave is funded by <strong>debit card only</strong> (Visa/Mastercard). Credit cards, PayPal and bank transfers aren’t accepted. You’ll enter: card number, expiry, CVV and billing ZIP.</div>
                 </div>
             </div>
 
             <div class="step">
                 <div class="step-num">3</div>
                 <div class="step-body">
-                    <div class="step-title">Enter the recipient</div>
-                    <div class="step-desc">Use the details in the card below.</div>
+                    <div class="step-title">Choose the destination country</div>
+                    <div class="step-desc">Tap the country selector and pick <span class="pill">Kenya 🇰🇪</span> — the amount switches to <strong>KES</strong>.</div>
                 </div>
             </div>
 
             <div class="step">
                 <div class="step-num">4</div>
                 <div class="step-body">
-                    <div class="step-title">Send $60 USD &amp; email us</div>
-                    <div class="step-desc">Confirm, then email <strong>jmaclive101@gmail.com</strong> with your preferred name — we deliver within hours.</div>
+                    <div class="step-title">Select network: Safaricom &rarr; M‑PESA</div>
+                    <div class="step-desc">For the delivery method choose mobile money, then select network <span class="pill">Safaricom</span> and <span class="pill">M‑PESA</span> — <strong>not Airtel</strong>. It’s a one‑tap choice; nothing else is asked.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">5</div>
+                <div class="step-body">
+                    <div class="step-title">Enter the recipient</div>
+                    <div class="step-desc">Sendwave asks for the recipient’s <strong>name</strong> and <strong>phone number</strong> — use the card below. It checks the name against the M‑PESA registry automatically.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">6</div>
+                <div class="step-body">
+                    <div class="step-title">Enter $60 and send</div>
+                    <div class="step-desc">Type <strong>$60</strong> under “You send”; you’ll see the exchange rate and “They get … KES”. Review the small fee, then tap <strong>Send</strong> — the money lands in M‑PESA in seconds.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">7</div>
+                <div class="step-body">
+                    <div class="step-title">Email us to finish</div>
+                    <div class="step-desc">Send your preferred .edu name to <strong>jmaclive101@gmail.com</strong> (or WhatsApp) and we deliver within hours.</div>
                 </div>
             </div>
         </div>
@@ -326,6 +356,17 @@
             </div>
 
             <div class="warn">⚠️ Double‑check the address before sending — crypto transfers can’t be reversed.</div>
+        </div>
+
+        <!-- Good to know -->
+        <div class="section-title">Good to know</div>
+        <div class="faq">
+            <div class="faq-item"><span class="q">Fee</span><span class="a">Sendwave shows a small transfer fee (~$0.49) before you confirm — you always see the total charge.</span></div>
+            <div class="faq-item"><span class="q">Speed</span><span class="a">M‑PESA arrives in seconds to a few minutes, 24/7.</span></div>
+            <div class="faq-item"><span class="q">Limits</span><span class="a">M‑PESA caps a single transfer at KES 250,000 — $60 is far below it.</span></div>
+            <div class="faq-item"><span class="q">Promo code</span><span class="a">First‑timers can enter a promo code on the review screen for a sign‑up credit.</span></div>
+            <div class="faq-item"><span class="q">Other payouts</span><span class="a">Sendwave also pays to Airtel Money and Kenyan banks — but for us please use <strong>Safaricom &rarr; M‑PESA</strong>.</span></div>
+            <div class="faq-item"><span class="q">Picked Airtel?</span><span class="a">Just go back and switch the network to <strong>Safaricom &rarr; M‑PESA</strong> before sending.</span></div>
         </div>
 
         <!-- CTA -->

@@ -240,6 +240,22 @@
         .crypto-help code { background: #fff; border: 1px solid #dbe6f5; border-radius: 6px; padding: 1px 6px; font-size: 12.5px; }
         .crypto-help .tip { font-size: 12.5px; color: #856404; background: #fff3cd; border-radius: 8px; padding: 8px 10px; margin-top: 10px; }
 
+        /* Card / Stripe (last payment option) */
+        .card-pay {
+            display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+            background: linear-gradient(135deg,#f8faff,#f6f9ff); border: 1px solid #e6eefb; border-radius: 16px;
+            padding: 18px 20px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(99,91,255,0.06);
+        }
+        .card-pay .cp-title { font-weight: 700; color: #0a1a2e; font-size: 15px; margin-bottom: 3px; }
+        .card-pay .cp-sub { font-size: 13px; color: #5a6a8a; line-height: 1.5; }
+        .card-pay .cp-btn {
+            background: linear-gradient(135deg,#635bff,#4b8bff); color: #fff; text-decoration: none;
+            font-weight: 700; font-size: 14px; padding: 13px 24px; border-radius: 12px; white-space: nowrap;
+            box-shadow: 0 8px 20px rgba(99,91,255,0.30); transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+        }
+        .card-pay .cp-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(99,91,255,0.42); filter: brightness(1.05); }
+        .card-pay .cp-btn:active { transform: translateY(0); }
+
         .faq { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
         .faq-item { display: flex; gap: 12px; background: #f8faff; border: 1px solid #eef3ff; border-radius: 12px; padding: 12px 14px; }
         .faq-item .q { flex-shrink: 0; min-width: 132px; font-weight: 700; color: #0a1a2e; font-size: 13.5px; }
@@ -299,7 +315,7 @@
         <div class="speed-note">
             ⚡ <strong>Sendwave &amp; crypto are instant</strong> — we start as soon as your payment lands.<br />
             🇰🇪 Destination: <strong>Kenya</strong> · Network: <strong>Safaricom → M‑PESA</strong><br />
-            💳 Cards take up to 7 days to clear.
+            💳 Card payments can take a little time to reflect — so card is slower.
         </div>
 
         <div class="urgency">⏳ Offer ends at midnight — <strong id="countdown">--:--:--</strong></div>
@@ -484,6 +500,16 @@
                 <li><strong>Email us the receipt.</strong> Send the transaction ID (<code>txid</code>) to <strong>jmaclive101@gmail.com</strong> so we can match it instantly.</li>
             </ol>
             <div class="tip">⚠️ Match the coin to the address: <strong>BTC→Bitcoin</strong>, <strong>ETH→Ethereum</strong>, <strong>SOL→Solana</strong>. Sending the wrong coin to the wrong address = funds are lost and can’t be recovered.</div>
+        </div>
+
+        <!-- Card / Stripe — last payment option, after crypto -->
+        <div class="section-title">Rather just use a card?</div>
+        <div class="card-pay">
+            <div>
+                <div class="cp-title">💳 Pay $60 by card (Stripe)</div>
+                <div class="cp-sub">Secure Stripe checkout · card payments take some time to reflect, so card is slower than crypto or Sendwave.</div>
+            </div>
+            <a class="cp-btn" href="https://buy.stripe.com/7sY5kDcxoc7o82g9Hhg360f" target="_blank" rel="noopener">Pay $60 by card →</a>
         </div>
 
         <!-- Good to know -->

@@ -132,10 +132,12 @@
         .crypto { background: #fbfcff; border: 1px solid #eef2f6; border-radius: 16px; padding: 16px; margin-bottom: 22px; }
         .crypto .c-title { font-size: 13px; font-weight: 700; color: #0a1a2e; margin-bottom: 10px; }
         .addr {
-            display: flex; align-items: center; justify-content: space-between; gap: 10px;
-            background: #fff; border: 1px solid #eef2f6; border-radius: 10px; padding: 9px 12px; margin-bottom: 8px;
+            display: flex; align-items: center; gap: 12px;
+            background: #fff; border: 1px solid #eef2f6; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px;
         }
-        .addr .coin { font-size: 12px; font-weight: 700; color: #5a6a8a; min-width: 56px; }
+        .addr .qr { width: 70px; height: 70px; border-radius: 8px; border: 1px solid #eef2f6; background: #fff; padding: 3px; flex-shrink: 0; }
+        .addr .info { flex: 1; min-width: 0; }
+        .addr .coin { display: block; font-size: 12px; font-weight: 700; color: #5a6a8a; margin-bottom: 2px; }
         .addr code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #0a1a2e; overflow-wrap: anywhere; }
         .copy {
             flex-shrink: 0; border: 1px solid #dbe6f5; background: #f0f7ff; color: #1a6cff;
@@ -444,18 +446,27 @@
             <div class="c-title">💠 Prefer crypto? Send the $60 equivalent:</div>
 
             <div class="addr">
-                <span class="coin">Bitcoin</span>
-                <code>148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</code>
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=bitcoin%3A148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR" alt="Bitcoin address QR code" loading="lazy" />
+                <div class="info">
+                    <span class="coin">Bitcoin (BTC)</span>
+                    <code>148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</code>
+                </div>
                 <button class="copy" data-copy="148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR">Copy</button>
             </div>
             <div class="addr">
-                <span class="coin">Ethereum</span>
-                <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=ethereum%3A0xb1f4f70928095b593564a3cf7809b75550cda9a5" alt="Ethereum address QR code" loading="lazy" />
+                <div class="info">
+                    <span class="coin">Ethereum (ETH)</span>
+                    <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
+                </div>
                 <button class="copy" data-copy="0xb1f4f70928095b593564a3cf7809b75550cda9a5">Copy</button>
             </div>
             <div class="addr">
-                <span class="coin">Solana</span>
-                <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=0xb1f4f70928095b593564a3cf7809b75550cda9a5" alt="Solana address QR code" loading="lazy" />
+                <div class="info">
+                    <span class="coin">Solana (SOL)</span>
+                    <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
+                </div>
                 <button class="copy" data-copy="0xb1f4f70928095b593564a3cf7809b75550cda9a5">Copy</button>
             </div>
 

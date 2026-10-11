@@ -3,366 +3,316 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Email Discount – Get Yours in Minutes</title>
+    <title>Pay via Sendwave — Student Email Discount | Fast Discount Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     <style>
-        /* --- Reset & Base --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #f9fafc;
-            color: #1a1a2e;
-            line-height: 1.6;
-            padding: 2rem 1rem;
-        }
-        .container {
-            max-width: 820px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 32px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-            padding: 2.5rem 2rem;
-        }
-
-        /* --- Typography --- */
-        h1 {
-            font-size: 2.4rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-        }
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-top: 2.2rem;
-            margin-bottom: 1rem;
-        }
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            color: #2d2d44;
-        }
-        a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Hero --- */
-        .hero {
-            text-align: center;
-            padding: 1rem 0 0.5rem;
-        }
-        .hero .badge {
-            display: inline-block;
-            background: #e0f2fe;
-            color: #0369a1;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.25rem 1rem;
-            border-radius: 40px;
-            letter-spacing: 0.3px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-        .hero h1 span {
-            color: #2563eb;
-        }
-        .hero .sub {
-            font-size: 1.2rem;
-            color: #4b4b6b;
-            max-width: 600px;
-            margin: 0 auto 1.5rem;
-        }
-
-        /* --- Benefits grid --- */
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0 2.5rem;
-            background: #f8faff;
-            padding: 1.5rem;
-            border-radius: 24px;
-        }
-        .benefit-item {
-            text-align: center;
-        }
-        .benefit-item .icon {
-            font-size: 2rem;
-            display: block;
-            margin-bottom: 0.25rem;
-        }
-        .benefit-item strong {
-            display: block;
-            font-size: 1rem;
-        }
-        .benefit-item small {
-            font-size: 0.9rem;
-            color: #4b4b6b;
-        }
-
-        /* --- Steps --- */
-        .steps {
-            margin: 2rem 0;
-            padding: 0;
-            list-style: none;
-            counter-reset: step;
-        }
-        .steps li {
-            counter-increment: step;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            padding: 1rem 1.2rem;
-            background: #f8faff;
-            border-radius: 16px;
-            transition: background 0.2s;
-        }
-        .steps li:hover {
-            background: #eef4ff;
-        }
-        .steps li::before {
-            content: counter(step);
-            background: #2563eb;
-            color: #fff;
-            font-weight: 700;
-            font-size: 1rem;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 40px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f4f9;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
-            margin-top: 0.1rem;
-        }
-        .steps li .step-content {
-            flex: 1;
-        }
-        .steps li .step-content strong {
-            display: block;
-            font-size: 1.05rem;
-        }
-        .steps li .step-content .detail {
-            font-size: 0.95rem;
-            color: #2d2d44;
-            margin-top: 0.2rem;
-        }
-        .steps li .step-content .detail a {
-            word-break: break-all;
-        }
-        .store-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.3rem;
-        }
-        .store-badges img {
-            height: 42px;
-            width: auto;
-            border-radius: 8px;
-            transition: transform 0.15s;
-        }
-        .store-badges img:hover {
-            transform: scale(1.02);
-        }
-        .crypto-address {
-            background: #1e1e2f;
-            color: #e0e0ff;
-            padding: 0.75rem 1rem;
-            border-radius: 12px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            word-break: break-all;
-            margin: 0.25rem 0;
-            display: inline-block;
-            max-width: 100%;
+            padding: 24px;
+            background-image: radial-gradient(ellipse at 20% 50%, rgba(26, 108, 255, 0.04) 0%, transparent 60%),
+                              radial-gradient(ellipse at 80% 50%, rgba(255, 204, 0, 0.04) 0%, transparent 60%);
         }
 
-        /* --- CTA --- */
-        .cta-box {
-            background: #1a1a2e;
-            color: #fff;
-            padding: 2rem 2rem 1.8rem;
-            border-radius: 28px;
-            margin: 2.5rem 0 1rem;
-            text-align: center;
-        }
-        .cta-box h2 {
-            color: #fff;
-            margin-top: 0;
-            font-size: 1.8rem;
-        }
-        .cta-box p {
-            color: #d0d0ea;
-            font-size: 1.1rem;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .cta-box .email-btn {
-            display: inline-block;
+        .container {
+            max-width: 720px;
+            width: 100%;
             background: #ffffff;
-            color: #1a1a2e;
-            font-weight: 600;
-            padding: 0.8rem 2.5rem;
-            border-radius: 60px;
-            font-size: 1.1rem;
-            margin: 1rem 0 0.5rem;
-            transition: all 0.2s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            text-decoration: none;
+            border-radius: 32px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.03);
+            padding: 48px 40px 36px;
+            position: relative;
+            overflow: hidden;
         }
-        .cta-box .email-btn:hover {
-            background: #e0e7ff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            text-decoration: none;
+        .container::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #1a6cff, #ffcc00, #1a6cff);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
         }
-        .cta-box .guarantee {
-            font-size: 0.9rem;
-            color: #a5b4fc;
-            margin-top: 0.75rem;
+        @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+        .badge {
+            display: inline-block; background: #eef3ff; color: #1a6cff;
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px;
         }
 
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            margin-top: 2.5rem;
-            font-size: 0.85rem;
-            color: #6b6b8a;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 1.5rem;
+        h1 { font-size: 30px; font-weight: 800; color: #0a1a2e; letter-spacing: -0.03em; line-height: 1.12; margin-bottom: 8px; }
+        h1 span { color: #1a6cff; }
+        .subhead { font-size: 16px; color: #5a6a8a; line-height: 1.55; margin-bottom: 22px; }
+        .subhead strong { color: #0a1a2e; }
+
+        .speed-note {
+            background: #f0f9ff; border-radius: 10px; padding: 11px 16px;
+            border: 1px solid #b3d9ff; font-size: 13px; color: #0055aa;
+            margin-bottom: 26px; text-align: center; font-weight: 500;
         }
 
-        /* --- Responsive --- */
-        @media (max-width: 640px) {
-            .container { padding: 1.5rem 1rem; }
-            h1 { font-size: 1.8rem; }
-            h2 { font-size: 1.5rem; }
-            .benefits { grid-template-columns: 1fr 1fr; gap: 1rem; }
-            .steps li { flex-direction: column; align-items: stretch; }
-            .steps li::before { margin-bottom: 0.25rem; }
-            .cta-box { padding: 1.5rem 1rem; }
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 26px; }
+        .feature-item { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 500; color: #2a3a5a; }
+        .feature-item .icon { font-size: 18px; flex-shrink: 0; }
+
+        .section-title {
+            font-size: 13px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: #8a9ab0; margin: 0 0 14px;
+        }
+
+        /* Steps */
+        .steps { display: flex; flex-direction: column; gap: 12px; margin-bottom: 26px; }
+        .step {
+            display: flex; gap: 14px; background: #f8faff; border: 1px solid #eef3ff;
+            border-radius: 16px; padding: 16px 16px 16px 14px; transition: border-color .2s, box-shadow .2s;
+        }
+        .step:hover { border-color: #cfe0ff; box-shadow: 0 6px 18px rgba(26,108,255,0.06); }
+        .step-num {
+            flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+            background: linear-gradient(135deg, #1a6cff, #4b8bff); color: #fff;
+            font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 10px rgba(26,108,255,0.28);
+        }
+        .step-body { flex: 1; }
+        .step-title { font-weight: 700; color: #0a1a2e; font-size: 15px; margin-bottom: 3px; }
+        .step-desc { font-size: 13.5px; color: #5a6a8a; line-height: 1.6; }
+        .step-desc strong { color: #0a1a2e; }
+
+        .store-badges { display: flex; gap: 10px; margin-top: 10px; }
+        .store-badges img { height: 40px; display: block; }
+        .store-badges img.apple { height: 40px; }
+
+        .pill {
+            display: inline-block; background: #eef3ff; color: #1a6cff; font-weight: 600;
+            font-size: 12.5px; padding: 3px 10px; border-radius: 8px; margin: 2px 4px 2px 0;
+        }
+
+        /* Recipient highlight */
+        .recipient {
+            background: linear-gradient(135deg, #f0f7ff, #f6f9ff);
+            border: 1px solid #1a6cff; border-radius: 16px; padding: 18px 18px;
+            margin-bottom: 14px; box-shadow: 0 4px 16px rgba(26,108,255,0.08);
+        }
+        .recipient .r-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1a6cff; margin-bottom: 8px; }
+        .r-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 0; border-bottom: 1px dashed #dbe6f5; }
+        .r-row:last-child { border-bottom: none; }
+        .r-row .k { font-size: 13px; color: #5a6a8a; font-weight: 500; }
+        .r-row .v { font-size: 15px; color: #0a1a2e; font-weight: 700; letter-spacing: 0.01em; }
+        .r-amount { font-size: 26px; font-weight: 800; color: #1a6cff; }
+
+        /* Crypto */
+        .crypto { background: #fbfcff; border: 1px solid #eef2f6; border-radius: 16px; padding: 16px; margin-bottom: 22px; }
+        .crypto .c-title { font-size: 13px; font-weight: 700; color: #0a1a2e; margin-bottom: 10px; }
+        .addr {
+            display: flex; align-items: center; justify-content: space-between; gap: 10px;
+            background: #fff; border: 1px solid #eef2f6; border-radius: 10px; padding: 9px 12px; margin-bottom: 8px;
+        }
+        .addr .coin { font-size: 12px; font-weight: 700; color: #5a6a8a; min-width: 56px; }
+        .addr code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #0a1a2e; overflow-wrap: anywhere; }
+        .copy {
+            flex-shrink: 0; border: 1px solid #dbe6f5; background: #f0f7ff; color: #1a6cff;
+            font-weight: 700; font-size: 11px; padding: 6px 12px; border-radius: 8px; cursor: pointer;
+            transition: background .15s, transform .1s;
+        }
+        .copy:hover { background: #e3efff; }
+        .copy:active { transform: scale(0.96); }
+        .copy.done { background: #d4edda; color: #155724; border-color: #b7e2c4; }
+        .warn { font-size: 12px; color: #856404; background: #fff3cd; border-radius: 8px; padding: 7px 10px; margin-top: 2px; }
+
+        /* CTA */
+        .cta-box {
+            background: #ffffff; border: 1px dashed #dbe6f5; border-radius: 18px;
+            padding: 24px 20px; text-align: center; margin-bottom: 20px;
+        }
+        .cta-box h2 { font-size: 20px; font-weight: 800; color: #0a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; }
+        .cta-box p { font-size: 14px; color: #5a6a8a; margin-bottom: 16px; line-height: 1.55; }
+        .email-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            background: linear-gradient(135deg, #1a6cff 0%, #4b8bff 55%, #6aa6ff 100%);
+            color: #fff; text-decoration: none; font-weight: 700; font-size: 16px;
+            padding: 15px 30px; border-radius: 14px; box-shadow: 0 10px 24px rgba(26,108,255,0.30);
+            transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
+            position: relative; overflow: hidden;
+        }
+        .email-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(26,108,255,0.40); filter: brightness(1.04); }
+        .email-btn:active { transform: translateY(0); }
+        .email-btn::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.30) 50%, transparent 70%);
+            transform: translateX(-130%); transition: transform .6s ease;
+        }
+        .email-btn:hover::after { transform: translateX(130%); }
+        .guarantee { font-size: 12.5px; color: #2e7d47; margin-top: 12px; font-weight: 600; }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid #eef2f6; padding-top: 18px; margin-top: 6px;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+            font-size: 13px; color: #8a9ab0;
+        }
+        .footer .trust { display: flex; align-items: center; gap: 14px; }
+        .contact-info { margin-top: 14px; text-align: center; font-size: 14px; color: #4a5a7a; line-height: 1.8; }
+        .contact-info a { color: #1a6cff; text-decoration: none; font-weight: 500; }
+        .contact-info a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .container { padding: 32px 20px 24px; }
+            .features { grid-template-columns: 1fr; }
+            .footer { flex-direction: column; text-align: center; }
+            .store-badges img { height: 36px; }
         }
     </style>
 </head>
 <body>
-<div class="container">
+    <div class="container">
 
-    <!-- HERO -->
-    <div class="hero">
-        <span class="badge">🎓 Limited Offer</span>
-        <h1>Student Email <span>Discount</span> – Instant Access</h1>
-        <p class="sub">Get your verified .edu email in <strong>under 24 hours</strong> and start saving on Apple, Amazon, Spotify, and hundreds more.</p>
-    </div>
+        <div class="badge">🔥 Instant Delivery · 24h</div>
 
-    <!-- BENEFITS -->
-    <div class="benefits">
-        <div class="benefit-item">
-            <span class="icon">⚡</span>
-            <strong>Lightning‑fast</strong>
-            <small>Delivery in hours, not weeks</small>
-        </div>
-        <div class="benefit-item">
-            <span class="icon">🔒</span>
-            <strong>100% Private</strong>
-            <small>Your data stays confidential</small>
-        </div>
-        <div class="benefit-item">
-            <span class="icon">💰</span>
-            <strong>Huge Savings</strong>
-            <small>Up to 60% off on top brands</small>
-        </div>
-        <div class="benefit-item">
-            <span class="icon">📧</span>
-            <strong>Real .edu</strong>
-            <small>Works with all major student portals</small>
-        </div>
-    </div>
+        <h1>Pay the Fast Way — <span>Get Your .edu</span></h1>
+        <p class="subhead">
+            Verified student email delivered in <strong>under 24 hours</strong>. Pay via
+            <strong>Sendwave</strong> or <strong>crypto</strong> — no third‑party holds.
+        </p>
 
-    <!-- HOW IT WORKS + PAYMENT -->
-    <h2>How to get your student email</h2>
-    <p style="color:#4b4b6b;">Follow these simple steps – you’ll be saving in no time.</p>
+        <div class="speed-note">
+            ⚡ <strong>Sendwave &amp; crypto are instant</strong> — we start as soon as your payment lands.<br />
+            💳 Cards take up to 7 days to clear.
+        </div>
 
-    <ol class="steps">
-        <li>
-            <div class="step-content">
-                <strong>Download Sendwave</strong>
-                <div class="detail">Get the app from the official stores:</div>
-                <div class="store-badges">
-                    <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank">
-                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" />
-                    </a>
-                    <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" style="height:42px;" />
-                    </a>
+        <div class="features">
+            <div class="feature-item"><span class="icon">⚡</span> Delivery in hours</div>
+            <div class="feature-item"><span class="icon">🔒</span> 100% private</div>
+            <div class="feature-item"><span class="icon">💰</span> Up to 60% off</div>
+            <div class="feature-item"><span class="icon">📧</span> Real .edu email</div>
+        </div>
+
+        <div class="section-title">How to pay</div>
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-body">
+                    <div class="step-title">Download Sendwave</div>
+                    <div class="step-desc">Get the app from the official stores:</div>
+                    <div class="store-badges">
+                        <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+                        </a>
+                        <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
+                            <img class="apple" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" />
+                        </a>
+                    </div>
                 </div>
             </div>
-        </li>
-        <li>
-            <div class="step-content">
-                <strong>Sign up &amp; set your first transfer</strong>
-                <div class="detail">Choose <strong>Kenya</strong> as the country and <strong>M‑PESA</strong> as the payment method.</div>
-            </div>
-        </li>
-        <li>
-            <div class="step-content">
-                <strong>Enter recipient details</strong>
-                <div class="detail">Full name: <strong>Abel Ochieng</strong><br />Mobile: <strong>722 869 570</strong></div>
-            </div>
-        </li>
-        <li>
-            <div class="step-content">
-                <strong>Send $55 USD</strong>
-                <div class="detail">Review the amount and confirm. Funds arrive within minutes.</div>
-            </div>
-        </li>
-        <li>
-            <div class="step-content">
-                <strong>Prefer crypto?</strong>
-                <div class="detail">Send the equivalent of <strong>$50 USD</strong> to any of these wallets:</div>
-                <div style="margin-top:0.3rem;">
-                    <span class="crypto-address">Bitcoin: 148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</span><br />
-                    <span class="crypto-address">Ethereum: 0xb1f4f70928095b593564a3cf7809b75550cda9a5</span><br />
-                    <span class="crypto-address">Solana: 0xb1f4f70928095b593564a3cf7809b75550cda9a5</span>
-                </div>
-                <div class="detail" style="margin-top:0.4rem;font-size:0.9rem;">⚠️ Double‑check the address before sending.</div>
-            </div>
-        </li>
-    </ol>
 
-    <!-- FINAL CTA -->
-    <div class="cta-box">
-        <h2>Ready to start saving?</h2>
-        <p>Once your payment is sent, email us with your preferred name and we'll deliver your .edu address within hours.</p>
-        <a href="mailto:jmaclive101@gmail.com" class="email-btn">📧 Email Us Now</a>
-        <div class="guarantee">✅ 24‑hour delivery guarantee • Full refund if we miss the deadline</div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-body">
+                    <div class="step-title">Set up your transfer</div>
+                    <div class="step-desc">Choose country <strong>Kenya</strong> and method <strong>M‑PESA</strong>.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-body">
+                    <div class="step-title">Enter the recipient</div>
+                    <div class="step-desc">Use the details in the card below.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-body">
+                    <div class="step-title">Send $55 USD &amp; email us</div>
+                    <div class="step-desc">Confirm, then email <strong>jmaclive101@gmail.com</strong> with your preferred name — we deliver within hours.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipient card -->
+        <div class="recipient">
+            <div class="r-label">Send to</div>
+            <div class="r-row"><span class="k">Recipient</span><span class="v">Abel Ochieng</span></div>
+            <div class="r-row"><span class="k">Mobile (M‑PESA · Kenya)</span>
+                <span class="v">722 869 570
+                    <button class="copy" data-copy="722869570">Copy</button>
+                </span>
+            </div>
+            <div class="r-row"><span class="k">Amount</span><span class="v r-amount">$55 <small style="font-size:12px;color:#5a6a8a;font-weight:600;">USD</small></span></div>
+        </div>
+
+        <!-- Crypto -->
+        <div class="crypto">
+            <div class="c-title">💠 Prefer crypto? Send the $50 equivalent:</div>
+
+            <div class="addr">
+                <span class="coin">Bitcoin</span>
+                <code>148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</code>
+                <button class="copy" data-copy="148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR">Copy</button>
+            </div>
+            <div class="addr">
+                <span class="coin">Ethereum</span>
+                <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
+                <button class="copy" data-copy="0xb1f4f70928095b593564a3cf7809b75550cda9a5">Copy</button>
+            </div>
+            <div class="addr">
+                <span class="coin">Solana</span>
+                <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
+                <button class="copy" data-copy="0xb1f4f70928095b593564a3cf7809b75550cda9a5">Copy</button>
+            </div>
+
+            <div class="warn">⚠️ Double‑check the address before sending — crypto transfers can’t be reversed.</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h2>Ready to start saving?</h2>
+            <p>Once your payment is sent, email us your preferred name and we’ll deliver your .edu address within hours.</p>
+            <a href="mailto:jmaclive101@gmail.com?subject=Sendwave%20payment%20sent%20-%20.edu%20request" class="email-btn">📧 Email Us Now</a>
+            <div class="guarantee">✅ 24‑hour delivery guarantee · Full refund if we miss it</div>
+        </div>
+
+        <div class="footer">
+            <div class="trust">
+                <span>⚡ Instant</span>
+                <span>🔒 Private</span>
+                <span>📧 Real .edu</span>
+            </div>
+            <span>© 2026 Fast Discount Finder</span>
+        </div>
+
+        <div class="contact-info">
+            📧 <a href="mailto:jmaclive101@gmail.com">jmaclive101@gmail.com</a>
+            <br />
+            <span style="font-size: 13px; color: #8a9ab0;">We reply within 2–3 hours.</span>
+        </div>
+
     </div>
 
-    <!-- TRUST / EXTRA -->
-    <p style="font-size:0.9rem;color:#6b6b8a;text-align:center;margin-top:1.5rem;">
-        No third‑party holds • Direct mobile wallet transfer • Fast &amp; discreet
-    </p>
-
-    <footer>
-        <p>© 2026 Fast Discount Finder – Helping students save smarter.</p>
-    </footer>
-
-</div>
+    <script>
+        document.querySelectorAll('.copy').forEach(function (btn) {
+            btn.addEventListener('click', async function () {
+                var text = btn.getAttribute('data-copy');
+                try {
+                    await navigator.clipboard.writeText(text);
+                } catch (e) {
+                    var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select();
+                    try { document.execCommand('copy'); } catch (_) {}
+                    document.body.removeChild(t);
+                }
+                var old = btn.textContent;
+                btn.textContent = 'Copied'; btn.classList.add('done');
+                setTimeout(function () { btn.textContent = old; btn.classList.remove('done'); }, 1400);
+            });
+        });
+    </script>
 </body>
 </html>

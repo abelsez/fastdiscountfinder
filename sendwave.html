@@ -184,18 +184,19 @@
         .contact-info a:hover { text-decoration: underline; }
 
         .works-with {
-            display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: center;
-            margin: 0 0 24px;
+            display: flex; flex-direction: column; align-items: center; gap: 14px;
+            background: linear-gradient(180deg, #f8faff, #fbfcff);
+            border: 1px solid #eef3ff; border-radius: 18px;
+            padding: 20px 16px; margin: 0 0 26px; text-align: center;
         }
-        .works-with .ww-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #8a9ab0; }
-        .works-with .ww-badge {
-            background: #fff; border: 1px solid #e6eefb; color: #0a1a2e;
-            font-weight: 700; font-size: 12.5px; padding: 6px 13px; border-radius: 100px;
-            box-shadow: 0 2px 8px rgba(10, 26, 46, 0.04);
+        .works-with .ww-label { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; color: #1a6cff; }
+        .works-with .vb-logos { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
+        .works-with .ww-badge.logo { padding: 0; border: none; box-shadow: none; background: transparent; }
+        .works-with .ww-badge.logo svg { display: block; height: 44px; width: auto; }
+        @media (max-width: 480px) {
+            .works-with .ww-badge.logo svg { height: 34px; }
+            .works-with .vb-logos { gap: 16px; }
         }
-        .works-with .ww-badge.check::before { content: "✓ "; color: #1a6cff; }
-        .works-with .ww-badge.logo { padding: 7px 14px; }
-        .works-with .ww-badge.logo svg { display: block; height: 22px; width: auto; }
 
         .save-strip {
             display: inline-flex; align-items: center; gap: 8px; margin: 0 0 18px;
@@ -310,7 +311,8 @@
         </div>
 
         <div class="works-with">
-            <span class="ww-label">Accepted by</span>
+            <div class="ww-label">✅ Verified with</div>
+            <div class="vb-logos">
 
             <!-- UNiDAYS (stylized wordmark) -->
             <span class="ww-badge logo">
@@ -338,6 +340,7 @@
                     <text x="34" y="19.6" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.4" fill="#0A1A2E">student beans</text>
                 </svg>
             </span>
+            </div>
         </div>
 
         <div class="section-title">How to pay</div>

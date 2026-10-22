@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=robots content=noindex>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>dbx-lab trigger</title>
+<style>body{font:15px/1.5 monospace;background:#111;color:#ddd;padding:1rem}
+button{font:inherit;padding:.7rem 1rem;margin:.5rem 0;background:#2b6cb0;color:#fff;border:0;border-radius:6px;display:block;width:100%;text-align:left}
+code{color:#0f0;font-size:10px;word-break:break-all} h1{color:#0f0;font-size:1.1rem}
+li{margin-bottom:1rem;list-style:none} ul{padding:0}</style></head>
+<body><h1>DBX-LAB trigger</h1>
+<p>Tap a case, then report <b>which screen</b> Dropbox shows. Termux can't see this, only you can.
+Each tap is deterministic — same case, same URL, every time.</p>
+<ul><li><button data-u="https://dbx.go.link/?adj_deep_link=https%3A%2F%2Fdbx.go.link%2F%3Fadj_deep_link%3Dhttps%253A%252F%252Fwww.dropbox.com%252Fdl%252Fupgrade"><b>chain2</b></button><br><code>https://dbx.go.link/?adj_deep_link=https%3A%2F%2Fdbx.go.link%2F%3Fadj_deep_link%3Dhttps%253A%252F%252Fwww.dropbox.com%252Fdl%252Fu</code></li>
+<li><button data-u="https://dbx.go.link/?adj_deep_link=dbx-applink%3A%2F%2Fdropbox.com%2Fdl%2Foffline%2Fmobile"><b>scheme-dbxapplink</b></button><br><code>https://dbx.go.link/?adj_deep_link=dbx-applink%3A%2F%2Fdropbox.com%2Fdl%2Foffline%2Fmobile</code></li>
+<li><button data-u="https://dbx.go.link/?adj_deep_link=file%3A%2F%2F%2Fdl%2Foffline%2Fmobile"><b>scheme-file</b></button><br><code>https://dbx.go.link/?adj_deep_link=file%3A%2F%2F%2Fdl%2Foffline%2Fmobile</code></li>
+<li><button data-u="https://dbx.go.link/?adj_deep_link=content%3A%2F%2Fcom.dropbox.android.Dropbox%2Fmetadata%2Fdl%2Foffline%2Fmobile"><b>scheme-content</b></button><br><code>https://dbx.go.link/?adj_deep_link=content%3A%2F%2Fcom.dropbox.android.Dropbox%2Fmetadata%2Fdl%2Foffline%2Fmobile</code></li>
+<li><button data-u="https://dbx.go.link/?adj_deep_link=https%3A%2F%2Ffastdiscountfinder.com%2Fl%2Fx"><b>fetch-ourdomain</b></button><br><code>https://dbx.go.link/?adj_deep_link=https%3A%2F%2Ffastdiscountfinder.com%2Fl%2Fx</code></li>
+<li><button data-u="https://dbx.go.link/?adj_deep_link=https%3A%2F%2Fwww.dropbox.com%2Fdl%2Foffline%2Fmobile"><b>plain-offline</b></button><br><code>https://dbx.go.link/?adj_deep_link=https%3A%2F%2Fwww.dropbox.com%2Fdl%2Foffline%2Fmobile</code></li>
+<li><button data-u="https://dbx.go.link/"><b>control</b></button><br><code>https://dbx.go.link/</code></li></ul><p id=st style="color:#ff0"></p>
+<script>document.querySelectorAll('button').forEach(function(b){b.onclick=function(){
+  document.getElementById('st').textContent='navigating: '+b.querySelector('b').textContent;
+  location.href=b.dataset.u;};});</script></body></html>

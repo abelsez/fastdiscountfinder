@@ -47,6 +47,7 @@ def main() -> int:
     ap.add_argument("--name", required=True)
     ap.add_argument("--list-id", action="append", default=[])
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--send", action="store_true", help="create the campaign then SEND it (requires BREVO_ALLOW_SEND=yes)")
     args = ap.parse_args()
 
     env = load_env()
@@ -93,10 +94,43 @@ def main() -> int:
         with urllib.request.urlopen(req, timeout=45) as resp:
             body = resp.read().decode()
             print(f"HTTP {resp.status} -> {body[:300]}")
-            return 0 if resp.status in (200, 201) else 1
+            if resp.status not in (200, 201):
+                return 1
+            try:
+                campaign_id = json.loads(body).get("id")
+            except json.JSONDecodeError:
+                campaign_id = None
     except urllib.error.HTTPError as exc:
         detail = exc.read().decode()[:500]
         print(f"HTTP {exc.code} -> {detail}", file=sys.stderr)
+        return 1
+    except urllib.error.URLError as exc:
+        print(f"network error: {exc.reason}", file=sys.stderr)
+        return 1
+
+    if not args.send:
+        print(f"draft created: campaign #{campaign_id} (not sent)")
+        return 0
+
+    if env.get("BREVO_ALLOW_SEND") != "yes":
+        print("refusing to send: set BREVO_ALLOW_SEND=yes in ~/.secrets/brevo.env", file=sys.stderr)
+        return 3
+    if not campaign_id:
+        print("no campaign id returned; cannot send", file=sys.stderr)
+        return 1
+
+    send_req = urllib.request.Request(
+        f"https://api.brevo.com/v3/emailCampaigns/{campaign_id}/sendNow",
+        data=b"{}",
+        headers={"api-key": key, "accept": "application/json", "content-type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(send_req, timeout=45) as resp:
+            print(f"SENT campaign #{campaign_id} -> HTTP {resp.status} {resp.read().decode()[:200]}")
+            return 0
+    except urllib.error.HTTPError as exc:
+        print(f"send failed HTTP {exc.code} -> {exc.read().decode()[:400]}", file=sys.stderr)
         return 1
     except urllib.error.URLError as exc:
         print(f"network error: {exc.reason}", file=sys.stderr)

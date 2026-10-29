@@ -52,4 +52,4 @@ Fast Discount Finder - https://fastdiscountfinder.com
 537 Grand Blvd, San Mateo, CA 94401, USA
 You received this because you opted in to discount alerts.
 
-Unsubscribe: {{ unsubscribe }}
+Unsubscribe: https://fastdiscountfinder.com/unsubscribe

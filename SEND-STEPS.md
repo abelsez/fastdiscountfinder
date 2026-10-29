@@ -1,11 +1,11 @@
 # Send the campaign — manual steps (no API needed)
 
-Reply-To on every path: **jmavlive101@gmail.com** (set in `.eml`, `brevo.env`, `brevo-smtp.env`).
+Reply-To on every path: **jmaclive101@gmail.com** (set in `.eml`, `brevo.env`, `brevo-smtp.env`).
 
 ## Path 1 — from your own phone mail app (30 seconds, in progress)
 
 1. A Gmail/Outlook compose window was already opened by me, addressed to
-   `jmavlive101@gmail.com`, with subject + full plain-text body prefilled
+   `jmaclive101@gmail.com`, with subject + full plain-text body prefilled
    (marketing campaigns cannot carry HTML through a `mailto:` intent — that is a client limit).
 2. Tap **Send**. You now have a seed copy: check it did not land in Spam, and that the
    preheader/CTA text reads correctly.
@@ -30,8 +30,8 @@ Reply-To on every path: **jmavlive101@gmail.com** (set in `.eml`, `brevo.env`, `
    `email/edu-custom-2026-10-29.html` (or upload the file).
 4. Subject: `Your custom .edu email + 200+ student discounts`
    Preview text: `Cut $2,000+ off your yearly subscriptions. Setup takes 2 minutes, delivered in 24h.`
-5. Sender: a **verified** sender at an authenticated domain → **Reply-To: jmavlive101@gmail.com**.
-6. Send a **test** to `jmavlive101@gmail.com` first, confirm inbox + rendering.
+5. Sender: a **verified** sender at an authenticated domain → **Reply-To: jmaclive101@gmail.com**.
+6. Send a **test** to `jmaclive101@gmail.com` first, confirm inbox + rendering.
 7. **Send now** (or schedule).
 
 ## Path 4 — API (fastest once the account stops blocking this IP)
@@ -53,7 +53,7 @@ Reply-To on every path: **jmavlive101@gmail.com** (set in `.eml`, `brevo.env`, `
    BREVO_SMTP_KEY=xsmtpsib-...
    BREVO_SMTP_USER=<SMTP login shown next to the key>
    BREVO_SENDER_EMAIL=<verified sender>
-   BREVO_REPLY_TO=jmavlive101@gmail.com
+   BREVO_REPLY_TO=jmaclive101@gmail.com
    BREVO_ALLOW_SEND=yes
    ```
 4. Seed first:

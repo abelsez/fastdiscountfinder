@@ -50,6 +50,8 @@ def build(env: dict[str, str], subject: str, html: str, text: str, to: str) -> E
     msg["To"] = to
     msg["Date"] = formatdate(localtime=True)
     msg["Message-ID"] = make_msgid(domain=env["BREVO_SENDER_EMAIL"].split("@")[-1])
+    if env.get("BREVO_REPLY_TO"):
+        msg["Reply-To"] = env["BREVO_REPLY_TO"]
     msg["List-Unsubscribe"] = f"<mailto:unsubscribe@{env['BREVO_SENDER_EMAIL'].split('@')[-1]}>, <https://{env['BREVO_SENDER_EMAIL'].split('@')[-1]}/unsubscribe>"
     msg["List-Unsubscribe-Post"] = "List-Unsubscribe=One-Click"
     msg.set_content(text or "This message requires an HTML-capable client.")

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay via Sendwave — Student Email & Verification | Fast Discount Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f4f9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background-image: radial-gradient(ellipse at 20% 50%, rgba(26, 108, 255, 0.04) 0%, transparent 60%),
+                              radial-gradient(ellipse at 80% 50%, rgba(255, 204, 0, 0.04) 0%, transparent 60%);
+        }
+
+        .container {
+            max-width: 720px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.03);
+            padding: 48px 40px 36px;
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #1a6cff, #ffcc00, #1a6cff);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+
+        .back-nav {
+            margin-bottom: 18px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #1a6cff;
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        .badge {
+            display: inline-block; background: #eef3ff; color: #1a6cff;
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px;
+        }
+
+        h1 { font-size: 30px; font-weight: 800; color: #0a1a2e; letter-spacing: -0.03em; line-height: 1.12; margin-bottom: 8px; }
+        h1 span { color: #1a6cff; }
+        .subhead { font-size: 16px; color: #5a6a8a; line-height: 1.55; margin-bottom: 22px; }
+        .subhead strong { color: #0a1a2e; }
+
+        .speed-note {
+            background: #f0f9ff; border-radius: 10px; padding: 11px 16px;
+            border: 1px solid #b3d9ff; font-size: 13px; color: #0055aa;
+            margin-bottom: 24px; text-align: center; font-weight: 500;
+        }
+
+        /* Plan Selector Selector Chips */
+        .plan-select-section {
+            background: #f8faff;
+            border: 1px solid #eef3ff;
+            border-radius: 18px;
+            padding: 20px 18px;
+            margin-bottom: 24px;
+        }
+        .plan-select-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #1a6cff;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        .plan-options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .plan-toggle {
+            background: #ffffff;
+            border: 2px solid #eef2f6;
+            border-radius: 14px;
+            padding: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            position: relative;
+        }
+        .plan-toggle:hover {
+            border-color: #cfe0ff;
+        }
+        .plan-toggle.active {
+            border-color: #1a6cff;
+            background: #f0f7ff;
+            box-shadow: 0 4px 16px rgba(26, 108, 255, 0.12);
+        }
+        .plan-toggle .pt-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0a1a2e;
+            margin-bottom: 4px;
+        }
+        .plan-toggle .pt-price {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1a6cff;
+        }
+        .plan-toggle .pt-kes {
+            font-size: 12px;
+            color: #5a6a8a;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+        .plan-toggle .pt-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ffcc00;
+            color: #0a1a2e;
+            font-size: 9px;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 20px;
+        }
+
+        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 24px; }
+        .feature-item { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 500; color: #2a3a5a; }
+        .feature-item .icon { font-size: 18px; flex-shrink: 0; }
+
+        .works-with {
+            display: flex; flex-direction: column; align-items: center; gap: 14px;
+            background: linear-gradient(180deg, #f8faff, #fbfcff);
+            border: 1px solid #eef3ff; border-radius: 18px;
+            padding: 20px 16px; margin: 0 0 26px; text-align: center;
+        }
+        .works-with .ww-label { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; color: #1a6cff; }
+        .works-with .vb-logos { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
+        .works-with .ww-badge.logo { padding: 0; border: none; box-shadow: none; background: transparent; }
+        .works-with .ww-badge.logo svg { display: block; height: 40px; width: auto; }
+
+        .section-title {
+            font-size: 13px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.1em; color: #8a9ab0; margin: 0 0 14px;
+        }
+
+        /* Recipient highlight card */
+        .recipient {
+            background: linear-gradient(135deg, #f0f7ff, #f6f9ff);
+            border: 1px solid #1a6cff; border-radius: 16px; padding: 20px;
+            margin-bottom: 22px; box-shadow: 0 4px 16px rgba(26,108,255,0.08);
+        }
+        .recipient .r-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1a6cff; margin-bottom: 8px; }
+        .r-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 7px 0; border-bottom: 1px dashed #dbe6f5; }
+        .r-row:last-child { border-bottom: none; }
+        .r-row .k { font-size: 13.5px; color: #5a6a8a; font-weight: 500; }
+        .r-row .v { font-size: 15px; color: #0a1a2e; font-weight: 700; letter-spacing: 0.01em; display: flex; align-items: center; gap: 8px; }
+        .r-amount { font-size: 28px; font-weight: 800; color: #1a6cff; }
+
+        .copy {
+            border: 1px solid #dbe6f5; background: #f0f7ff; color: #1a6cff;
+            font-weight: 700; font-size: 11px; padding: 5px 12px; border-radius: 8px; cursor: pointer;
+            transition: background .15s, transform .1s;
+        }
+        .copy:hover { background: #e3efff; }
+        .copy:active { transform: scale(0.96); }
+        .copy.done { background: #d4edda; color: #155724; border-color: #b7e2c4; }
+
+        .r-qr { display: flex; align-items: center; gap: 14px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed #dbe6f5; }
+        .r-qr img { width: 90px; height: 90px; border-radius: 10px; border: 1px solid #dbe6f5; background: #fff; padding: 4px; }
+        .r-qr span { font-size: 12.5px; color: #5a6a8a; font-weight: 500; line-height: 1.5; }
+
+        /* Steps */
+        .steps { display: flex; flex-direction: column; gap: 12px; margin-bottom: 26px; }
+        .step {
+            display: flex; gap: 14px; background: #f8faff; border: 1px solid #eef3ff;
+            border-radius: 16px; padding: 16px; transition: border-color .2s, box-shadow .2s;
+        }
+        .step:hover { border-color: #cfe0ff; box-shadow: 0 6px 18px rgba(26,108,255,0.06); }
+        .step-num {
+            flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+            background: linear-gradient(135deg, #1a6cff, #4b8bff); color: #fff;
+            font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 10px rgba(26,108,255,0.28);
+        }
+        .step-body { flex: 1; }
+        .step-title { font-weight: 700; color: #0a1a2e; font-size: 15px; margin-bottom: 3px; }
+        .step-desc { font-size: 13.5px; color: #5a6a8a; line-height: 1.6; }
+        .step-desc strong { color: #0a1a2e; }
+
+        .getwave-btn {
+            display: inline-flex; align-items: center; gap: 8px; margin: 10px 0 12px;
+            background: linear-gradient(135deg, #00b8a9 0%, #00e08a 100%); color: #fff; text-decoration: none;
+            font-weight: 700; font-size: 14px; padding: 11px 20px; border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 190, 140, 0.30);
+            transition: transform .15s ease, box-shadow .2s ease;
+        }
+        .getwave-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0, 190, 140, 0.42); }
+
+        .store-badges { display: flex; gap: 10px; margin-top: 8px; }
+        .store-badges img { height: 38px; display: block; }
+
+        .pill {
+            display: inline-block; background: #eef3ff; color: #1a6cff; font-weight: 600;
+            font-size: 12.5px; padding: 3px 10px; border-radius: 8px; margin: 2px 4px 2px 0;
+        }
+
+        /* Delivery method */
+        .delivery { background: #f8faff; border: 1px solid #eef3ff; border-radius: 14px; padding: 14px 16px; margin-bottom: 22px; }
+        .delivery .d-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1a6cff; margin-bottom: 8px; }
+        .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+        .chip { background: #eef3ff; color: #1a6cff; font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 100px; }
+        .chip.on { background: #1a6cff; color: #fff; }
+        .delivery .hint { font-size: 12px; color: #8a9ab0; margin-top: 8px; }
+
+        /* Crypto */
+        .crypto { background: #fbfcff; border: 1px solid #eef2f6; border-radius: 16px; padding: 16px; margin-bottom: 22px; }
+        .crypto .c-title { font-size: 13px; font-weight: 700; color: #0a1a2e; margin-bottom: 10px; }
+        .addr {
+            display: flex; align-items: center; gap: 12px;
+            background: #fff; border: 1px solid #eef2f6; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px;
+        }
+        .addr .qr { width: 70px; height: 70px; border-radius: 8px; border: 1px solid #eef2f6; background: #fff; padding: 3px; flex-shrink: 0; }
+        .addr .info { flex: 1; min-width: 0; }
+        .addr .coin { display: block; font-size: 12px; font-weight: 700; color: #5a6a8a; margin-bottom: 2px; }
+        .addr code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #0a1a2e; overflow-wrap: anywhere; }
+        .warn { font-size: 12px; color: #856404; background: #fff3cd; border-radius: 8px; padding: 7px 10px; margin-top: 2px; }
+
+        /* Card fallback */
+        .card-fallback {
+            background: #f8faff; border: 1px solid #eef2f6; border-radius: 14px;
+            padding: 16px; margin-bottom: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+        }
+        .card-fallback .cf-text { font-size: 13.5px; color: #5a6a8a; }
+        .card-fallback .cf-text strong { color: #0a1a2e; }
+        .card-fallback .cf-btn {
+            background: #1a6cff; color: #fff; text-decoration: none; font-size: 13px; font-weight: 700;
+            padding: 9px 16px; border-radius: 10px; white-space: nowrap;
+        }
+
+        /* CTA */
+        .cta-box {
+            background: #ffffff; border: 1px dashed #dbe6f5; border-radius: 18px;
+            padding: 24px 20px; text-align: center; margin-bottom: 20px;
+        }
+        .cta-box h2 { font-size: 20px; font-weight: 800; color: #0a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; }
+        .cta-box p { font-size: 14px; color: #5a6a8a; margin-bottom: 16px; line-height: 1.55; }
+        .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .email-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            background: linear-gradient(135deg, #1a6cff 0%, #4b8bff 55%, #6aa6ff 100%);
+            color: #fff; text-decoration: none; font-weight: 700; font-size: 15px;
+            padding: 14px 26px; border-radius: 14px; box-shadow: 0 10px 24px rgba(26,108,255,0.30);
+        }
+        .wa-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            background: linear-gradient(135deg, #25D366 0%, #1ebe5b 100%); color: #fff; text-decoration: none;
+            font-weight: 700; font-size: 15px; padding: 14px 26px; border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(37, 211, 102, 0.30);
+        }
+        .guarantee { font-size: 12.5px; color: #2e7d47; margin-top: 12px; font-weight: 600; }
+
+        .footer {
+            border-top: 1px solid #eef2f6; padding-top: 18px; margin-top: 6px;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+            font-size: 13px; color: #8a9ab0;
+        }
+        .footer .trust { display: flex; align-items: center; gap: 14px; }
+        .contact-info { margin-top: 14px; text-align: center; font-size: 14px; color: #4a5a7a; line-height: 1.8; }
+        .contact-info a { color: #1a6cff; text-decoration: none; font-weight: 500; }
+        .contact-info a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .container { padding: 32px 20px 24px; }
+            .plan-options-grid { grid-template-columns: 1fr; }
+            .features { grid-template-columns: 1fr; }
+            .footer { flex-direction: column; text-align: center; }
+            .store-badges img { height: 34px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="back-nav">
+            <a href="/sendwave.html" class="back-link">&larr; View All Plans &amp; Other Payment Methods (Stripe / Crypto / Gift Card)</a>
+        </div>
+
+        <div class="badge">🔥 Instant Delivery · 24h</div>
+
+        <h1>Pay via Sendwave — <span>Choose Your Plan</span></h1>
+        <p class="subhead">
+            Verified student email &amp; verification delivered in <strong>under 24 hours</strong>. Pay via
+            <strong>Sendwave (M-PESA)</strong> or <strong>Crypto</strong> — we start working immediately.
+        </p>
+
+        <div class="speed-note">
+            ⚡ <strong>Sendwave &amp; Crypto are INSTANT</strong> — no third-party card processing delays.<br />
+            🇰🇪 Destination: <strong>Kenya</strong> &bull; Network: <strong>Safaricom &rarr; M-PESA</strong>
+        </div>
+
+        <!-- Plan Selection matching eduverify pricing -->
+        <div class="plan-select-section">
+            <div class="plan-select-title">Step 1: Choose Your Plan (Same Price as EduVerify)</div>
+            <div class="plan-options-grid">
+                <!-- Plan 1: $55 -->
+                <div class="plan-toggle active" id="planEdu" onclick="selectPlan('edu')">
+                    <div class="pt-name">📧 .edu Only</div>
+                    <div class="pt-price">$55 <small style="font-size:13px;color:#5a6a8a;font-weight:600;">USD</small></div>
+                    <div class="pt-kes">≈ KES 7,130 (via M-PESA)</div>
+                </div>
+
+                <!-- Plan 2: $99 -->
+                <div class="plan-toggle" id="planSheer" onclick="selectPlan('sheerid')">
+                    <span class="pt-badge">⭐ Recommended</span>
+                    <div class="pt-name">⭐ .edu + SheerID</div>
+                    <div class="pt-price">$99 <small style="font-size:13px;color:#5a6a8a;font-weight:600;">USD</small></div>
+                    <div class="pt-kes">≈ KES 12,840 (via M-PESA)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipient Card -->
+        <div class="recipient">
+            <div class="r-label">Step 2: Sendwave Recipient Details</div>
+            <div class="r-row">
+                <span class="k">Recipient Name</span>
+                <span class="v">Abel Ochieng</span>
+            </div>
+            <div class="r-row">
+                <span class="k">Mobile (M-PESA &bull; Kenya)</span>
+                <span class="v">
+                    722 869 570
+                    <button class="copy" data-copy="722869570">Copy</button>
+                </span>
+            </div>
+            <div class="r-row">
+                <span class="k">Selected Plan</span>
+                <span class="v" id="cardPlanName">📧 .edu Only</span>
+            </div>
+            <div class="r-row">
+                <span class="k">Amount to Send</span>
+                <span class="v r-amount" id="cardAmount">$55 <small style="font-size:13px;color:#5a6a8a;font-weight:600;">USD</small></span>
+            </div>
+            <div class="r-row">
+                <span class="k">Estimated M-PESA Received</span>
+                <span class="v" id="cardKesAmount"><strong>KES 7,130</strong></span>
+            </div>
+            <div class="r-qr">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https%3A%2F%2Fsendwave.onelink.me%2Fkjap" alt="QR code to open Sendwave" loading="lazy" />
+                <span>Scan with your phone camera to download and open the official Sendwave app</span>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-item"><span class="icon">⚡</span> Delivery in hours</div>
+            <div class="feature-item"><span class="icon">🔒</span> 100% Private &amp; Safe</div>
+            <div class="feature-item"><span class="icon">💰</span> Absorb fees option</div>
+            <div class="feature-item"><span class="icon">📧</span> Real official .edu</div>
+        </div>
+
+        <!-- Verified with SVGs -->
+        <div class="works-with">
+            <div class="ww-label">✅ Verified &amp; Accepted by</div>
+            <div class="vb-logos">
+                <span class="ww-badge logo">
+                    <svg viewBox="0 0 136 28" role="img" aria-label="UNiDAYS" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="13" fill="#8DEB00"/>
+                        <path d="M14 6.2l6.6 3.7v6.2c0 4.3-3.2 6.8-6.6 8.7-3.4-1.9-6.6-4.4-6.6-8.7V9.9L14 6.2z" fill="#0A1A2E"/>
+                        <text x="34" y="19.6" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.4" fill="#0A1A2E">UNiDAYS</text>
+                    </svg>
+                </span>
+                <span class="ww-badge logo">
+                    <svg viewBox="0 0 128 28" role="img" aria-label="SheerID" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="13" fill="#4A6CF7"/>
+                        <path d="M8 14.6l4 4 8-9.2" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <text x="34" y="19.6" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.4" fill="#2B3A8F">SheerID</text>
+                    </svg>
+                </span>
+                <span class="ww-badge logo">
+                    <svg viewBox="0 0 176 28" role="img" aria-label="Student Beans" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="13" fill="#FF3B80"/>
+                        <ellipse cx="14" cy="14" rx="5" ry="7.4" fill="#fff" transform="rotate(35 14 14)"/>
+                        <text x="34" y="19.6" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.4" fill="#0A1A2E">student beans</text>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <!-- How to pay steps -->
+        <div class="section-title">Step 3: How to Send in the App</div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-body">
+                    <div class="step-title">Download Sendwave</div>
+                    <div class="step-desc">Get the app from the official stores:</div>
+                    <a class="getwave-btn" href="https://www.sendwave.com" target="_blank" rel="noopener">Get Sendwave &rarr;</a>
+                    <div class="store-badges">
+                        <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
+                        </a>
+                        <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
+                            <img class="apple" src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-body">
+                    <div class="step-title">Add your debit card</div>
+                    <div class="step-desc">Sendwave uses <strong>debit card</strong> (Visa / Mastercard). Enter your card details in the app.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-body">
+                    <div class="step-title">Choose destination country</div>
+                    <div class="step-desc">Tap the country selector and pick <span class="pill">Kenya 🇰🇪</span>.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-body">
+                    <div class="step-title">Select network: Safaricom &rarr; M-PESA</div>
+                    <div class="step-desc">Select mobile money, then choose network <span class="pill">Safaricom</span> and <span class="pill">M-PESA</span>.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">5</div>
+                <div class="step-body">
+                    <div class="step-title">Enter recipient</div>
+                    <div class="step-desc">Name: <strong>Abel Ochieng</strong> &bull; Phone: <strong>722 869 570</strong> (copy button above).</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">6</div>
+                <div class="step-body">
+                    <div class="step-title">Enter the amount and send</div>
+                    <div class="step-desc">Enter <strong id="stepAmount">$55</strong> (or your selected plan amount) and tap <strong>Send</strong>.</div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-num">7</div>
+                <div class="step-body">
+                    <div class="step-title">Notify us to start</div>
+                    <div class="step-desc">Email us at <strong>sheeredudeals@gmail.com</strong> or WhatsApp with your preferred .edu name!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crypto Section -->
+        <div class="crypto">
+            <div class="c-title">💠 Prefer Crypto? Send the plan equivalent directly:</div>
+
+            <div class="addr">
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=bitcoin%3A148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR" alt="Bitcoin address QR code" loading="lazy" />
+                <div class="info">
+                    <span class="coin">Bitcoin (BTC)</span>
+                    <code>148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</code>
+                </div>
+                <button class="copy" data-copy="148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR">Copy</button>
+            </div>
+            <div class="addr">
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=ethereum%3A0xb1f4f70928095b593564a3cf7809b75550cda9a5" alt="Ethereum address QR code" loading="lazy" />
+                <div class="info">
+                    <span class="coin">Ethereum (ETH)</span>
+                    <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
+                </div>
+                <button class="copy" data-copy="0xb1f4f70928095b593564a3cf7809b75550cda9a5">Copy</button>
+            </div>
+            <div class="addr">
+                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=solana%3AGaugrLveSBgnm9B7vp4WGvgjzq18BtHXc2LHhHK3vyy5" alt="Solana address QR code" loading="lazy" />
+                <div class="info">
+                    <span class="coin">Solana (SOL)</span>
+                    <code>GaugrLveSBgnm9B7vp4WGvgjzq18BtHXc2LHhHK3vyy5</code>
+                </div>
+                <button class="copy" data-copy="GaugrLveSBgnm9B7vp4WGvgjzq18BtHXc2LHhHK3vyy5">Copy</button>
+            </div>
+
+            <div class="warn">⚠️ Always double-check addresses before sending — crypto transactions cannot be reversed.</div>
+        </div>
+
+        <!-- Card fallback -->
+        <div class="card-fallback">
+            <div class="cf-text">
+                <strong>Need to pay with a regular credit/debit card instead?</strong><br />
+                Use our Stripe checkout on the main verification page.
+            </div>
+            <a href="/sendwave.html" class="cf-btn">Pay via Card &rarr;</a>
+        </div>
+
+        <!-- CTA Box -->
+        <div class="cta-box">
+            <h2>Ready to Activate Your Discounts?</h2>
+            <p>Once your Sendwave payment is sent, send us your details and preferred name — we activate within hours.</p>
+            <div class="cta-actions">
+                <a href="mailto:sheeredudeals@gmail.com?subject=Sendwave%20payment%20sent%20-%20Student%20Verification" class="email-btn">📧 Email Us Confirmation</a>
+                <a href="https://wa.me/13477667259?text=Hi%2C%20I%20sent%20a%20Sendwave%20payment%20for%20my%20student%20verification" target="_blank" rel="noopener" class="wa-btn">💬 WhatsApp Support</a>
+            </div>
+            <div class="guarantee">✅ 24-hour delivery guarantee &bull; 100% money-back if we cannot verify</div>
+        </div>
+
+        <div class="footer">
+            <div class="trust">
+                <span>⚡ Instant Start</span>
+                <span>🔒 Secure Transfer</span>
+                <span>📧 Real .edu Email</span>
+            </div>
+            <span>&copy; 2026 Fast Discount Finder</span>
+        </div>
+
+        <div class="contact-info">
+            📧 <a href="mailto:sheeredudeals@gmail.com">sheeredudeals@gmail.com</a> &nbsp;&bull;&nbsp;
+            📱 <a href="https://wa.me/13477667259" target="_blank">+1 (347) 766-7259</a>
+            <br />
+            <span style="font-size: 13px; color: #8a9ab0;">Fast replies within 2–3 hours.</span>
+        </div>
+
+    </div>
+
+    <script>
+        var plans = {
+            edu: {
+                name: '📧 .edu Only',
+                usd: 55,
+                kes: 'KES 7,130'
+            },
+            sheerid: {
+                name: '⭐ .edu + SheerID',
+                usd: 99,
+                kes: 'KES 12,840'
+            }
+        };
+
+        function selectPlan(planKey) {
+            document.querySelectorAll('.plan-toggle').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            if (planKey === 'sheerid') {
+                document.getElementById('planSheer').classList.add('active');
+            } else {
+                document.getElementById('planEdu').classList.add('active');
+            }
+            var p = plans[planKey];
+            document.getElementById('cardPlanName').textContent = p.name;
+            document.getElementById('cardAmount').innerHTML = '$' + p.usd + ' <small style="font-size:13px;color:#5a6a8a;font-weight:600;">USD</small>';
+            document.getElementById('cardKesAmount').innerHTML = '<strong>' + p.kes + '</strong>';
+            document.getElementById('stepAmount').textContent = '$' + p.usd;
+        }
+
+        // Check query param e.g. ?plan=sheerid
+        var params = new URLSearchParams(window.location.search);
+        var initialPlan = params.get('plan');
+        if (initialPlan === 'sheerid') {
+            selectPlan('sheerid');
+        }
+
+        document.querySelectorAll('.copy').forEach(function (btn) {
+            btn.addEventListener('click', async function () {
+                var text = btn.getAttribute('data-copy');
+                try {
+                    await navigator.clipboard.writeText(text);
+                } catch (e) {
+                    var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select();
+                    try { document.execCommand('copy'); } catch (_) {}
+                    document.body.removeChild(t);
+                }
+                var old = btn.textContent;
+                btn.textContent = 'Copied'; btn.classList.add('done');
+                setTimeout(function () { btn.textContent = old; btn.classList.remove('done'); }, 1400);
+            });
+        });
+    </script>
+</body>
+</html>

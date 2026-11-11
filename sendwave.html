@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pay via Sendwave — Student Email Discount | Fast Discount Finder</title>
+    <title>Student Verification — Which Plan Is Right For You?</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
@@ -23,7 +23,7 @@
         }
 
         .container {
-            max-width: 720px;
+            max-width: 680px;
             width: 100%;
             background: #ffffff;
             border-radius: 32px;
@@ -32,591 +32,389 @@
             position: relative;
             overflow: hidden;
         }
+
         .container::before {
             content: '';
-            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
             background: linear-gradient(90deg, #1a6cff, #ffcc00, #1a6cff);
             background-size: 200% 100%;
             animation: shimmer 3s ease-in-out infinite;
         }
-        @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 
-        .badge {
-            display: inline-block; background: #eef3ff; color: #1a6cff;
-            font-size: 11px; font-weight: 700; text-transform: uppercase;
-            letter-spacing: 0.08em; padding: 6px 16px; border-radius: 100px; margin-bottom: 16px;
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
-        h1 { font-size: 30px; font-weight: 800; color: #0a1a2e; letter-spacing: -0.03em; line-height: 1.12; margin-bottom: 8px; }
-        h1 span { color: #1a6cff; }
-        .subhead { font-size: 16px; color: #5a6a8a; line-height: 1.55; margin-bottom: 22px; }
+        .badge {
+            display: inline-block;
+            background: #eef3ff;
+            color: #1a6cff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 800;
+            color: #0a1a2e;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .subhead {
+            font-size: 16px;
+            color: #5a6a8a;
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
         .subhead strong { color: #0a1a2e; }
 
         .speed-note {
-            background: #f0f9ff; border-radius: 10px; padding: 11px 16px;
-            border: 1px solid #b3d9ff; font-size: 13px; color: #0055aa;
-            margin-bottom: 26px; text-align: center; font-weight: 500;
+            background: #f0f9ff;
+            border-radius: 8px;
+            padding: 10px 16px;
+            border: 1px solid #b3d9ff;
+            font-size: 13px;
+            color: #0055aa;
+            margin-bottom: 24px;
+            text-align: center;
+            font-weight: 500;
         }
 
-        .features { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0 0 26px; }
-        .feature-item { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 500; color: #2a3a5a; }
+        .plan-comparison {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .plan-card {
+            flex: 1;
+            min-width: 220px;
+            background: #f8faff;
+            border-radius: 16px;
+            padding: 18px 16px 20px;
+            border: 1px solid #eef3ff;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .plan-card.premium {
+            border-color: #1a6cff;
+            background: #f0f7ff;
+            box-shadow: 0 4px 16px rgba(26, 108, 255, 0.08);
+        }
+
+        .plan-card .plan-name {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .plan-card .plan-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: #0a1a2e;
+        }
+
+        .plan-card .plan-desc {
+            font-size: 13px;
+            color: #5a6a8a;
+            margin: 6px 0 12px 0;
+            line-height: 1.5;
+        }
+
+        .plan-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 12px 0;
+            font-size: 13px;
+            color: #2a3a5a;
+            line-height: 1.8;
+        }
+
+        .plan-card ul li::before {
+            content: "✓ ";
+            color: #1a6cff;
+            font-weight: 700;
+        }
+
+        .plan-card .badge-recommended {
+            display: inline-block;
+            background: #ffcc00;
+            color: #0a1a2e;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 2px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+            margin-top: 6px;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            border: 1px solid #eef2f6;
+            border-radius: 10px;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #0a1a2e;
+            font-size: 13px;
+            transition: border-color 0.2s;
+        }
+        .payment-option:hover {
+            border-color: #1a6cff;
+        }
+        .payment-option .label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .payment-option .badge-instant {
+            background: #d4edda;
+            color: #155724;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 1px 8px;
+            border-radius: 20px;
+        }
+        .payment-option .badge-hold {
+            background: #fff3cd;
+            color: #856404;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 1px 8px;
+            border-radius: 20px;
+        }
+        .payment-option .arrow {
+            color: #1a6cff;
+            font-weight: 300;
+        }
+
+        .gift-card-note {
+            font-size: 11px;
+            color: #4a5a7a;
+            margin-top: 4px;
+            text-align: center;
+            line-height: 1.5;
+        }
+        .gift-card-note strong {
+            color: #0a1a2e;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0 18px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2a3a5a;
+        }
         .feature-item .icon { font-size: 18px; flex-shrink: 0; }
 
-        .section-title {
-            font-size: 13px; font-weight: 700; text-transform: uppercase;
-            letter-spacing: 0.1em; color: #8a9ab0; margin: 0 0 14px;
-        }
-
-        /* Steps */
-        .steps { display: flex; flex-direction: column; gap: 12px; margin-bottom: 26px; }
-        .step {
-            display: flex; gap: 14px; background: #f8faff; border: 1px solid #eef3ff;
-            border-radius: 16px; padding: 16px 16px 16px 14px; transition: border-color .2s, box-shadow .2s;
-        }
-        .step:hover { border-color: #cfe0ff; box-shadow: 0 6px 18px rgba(26,108,255,0.06); }
-        .step-num {
-            flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
-            background: linear-gradient(135deg, #1a6cff, #4b8bff); color: #fff;
-            font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 4px 10px rgba(26,108,255,0.28);
-        }
-        .step-body { flex: 1; }
-        .step-title { font-weight: 700; color: #0a1a2e; font-size: 15px; margin-bottom: 3px; }
-        .step-desc { font-size: 13.5px; color: #5a6a8a; line-height: 1.6; }
-        .step-desc strong { color: #0a1a2e; }
-
-        .store-badges { display: flex; gap: 10px; margin-top: 10px; }
-        .store-badges img { height: 40px; display: block; }
-        .store-badges img.apple { height: 40px; }
-
-        .getwave-btn {
-            display: inline-flex; align-items: center; gap: 8px; margin: 10px 0 12px;
-            background: linear-gradient(135deg, #00b8a9 0%, #00e08a 100%); color: #fff; text-decoration: none;
-            font-weight: 700; font-size: 14px; padding: 11px 20px; border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0, 190, 140, 0.30);
-            transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
-        }
-        .getwave-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0, 190, 140, 0.42); filter: brightness(1.05); }
-        .getwave-btn:active { transform: translateY(0); }
-
-        .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-        .wa-btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            background: linear-gradient(135deg, #25D366 0%, #1ebe5b 100%); color: #fff; text-decoration: none;
-            font-weight: 700; font-size: 16px; padding: 15px 26px; border-radius: 14px;
-            box-shadow: 0 10px 24px rgba(37, 211, 102, 0.30);
-            transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
-        }
-        .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(37, 211, 102, 0.42); filter: brightness(1.04); }
-        .wa-btn:active { transform: translateY(0); }
-
-        .pill {
-            display: inline-block; background: #eef3ff; color: #1a6cff; font-weight: 600;
-            font-size: 12.5px; padding: 3px 10px; border-radius: 8px; margin: 2px 4px 2px 0;
-        }
-
-        /* Recipient highlight */
-        .recipient {
-            background: linear-gradient(135deg, #f0f7ff, #f6f9ff);
-            border: 1px solid #1a6cff; border-radius: 16px; padding: 18px 18px;
-            margin-bottom: 14px; box-shadow: 0 4px 16px rgba(26,108,255,0.08);
-        }
-        .recipient .r-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1a6cff; margin-bottom: 8px; }
-        .r-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 0; border-bottom: 1px dashed #dbe6f5; }
-        .r-row:last-child { border-bottom: none; }
-        .r-row .k { font-size: 13px; color: #5a6a8a; font-weight: 500; }
-        .r-row .v { font-size: 15px; color: #0a1a2e; font-weight: 700; letter-spacing: 0.01em; }
-        .r-amount { font-size: 26px; font-weight: 800; color: #1a6cff; }
-
-        /* Crypto */
-        .crypto { background: #fbfcff; border: 1px solid #eef2f6; border-radius: 16px; padding: 16px; margin-bottom: 22px; }
-        .crypto .c-title { font-size: 13px; font-weight: 700; color: #0a1a2e; margin-bottom: 10px; }
-        .addr {
-            display: flex; align-items: center; gap: 12px;
-            background: #fff; border: 1px solid #eef2f6; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px;
-        }
-        .addr .qr { width: 70px; height: 70px; border-radius: 8px; border: 1px solid #eef2f6; background: #fff; padding: 3px; flex-shrink: 0; }
-        .addr .info { flex: 1; min-width: 0; }
-        .addr .coin { display: block; font-size: 12px; font-weight: 700; color: #5a6a8a; margin-bottom: 2px; }
-        .addr code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #0a1a2e; overflow-wrap: anywhere; }
-        .copy {
-            flex-shrink: 0; border: 1px solid #dbe6f5; background: #f0f7ff; color: #1a6cff;
-            font-weight: 700; font-size: 11px; padding: 6px 12px; border-radius: 8px; cursor: pointer;
-            transition: background .15s, transform .1s;
-        }
-        .copy:hover { background: #e3efff; }
-        .copy:active { transform: scale(0.96); }
-        .copy.done { background: #d4edda; color: #155724; border-color: #b7e2c4; }
-        .warn { font-size: 12px; color: #856404; background: #fff3cd; border-radius: 8px; padding: 7px 10px; margin-top: 2px; }
-
-        /* CTA */
-        .cta-box {
-            background: #ffffff; border: 1px dashed #dbe6f5; border-radius: 18px;
-            padding: 24px 20px; text-align: center; margin-bottom: 20px;
-        }
-        .cta-box h2 { font-size: 20px; font-weight: 800; color: #0a1a2e; letter-spacing: -0.02em; margin-bottom: 6px; }
-        .cta-box p { font-size: 14px; color: #5a6a8a; margin-bottom: 16px; line-height: 1.55; }
-        .email-btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            background: linear-gradient(135deg, #1a6cff 0%, #4b8bff 55%, #6aa6ff 100%);
-            color: #fff; text-decoration: none; font-weight: 700; font-size: 16px;
-            padding: 15px 30px; border-radius: 14px; box-shadow: 0 10px 24px rgba(26,108,255,0.30);
-            transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
-            position: relative; overflow: hidden;
-        }
-        .email-btn:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(26,108,255,0.40); filter: brightness(1.04); }
-        .email-btn:active { transform: translateY(0); }
-        .email-btn::after {
-            content: ''; position: absolute; inset: 0;
-            background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.30) 50%, transparent 70%);
-            transform: translateX(-130%); transition: transform .6s ease;
-        }
-        .email-btn:hover::after { transform: translateX(130%); }
-        .guarantee { font-size: 12.5px; color: #2e7d47; margin-top: 12px; font-weight: 600; }
-
-        /* Footer */
         .footer {
-            border-top: 1px solid #eef2f6; padding-top: 18px; margin-top: 6px;
-            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
-            font-size: 13px; color: #8a9ab0;
+            border-top: 1px solid #eef2f6;
+            padding-top: 18px;
+            margin-top: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+            color: #8a9ab0;
         }
+        .footer .secure { display: flex; align-items: center; gap: 6px; }
         .footer .trust { display: flex; align-items: center; gap: 14px; }
-        .contact-info { margin-top: 14px; text-align: center; font-size: 14px; color: #4a5a7a; line-height: 1.8; }
-        .contact-info a { color: #1a6cff; text-decoration: none; font-weight: 500; }
+
+        .contact-info {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f0f2f6;
+            text-align: center;
+            font-size: 14px;
+            color: #4a5a7a;
+            line-height: 1.8;
+        }
+        .contact-info a {
+            color: #1a6cff;
+            text-decoration: none;
+            font-weight: 500;
+        }
         .contact-info a:hover { text-decoration: underline; }
 
-        .works-with {
-            display: flex; flex-direction: column; align-items: center; gap: 14px;
-            background: linear-gradient(180deg, #f8faff, #fbfcff);
-            border: 1px solid #eef3ff; border-radius: 18px;
-            padding: 20px 16px; margin: 0 0 26px; text-align: center;
+        .footnote {
+            text-align: center;
+            font-size: 12px;
+            color: #8a9ab0;
+            margin-top: 12px;
         }
-        .works-with .ww-label { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; color: #1a6cff; }
-        .works-with .vb-logos { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
-        .works-with .ww-badge.logo { padding: 0; border: none; box-shadow: none; background: transparent; }
-        .works-with .ww-badge.logo svg { display: block; height: 44px; width: auto; }
-        @media (max-width: 480px) {
-            .works-with .ww-badge.logo svg { height: 34px; }
-            .works-with .vb-logos { gap: 16px; }
-        }
-
-        .save-strip {
-            display: inline-flex; align-items: center; gap: 8px; margin: 0 0 18px;
-            background: #fff8e1; border: 1px solid #ffe08a; color: #8a5a00;
-            font-size: 13.5px; font-weight: 700; padding: 7px 14px; border-radius: 10px;
-        }
-        .save-strip s { color: #b98a2e; }
-        .save-strip strong { color: #0a1a2e; }
-        .save-strip .off { background: #ffcc00; color: #0a1a2e; font-size: 11px; font-weight: 800; padding: 2px 9px; border-radius: 20px; }
-
-        .urgency {
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-            background: #fff1f0; border: 1px solid #ffd0cb; color: #b3261e;
-            font-size: 13px; font-weight: 600; padding: 9px 14px; border-radius: 10px; margin-bottom: 12px;
-        }
-        .urgency strong { font-variant-numeric: tabular-nums; font-weight: 800; }
-
-        .rate-line { text-align: center; font-size: 13px; color: #5a6a8a; margin-bottom: 24px; }
-        .rate-line strong { color: #0a1a2e; }
-        .rate-line span { color: #8a9ab0; }
-
-        .delivery { background: #f8faff; border: 1px solid #eef3ff; border-radius: 14px; padding: 14px 16px; margin-bottom: 12px; }
-        .delivery .d-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1a6cff; margin-bottom: 8px; }
-        .chips { display: flex; gap: 8px; flex-wrap: wrap; }
-        .chip { background: #eef3ff; color: #1a6cff; font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 100px; }
-        .chip.on { background: #1a6cff; color: #fff; }
-        .delivery .hint { font-size: 12px; color: #8a9ab0; margin-top: 8px; }
-
-        .tst { display: grid; gap: 10px; margin-bottom: 22px; }
-        .tst-card { background: #f8faff; border: 1px solid #eef3ff; border-radius: 14px; padding: 14px 16px; }
-        .tst-card .stars { color: #ffb400; font-size: 13px; letter-spacing: 2px; margin-bottom: 4px; }
-        .tst-card p { font-size: 13.5px; color: #2a3a5a; line-height: 1.55; margin-bottom: 6px; }
-        .tst-card .who { font-size: 12px; color: #8a9ab0; font-weight: 600; }
-
-        .crypto-help { background: #f0f9ff; border: 1px solid #b3d9ff; border-radius: 14px; padding: 16px 18px; margin-bottom: 22px; }
-        .crypto-help h3 { font-size: 14.5px; color: #0055aa; margin-bottom: 8px; }
-        .crypto-help ol { margin: 0 0 0 20px; font-size: 13.5px; color: #2a3a5a; line-height: 1.85; }
-        .crypto-help li { margin-bottom: 3px; }
-        .crypto-help code { background: #fff; border: 1px solid #dbe6f5; border-radius: 6px; padding: 1px 6px; font-size: 12.5px; }
-        .crypto-help .tip { font-size: 12.5px; color: #856404; background: #fff3cd; border-radius: 8px; padding: 8px 10px; margin-top: 10px; }
-
-        /* Card / Stripe (last payment option) */
-        .card-pay {
-            display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-            background: linear-gradient(135deg,#f8faff,#f6f9ff); border: 1px solid #e6eefb; border-radius: 16px;
-            padding: 18px 20px; margin-bottom: 22px; box-shadow: 0 4px 16px rgba(99,91,255,0.06);
-        }
-        .card-pay .cp-title { font-weight: 700; color: #0a1a2e; font-size: 15px; margin-bottom: 3px; }
-        .card-pay .cp-sub { font-size: 13px; color: #5a6a8a; line-height: 1.5; }
-        .card-pay .cp-btn {
-            background: linear-gradient(135deg,#635bff,#4b8bff); color: #fff; text-decoration: none;
-            font-weight: 700; font-size: 14px; padding: 13px 24px; border-radius: 12px; white-space: nowrap;
-            box-shadow: 0 8px 20px rgba(99,91,255,0.30); transition: transform .15s ease, box-shadow .2s ease, filter .2s ease;
-        }
-        .card-pay .cp-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(99,91,255,0.42); filter: brightness(1.05); }
-        .card-pay .cp-btn:active { transform: translateY(0); }
-
-        .faq { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
-        .faq-item { display: flex; gap: 12px; background: #f8faff; border: 1px solid #eef3ff; border-radius: 12px; padding: 12px 14px; }
-        .faq-item .q { flex-shrink: 0; min-width: 132px; font-weight: 700; color: #0a1a2e; font-size: 13.5px; }
-        .faq-item .a { font-size: 13.5px; color: #5a6a8a; line-height: 1.6; }
-
-        .r-qr { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding-top: 12px; border-top: 1px dashed #dbe6f5; }
-        .r-qr img { width: 96px; height: 96px; border-radius: 10px; border: 1px solid #dbe6f5; background: #fff; padding: 4px; }
-        .r-qr span { font-size: 12.5px; color: #5a6a8a; font-weight: 500; }
-
-        .step { animation: rise .55s cubic-bezier(.2,.7,.2,1) both; }
-        .step:nth-child(2) { animation-delay: .06s; }
-        .step:nth-child(3) { animation-delay: .12s; }
-        .step:nth-child(4) { animation-delay: .18s; }
-        @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* Sticky mobile CTA */
-        .sticky-cta {
-            position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
-            display: flex; align-items: center; justify-content: space-between; gap: 12px;
-            padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
-            background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);
-            border-top: 1px solid #e6eefb; box-shadow: 0 -8px 24px rgba(10,26,46,0.08);
-            transform: translateY(120%); transition: transform .3s ease;
-        }
-        .sticky-cta.show { transform: translateY(0); }
-        .sticky-cta .sc-text { font-size: 13px; color: #0a1a2e; font-weight: 600; }
-        .sticky-cta .sc-text strong { color: #1a6cff; font-weight: 800; }
-        .sticky-cta .sc-btn {
-            background: linear-gradient(135deg,#00b8a9,#00e08a); color:#fff; text-decoration:none;
-            font-weight:700; font-size:14px; padding:11px 18px; border-radius:12px; white-space:nowrap;
-            box-shadow: 0 6px 16px rgba(0,190,140,0.30);
-        }
-        @media (min-width: 641px) { .sticky-cta { display: none; } }
-        @media (prefers-reduced-motion: reduce) { .step { animation: none; } }
 
         @media (max-width: 480px) {
             .container { padding: 32px 20px 24px; }
+            .plan-comparison { flex-direction: column; }
+            .plan-card { min-width: unset; }
             .features { grid-template-columns: 1fr; }
             .footer { flex-direction: column; text-align: center; }
-            .store-badges img { height: 36px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
 
-        <div class="badge">🔥 Instant Delivery · 24h</div>
-        <div class="save-strip">💸 <s>$99</s> → <strong>$60</strong> <span class="off">Save 39%</span></div>
+        <div class="badge">🔥 Instant Access Available</div>
 
-        <h1>Pay the Fast Way — <span>Get Your .edu</span></h1>
+        <h1>Which Plan Gets You the Most Savings?</h1>
         <p class="subhead">
-            Verified student email delivered in <strong>under 24 hours</strong>. Pay via
-            <strong>Sendwave</strong> or <strong>crypto</strong> — no third‑party holds.
-            Works with <strong>UNiDAYS</strong>, <strong>SheerID</strong> and <strong>Student Beans</strong>.
+            Get verified via <strong>Student Clearinghouse</strong> &bull; Custom <strong>.edu email</strong> included
         </p>
 
         <div class="speed-note">
-            ⚡ <strong>Sendwave &amp; crypto are instant</strong> — we start as soon as your payment lands.<br />
-            🇰🇪 Destination: <strong>Kenya</strong> · Network: <strong>Safaricom → M‑PESA</strong><br />
-            💳 Card payments can take a little time to reflect — so card is slower.
+            ⚡ <strong>Sendwave, Crypto &amp; Gift Cards are INSTANT</strong> – we start working immediately.<br />
+            💳 Card payments take some time to reflect – so card is slower.<br />
+            💸 <a href="/sendwave-pay.html" style="color:#0055aa;font-weight:700;">Prefer Sendwave (M-PESA)? See how to pay ($55 / $99) →</a>
         </div>
 
-        <div class="urgency">⏳ Offer ends at midnight — <strong id="countdown">--:--:--</strong></div>
-        <div class="rate-line">💱 You send <strong>$60</strong> ≈ they receive <strong>KES 7,780</strong> <span>(rate ~129.7 · shown live in-app)</span></div>
+        <!-- Plan Cards -->
+        <div class="plan-comparison">
+            <!-- Edu Only -->
+            <div class="plan-card">
+                <div class="plan-name">📧 .edu Only</div>
+                <div class="plan-price">$55</div>
+                <div class="plan-desc">Get a valid .edu – but some sites still reject it.</div>
+                <ul>
+                    <li>Custom .edu address (long‑lasting)</li>
+                    <li>No SheerID/UNiDAYS verification</li>
+                    <li>Still blocked by Amazon, Spotify, Adobe, Nike</li>
+                </ul>
 
+                <div class="payment-options">
+                    <a href="https://nowpayments.io/payment/?iid=5113588265" target="_blank" rel="noopener noreferrer" class="payment-option">
+                        <span class="label">₿ Crypto (NOWPayments)</span>
+                        <span class="badge-instant">Instant</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="/sendwave-pay.html?plan=edu" class="payment-option">
+                        <span class="label">💸 Sendwave ($55 · M-PESA)</span>
+                        <span class="badge-instant">Instant</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="https://tinyurl.com/EDUOnly45" target="_blank" rel="noopener noreferrer" class="payment-option">
+                        <span class="label">🎁 Gift Card ($45 USDT)</span>
+                        <span class="badge-instant">Instant</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="https://buy.stripe.com/9B6fZhdBs7R85U8cTtg360b" target="_blank" rel="noopener noreferrer" class="payment-option">
+                        <span class="label">💳 Stripe</span>
+                        <span class="badge-hold">Takes time to reflect</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+                <div class="gift-card-note">
+                    🎯 <strong>We absorb fees</strong> – you pay $45 for a $55 plan.<br />
+                    Buy the gift card with <strong>PayPal or any payment method</strong> (full anonymity),<br />
+                    then send the code to us via <strong>email or WhatsApp</strong> – we start instantly.
+                </div>
+            </div>
+
+            <!-- Premium -->
+            <div class="plan-card premium">
+                <div class="plan-name">⭐ .edu + SheerID</div>
+                <div class="plan-price">$99</div>
+                <div class="plan-desc">Unlock every discount – no rejections.</div>
+                <ul>
+                    <li>Custom .edu address (long‑lasting)</li>
+                    <li>SheerID/UNiDAYS verification</li>
+                    <li>Works for Nike, Spotify, Adobe, Amazon Prime, 200+ brands</li>
+                </ul>
+                <span class="badge-recommended">✅ Most Popular</span>
+
+                <div class="payment-options">
+                    <a href="https://nowpayments.io/payment/?iid=5509119084" target="_blank" rel="noopener noreferrer" class="payment-option">
+                        <span class="label">₿ Crypto (NOWPayments)</span>
+                        <span class="badge-instant">Instant</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="/sendwave-pay.html?plan=sheerid" class="payment-option">
+                        <span class="label">💸 Sendwave ($99 · M-PESA)</span>
+                        <span class="badge-instant">Instant</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="https://tinyurl.com/sheerID80" target="_blank" rel="noopener noreferrer" class="payment-option">
+                        <span class="label">🎁 Gift Card ($80 USDT)</span>
+                        <span class="badge-instant">Instant</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="https://buy.stripe.com/5kQ28r9lc5J06Yc5r1g360c" target="_blank" rel="noopener noreferrer" class="payment-option">
+                        <span class="label">💳 Stripe</span>
+                        <span class="badge-hold">Takes time to reflect</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+                <div class="gift-card-note">
+                    🎯 <strong>We absorb fees</strong> – you pay $80 for a $99 plan.<br />
+                    Buy the gift card with <strong>PayPal or any payment method</strong> (full anonymity),<br />
+                    then send the code to us via <strong>email or WhatsApp</strong> – we start instantly.
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Features -->
         <div class="features">
-            <div class="feature-item"><span class="icon">⚡</span> Delivery in hours</div>
-            <div class="feature-item"><span class="icon">🔒</span> 100% private</div>
-            <div class="feature-item"><span class="icon">💰</span> Up to 60% off</div>
-            <div class="feature-item"><span class="icon">📧</span> Real .edu email</div>
-        </div>
-
-        <div class="works-with">
-            <div class="ww-label">✅ Verified with</div>
-            <div class="vb-logos">
-
-            <!-- UNiDAYS (stylized wordmark) -->
-            <span class="ww-badge logo">
-                <svg viewBox="0 0 136 28" role="img" aria-label="UNiDAYS" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="14" cy="14" r="13" fill="#8DEB00"/>
-                    <path d="M14 6.2l6.6 3.7v6.2c0 4.3-3.2 6.8-6.6 8.7-3.4-1.9-6.6-4.4-6.6-8.7V9.9L14 6.2z" fill="#0A1A2E"/>
-                    <text x="34" y="19.6" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.4" fill="#0A1A2E">UNiDAYS</text>
-                </svg>
-            </span>
-
-            <!-- SheerID (stylized wordmark) -->
-            <span class="ww-badge logo">
-                <svg viewBox="0 0 128 28" role="img" aria-label="SheerID" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="14" cy="14" r="13" fill="#4A6CF7"/>
-                    <path d="M8 14.6l4 4 8-9.2" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <text x="34" y="19.6" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.4" fill="#2B3A8F">SheerID</text>
-                </svg>
-            </span>
-
-            <!-- Student Beans (stylized wordmark) -->
-            <span class="ww-badge logo">
-                <svg viewBox="0 0 176 28" role="img" aria-label="Student Beans" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="14" cy="14" r="13" fill="#FF3B80"/>
-                    <ellipse cx="14" cy="14" rx="5" ry="7.4" fill="#fff" transform="rotate(35 14 14)"/>
-                    <text x="34" y="19.6" font-family="Inter, system-ui, sans-serif" font-size="17" font-weight="800" letter-spacing="-0.4" fill="#0A1A2E">student beans</text>
-                </svg>
-            </span>
-            </div>
-        </div>
-
-        <div class="section-title">How to pay</div>
-        <div class="steps">
-
-            <div class="step">
-                <div class="step-num">1</div>
-                <div class="step-body">
-                    <div class="step-title">Download Sendwave</div>
-                    <div class="step-desc">Get the app from the official stores:</div>
-                    <a class="getwave-btn" href="https://www.sendwave.com" target="_blank" rel="noopener">Get Sendwave →</a>
-                    <div class="store-badges">
-                        <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
-                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" />
-                        </a>
-                        <a href="https://sendwave.onelink.me/kjap?af_js_web=true&af_ss_ver=2_7_3&pid=web&c=HomePage&af_channel=web&is_retargeting=true&af_ss_ui=true&af_ss_gtm_ui=true" target="_blank" rel="noopener">
-                            <img class="apple" src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="step-num">2</div>
-                <div class="step-body">
-                    <div class="step-title">Add a debit card</div>
-                    <div class="step-desc">Sendwave is funded by <strong>debit card only</strong> (Visa/Mastercard). Credit cards, PayPal and bank transfers aren’t accepted. You’ll enter: card number, expiry, CVV and billing ZIP.</div>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="step-num">3</div>
-                <div class="step-body">
-                    <div class="step-title">Choose the destination country</div>
-                    <div class="step-desc">Tap the country selector and pick <span class="pill">Kenya 🇰🇪</span> — the amount switches to <strong>KES</strong>.</div>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="step-num">4</div>
-                <div class="step-body">
-                    <div class="step-title">Select network: Safaricom &rarr; M‑PESA</div>
-                    <div class="step-desc">For the delivery method choose mobile money, then select network <span class="pill">Safaricom</span> and <span class="pill">M‑PESA</span> — <strong>not Airtel</strong>. It’s a one‑tap choice; nothing else is asked.</div>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="step-num">5</div>
-                <div class="step-body">
-                    <div class="step-title">Enter the recipient</div>
-                    <div class="step-desc">Sendwave asks for the recipient’s <strong>name</strong> and <strong>phone number</strong> — use the card below. It checks the name against the M‑PESA registry automatically.</div>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="step-num">6</div>
-                <div class="step-body">
-                    <div class="step-title">Enter $60 and send</div>
-                    <div class="step-desc">Type <strong>$60</strong> under “You send”; you’ll see the exchange rate and “They get … KES”. Review the small fee, then tap <strong>Send</strong> — the money lands in M‑PESA in seconds.</div>
-                </div>
-            </div>
-
-            <div class="step">
-                <div class="step-num">7</div>
-                <div class="step-body">
-                    <div class="step-title">Email us to finish</div>
-                    <div class="step-desc">Send your preferred .edu name to <strong>jmaclive101@gmail.com</strong> (or WhatsApp) and we deliver within hours.</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Delivery method -->
-        <div class="delivery">
-            <div class="d-label">Delivery method (pick these)</div>
-            <div class="chips">
-                <span class="chip">🇰🇪 Kenya</span>
-                <span class="chip on">Safaricom</span>
-                <span class="chip on">M‑PESA</span>
-            </div>
-            <div class="hint">Not Airtel? Switch the network to <strong>Safaricom → M‑PESA</strong> before sending — one tap, no extra questions.</div>
-        </div>
-
-        <!-- Recipient card -->
-        <div class="recipient">
-            <div class="r-label">Send to</div>
-            <div class="r-row"><span class="k">Recipient</span><span class="v">Abel Ochieng</span></div>
-            <div class="r-row"><span class="k">Mobile (M‑PESA · Kenya)</span>
-                <span class="v">722 869 570
-                    <button class="copy" data-copy="722869570">Copy</button>
-                </span>
-            </div>
-            <div class="r-row"><span class="k">Amount</span><span class="v r-amount">$60 <small style="font-size:12px;color:#5a6a8a;font-weight:600;">USD</small></span></div>
-            <div class="r-qr">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=https%3A%2F%2Fsendwave.onelink.me%2Fkjap" alt="QR code to open Sendwave" loading="lazy" />
-                <span>Scan to install Sendwave</span>
-            </div>
-        </div>
-
-        <!-- Crypto -->
-        <div class="crypto">
-            <div class="c-title">💠 Prefer crypto? Send the $60 equivalent:</div>
-
-            <div class="addr">
-                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=bitcoin%3A148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR" alt="Bitcoin address QR code" loading="lazy" />
-                <div class="info">
-                    <span class="coin">Bitcoin (BTC)</span>
-                    <code>148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</code>
-                </div>
-                <button class="copy" data-copy="148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR">Copy</button>
-            </div>
-            <div class="addr">
-                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=ethereum%3A0xb1f4f70928095b593564a3cf7809b75550cda9a5" alt="Ethereum address QR code" loading="lazy" />
-                <div class="info">
-                    <span class="coin">Ethereum (ETH)</span>
-                    <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
-                </div>
-                <button class="copy" data-copy="0xb1f4f70928095b593564a3cf7809b75550cda9a5">Copy</button>
-            </div>
-            <div class="addr">
-                <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=solana%3AGaugrLveSBgnm9B7vp4WGvgjzq18BtHXc2LHhHK3vyy5" alt="Solana address QR code" loading="lazy" />
-                <div class="info">
-                    <span class="coin">Solana (SOL)</span>
-                    <code>GaugrLveSBgnm9B7vp4WGvgjzq18BtHXc2LHhHK3vyy5</code>
-                </div>
-                <button class="copy" data-copy="GaugrLveSBgnm9B7vp4WGvgjzq18BtHXc2LHhHK3vyy5">Copy</button>
-            </div>
-
-            <div class="warn">⚠️ Double‑check the address before sending — crypto transfers can’t be reversed.</div>
-        </div>
-
-        <!-- Beginner crypto tutorial -->
-        <div class="crypto-help">
-            <h3>🪙 Never used crypto? It’s easy — here’s the beginner way</h3>
-            <ol>
-                <li><strong>Get a free app.</strong> Install <strong>Cash App</strong>, <strong>Coinbase</strong> or <strong>Trust Wallet</strong> and verify your ID (takes ~2 min).</li>
-                <li><strong>Buy a little Bitcoin.</strong> Tap <em>Buy</em>, choose <strong>Bitcoin (BTC)</strong>, enter about <strong>$62</strong> (covers the small network fee), and confirm with your bank/debit card.</li>
-                <li><strong>Tap “Send” (not “Buy”).</strong> Paste the <strong>Bitcoin</strong> address from the card above — use the Copy button so you don’t mistype.</li>
-                <li><strong>Enter $60 and confirm.</strong> Double-check the first 4 and last 4 characters match, then send.</li>
-                <li><strong>Email us the receipt.</strong> Send the transaction ID (<code>txid</code>) to <strong>jmaclive101@gmail.com</strong> so we can match it instantly.</li>
-            </ol>
-            <div class="tip">⚠️ Match the coin to the address: <strong>BTC→Bitcoin</strong>, <strong>ETH→Ethereum</strong>, <strong>SOL→Solana</strong>. Sending the wrong coin to the wrong address = funds are lost and can’t be recovered.</div>
-        </div>
-
-        <!-- Card / Stripe — last payment option, after crypto -->
-        <div class="section-title">Rather just use a card?</div>
-        <div class="card-pay">
-            <div>
-                <div class="cp-title">💳 Pay $60 by card (Stripe)</div>
-                <div class="cp-sub">Secure Stripe checkout · card payments take some time to reflect, so card is slower than crypto or Sendwave.</div>
-            </div>
-            <a class="cp-btn" href="https://buy.stripe.com/7sY5kDcxoc7o82g9Hhg360f" target="_blank" rel="noopener">Pay $60 by card →</a>
-        </div>
-
-        <!-- Good to know -->
-        <div class="section-title">Good to know</div>
-        <div class="faq">
-            <div class="faq-item"><span class="q">Fee</span><span class="a">Sendwave shows a small transfer fee (~$0.49) before you confirm — you always see the total charge.</span></div>
-            <div class="faq-item"><span class="q">Speed</span><span class="a">M‑PESA arrives in seconds to a few minutes, 24/7.</span></div>
-            <div class="faq-item"><span class="q">Limits</span><span class="a">M‑PESA caps a single transfer at KES 250,000 — $60 is far below it.</span></div>
-            <div class="faq-item"><span class="q">Promo code</span><span class="a">First‑timers can enter a promo code on the review screen for a sign‑up credit.</span></div>
-            <div class="faq-item"><span class="q">Other payouts</span><span class="a">Sendwave also pays to Airtel Money and Kenyan banks — but for us please use <strong>Safaricom &rarr; M‑PESA</strong>.</span></div>
-            <div class="faq-item"><span class="q">Picked Airtel?</span><span class="a">Just go back and switch the network to <strong>Safaricom &rarr; M‑PESA</strong> before sending.</span></div>
-        </div>
-
-        <!-- Testimonials -->
-        <div class="section-title">What buyers say</div>
-        <div class="tst">
-            <div class="tst-card">
-                <div class="stars">★★★★★</div>
-                <p>“Sent with Sendwave and had my .edu in under an hour. Spotify and Nike both accepted it.”</p>
-                <span class="who">— Marcus T.</span>
-            </div>
-            <div class="tst-card">
-                <div class="stars">★★★★★</div>
-                <p>“Never used crypto before but the steps were simple. Paid $60, got verified the same day.”</p>
-                <span class="who">— Priya S.</span>
-            </div>
-            <div class="tst-card">
-                <div class="stars">★★★★★</div>
-                <p>“Quick replies on WhatsApp and zero hassle. Cheaper than the other guys by a mile.”</p>
-                <span class="who">— Diego R.</span>
-            </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta-box">
-            <h2>Ready to start saving?</h2>
-            <p>Once your payment is sent, email us your preferred name and we’ll deliver your .edu address within hours.</p>
-            <div class="cta-actions">
-                <a href="mailto:jmaclive101@gmail.com?subject=Sendwave%20payment%20sent%20-%20.edu%20request" class="email-btn">📧 Email Us Now</a>
-                <a href="https://wa.me/13477667259?text=Hi%2C%20I%20sent%20a%20Sendwave%20payment%20for%20my%20.edu" target="_blank" rel="noopener" class="wa-btn">💬 WhatsApp</a>
-            </div>
-            <div class="guarantee">✅ 24‑hour delivery guarantee · Full refund if we miss it</div>
+            <div class="feature-item"><span class="icon">✅</span> 200+ Brands Verified</div>
+            <div class="feature-item"><span class="icon">🎓</span> .edu Email Included</div>
+            <div class="feature-item"><span class="icon">🔒</span> Student Clearinghouse</div>
+            <div class="feature-item"><span class="icon">⭐</span> 24+ 5‑Star Reviews</div>
         </div>
 
         <div class="footer">
+            <div class="secure"><span>🔒</span> Secure checkout</div>
             <div class="trust">
-                <span>⚡ Instant</span>
-                <span>🔒 Private</span>
-                <span>📧 Real .edu</span>
+                <span>💸 Sendwave (M-PESA)</span>
+                <span>💳 Stripe</span>
+                <span>₿ Crypto</span>
+                <span>🎁 Gift Card</span>
             </div>
-            <span>© 2026 Fast Discount Finder</span>
         </div>
 
         <div class="contact-info">
-            📧 <a href="mailto:jmaclive101@gmail.com">jmaclive101@gmail.com</a>
+            📧 <a href="mailto:sheeredudeals@gmail.com">sheeredudeals@gmail.com</a> &nbsp;·&nbsp;
+            📱 <a href="https://wa.me/13477667259" target="_blank">+1 (347) 766‑7259</a>
             <br />
             <span style="font-size: 13px; color: #8a9ab0;">We reply within 2–3 hours.</span>
         </div>
 
+        <div class="footnote">
+            💡 For gift card payments, send the code to us directly after purchase.
+        </div>
+
     </div>
-
-    <!-- Sticky mobile CTA -->
-    <div class="sticky-cta" id="stickyCta">
-        <div class="sc-text">Pay <strong>$60</strong> via Sendwave</div>
-        <a class="sc-btn" href="https://www.sendwave.com" target="_blank" rel="noopener">Open Sendwave →</a>
-    </div>
-
-    <script>
-        document.querySelectorAll('.copy').forEach(function (btn) {
-            btn.addEventListener('click', async function () {
-                var text = btn.getAttribute('data-copy');
-                try {
-                    await navigator.clipboard.writeText(text);
-                } catch (e) {
-                    var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select();
-                    try { document.execCommand('copy'); } catch (_) {}
-                    document.body.removeChild(t);
-                }
-                var old = btn.textContent;
-                btn.textContent = 'Copied'; btn.classList.add('done');
-                setTimeout(function () { btn.textContent = old; btn.classList.remove('done'); }, 1400);
-            });
-        });
-
-        // Sticky mobile CTA appears after a short scroll
-        var sticky = document.getElementById('stickyCta');
-        function toggleSticky() {
-            if (window.innerWidth <= 640 && window.scrollY > 220) sticky.classList.add('show');
-            else sticky.classList.remove('show');
-        }
-        window.addEventListener('scroll', toggleSticky, { passive: true });
-        window.addEventListener('resize', toggleSticky);
-        toggleSticky();
-
-        // Countdown to local midnight (offer urgency)
-        (function () {
-            var el = document.getElementById('countdown');
-            if (!el) return;
-            function tick() {
-                var now = new Date();
-                var end = new Date(now); end.setHours(24, 0, 0, 0);
-                var d = Math.max(0, end - now);
-                var h = Math.floor(d / 3600000), m = Math.floor((d % 3600000) / 60000), s = Math.floor((d % 60000) / 1000);
-                el.textContent = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
-            }
-            tick(); setInterval(tick, 1000);
-        })();
-    </script>
 </body>
 </html>

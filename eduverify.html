@@ -376,7 +376,111 @@
             </div>
         </div>
 
-        <!-- Trust Features -->
+
+<!-- Direct crypto guide START -->
+<style>
+.direct-crypto{background:#f0f9ff;border:1px solid #b3d9ff;border-radius:14px;padding:20px;margin:24px 0;text-align:left;color:#243650}
+.direct-crypto h3,.direct-crypto h4{color:#0055aa;margin:12px 0}
+.direct-crypto p,.direct-crypto li{line-height:1.8}
+.direct-crypto ol{padding-left:24px}
+.direct-address{background:white;border:1px solid #dbe6f5;border-radius:10px;padding:14px;margin:12px 0}
+.direct-address code{display:block;overflow-wrap:anywhere;margin:10px 0}
+.direct-address button{padding:9px 14px;cursor:pointer}
+.direct-tip{background:#fff3cd;border-radius:8px;padding:12px}
+</style>
+<section class="direct-crypto" id="direct-crypto">
+  <h3>Pay directly with crypto</h3>
+  <p><strong>EDU Only: $55 · Premium: $99</strong><br>
+  Send the equivalent value in Bitcoin or Ethereum using the matching
+  address and network below. Allow for your provider's transfer fees.</p>
+
+    <div class="direct-address">
+      <strong>Bitcoin — Bitcoin network</strong>
+      <code>148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR</code>
+      <button type="button" data-direct-copy="148KdrFBGGfHaCq8zbiRRnTk6L82UhK7QR">Copy address</button>
+    </div>
+
+    <div class="direct-address">
+      <strong>Ethereum — Ethereum mainnet</strong>
+      <code>0xb1f4f70928095b593564a3cf7809b75550cda9a5</code>
+      <button type="button" data-direct-copy="0xb1f4f70928095b593564a3cf7809b75550cda9a5">Copy address</button>
+    </div>
+
+  <h3>Never used crypto? Start here</h3>
+  <ol>
+    <li><strong>Choose your plan.</strong> EDU Only costs $55 and Premium
+    costs $99. These are the direct crypto payment amounts.</li>
+    <li><strong>Set up an app.</strong> Use the official Coinbase,
+    Cash App or Trust Wallet app. Complete any account setup and
+    verification required by the provider. Available features vary
+    by country and account.</li>
+    <li><strong>Buy your crypto.</strong> Bitcoin is used in the examples
+    below. Buy enough BTC to cover your chosen plan and the fees shown
+    by your provider. Buying crypto and sending it are separate steps;
+    check that your balance is available to withdraw.</li>
+  </ol>
+
+  <h4>Using Coinbase</h4>
+  <ol>
+    <li>Find the purchase option, choose Bitcoin (BTC), select an available
+    payment method and review the purchase total and fees.</li>
+    <li>Once the BTC is available to send, open the send or transfer
+    option and select Bitcoin.</li>
+    <li>Copy the Bitcoin address above into the recipient field.
+    If asked for a network, select the Bitcoin network.</li>
+    <li>Enter the BTC equivalent of $55 or $99 for your chosen plan.
+    Review the recipient amount and any fee deductions before confirming.</li>
+  </ol>
+
+  <h4>Using Cash App</h4>
+  <ol>
+    <li>If Bitcoin purchases and external withdrawals are available on
+    your account, buy sufficient BTC and complete any required checks.</li>
+    <li>Use the Bitcoin send or withdrawal option, paste the Bitcoin
+    address above, and enter the amount for your selected plan.</li>
+    <li>Review the amount, withdrawal fees and delivery estimate before
+    confirming. This address is for an on-chain Bitcoin transfer.</li>
+  </ol>
+
+  <h4>Using Trust Wallet</h4>
+  <ol>
+    <li>Open your Bitcoin wallet. Fund it with BTC or use an available
+    purchase provider, reviewing its fees and verification requirements.</li>
+    <li>Choose Send, paste the Bitcoin address above and enter the amount
+    for your selected plan.</li>
+    <li>Review the recipient amount and network fee before confirming.</li>
+  </ol>
+
+  <p>Prefer Ethereum? Follow your app's purchase and send process for
+  <strong>ETH on Ethereum mainnet</strong>, using the Ethereum address above.</p>
+
+  <h4>After sending</h4>
+  <p>Save the transaction ID (txid) and email it with your selected plan to
+  <a href="mailto:jmaclive101@gmail.com">jmaclive101@gmail.com</a>.
+  Confirmation time depends on the network and provider.</p>
+
+  <p class="direct-tip">Check the complete recipient address, asset,
+  network and amount before confirming. Transfers are generally
+  irreversible. Never share your recovery phrase or private key.
+  These addresses are for direct payments; if you choose a separate
+  checkout button, follow that checkout's own payment instructions.</p>
+</section>
+<script>
+document.querySelectorAll('[data-direct-copy]').forEach(function(button){
+  button.addEventListener('click', async function(){
+    try {
+      await navigator.clipboard.writeText(button.dataset.directCopy);
+      button.textContent = 'Copied!';
+      setTimeout(function(){ button.textContent = 'Copy address'; }, 2000);
+    } catch (error) {
+      window.prompt('Copy this address:', button.dataset.directCopy);
+    }
+  });
+});
+</script>
+<!-- Direct crypto guide END -->
+
+<!-- Trust Features -->
         <div class="features">
             <div class="feature-item"><span class="icon">✅</span> 200+ Brands Verified</div>
             <div class="feature-item"><span class="icon">🎓</span> .edu Email Included</div>
